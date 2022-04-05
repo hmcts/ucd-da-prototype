@@ -24,38 +24,44 @@
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
 
-    <form action="courtproceedings-answer" method="post" novalidate>
-    
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
+    <form action="addresshistory" method="post" novalidate>
+
+      <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Previous proceedings
+              What is your address?
             </h1>
-            <p class="govuk-body">Have you and/or the child(ren) in this case ever been involved in any other proceedings?</p>
           </legend>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="courtproceedingsanswer-1" name="courtproceedingsanswer" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="courtproceedingsanswer-1">
-               Yes
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="courtproceedingsanswer-2" name="courtproceedingsanswer" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="courtproceedingsanswer-2">
-                No
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="courtproceedingsanswer-3" name="courtproceedingsanswer" type="radio" value="dont know">
-              <label class="govuk-label govuk-radios__label" for="courtproceedingsanswer-3">
-                I don't know
-              </label>
-            </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+              Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+            </label>
+            <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
           </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-2">
+              <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+            </label>
+            <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-town">
+              Town or city
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-postcode">
+              Postcode
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+          </div>
+
         </fieldset>
-      </div>
 
       <button class="govuk-button" data-module="govuk-button">
         Continue
@@ -67,7 +73,7 @@
 </div>
     </div>
     <div class="govuk-grid-column-one-third">
-    
+
     		<details class="govuk-details" data-module="govuk-details">
  			 <summary class="govuk-details__summary">
    			 <span class="govuk-details__summary-text">
@@ -77,15 +83,15 @@
   			<div class="govuk-details__text">
    			 Ask a question or get any help in any language
    			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
-   			 
+
    			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
    			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
    			 <a href="#" class="govuk-link">Find out about call charges</a>
    			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
-   			 
+
 			  </div>
 			</details>
-    
+
     </div>
   </div>
 

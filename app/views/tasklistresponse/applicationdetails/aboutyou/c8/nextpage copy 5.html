@@ -24,33 +24,26 @@
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
 
-    <form action="courtproceedings-answer" method="post" novalidate>
+    <form action="/form-handler" method="post" novalidate>
     
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Previous proceedings
+              Next page
             </h1>
-            <p class="govuk-body">Have you and/or the child(ren) in this case ever been involved in any other proceedings?</p>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="courtproceedingsanswer-1" name="courtproceedingsanswer" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="courtproceedingsanswer-1">
-               Yes
+              <input class="govuk-radios__input" id="answer-1" name="answer" type="radio" value="answer1">
+              <label class="govuk-label govuk-radios__label" for="answer-1">
+               Answer1
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="courtproceedingsanswer-2" name="courtproceedingsanswer" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="courtproceedingsanswer-2">
-                No
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="courtproceedingsanswer-3" name="courtproceedingsanswer" type="radio" value="dont know">
-              <label class="govuk-label govuk-radios__label" for="courtproceedingsanswer-3">
-                I don't know
+              <input class="govuk-radios__input" id="answer-2" name="answer" type="radio" value="answer2">
+              <label class="govuk-label govuk-radios__label" for="answer-2">
+                Answer2
               </label>
             </div>
           </div>
