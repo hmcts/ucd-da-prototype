@@ -24,52 +24,54 @@
 
      <main class="govuk-main-wrapper " id="main-content" role="main">
 
-       <form action="start-answer" method="post" novalidate>
+       <form action="childrenabuse-answer" method="post" novalidate>
+
          <span class="govuk-caption-l">Safety concerns</span>
-         <h1 class="govuk-heading-l">Have you experienced or are you at risk of experiencing domestice abuse or violence?</h1>
+         <h1 class="govuk-heading-l">Have the child(ren) named in this application experienced or are at risk of experiencing domestice abuse or violence?</h1>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="proposal-hint">
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="abuse-yes" name="abuse" type="radio" value="yes" data-aria-controls="conditional-abuse">
-                <label class="govuk-label govuk-radios__label" for="abuse-yes">Yes</label>
+              <input class="govuk-radios__input" id="child-abuse-yes" name="abuse" type="radio" value="yes" data-aria-controls="conditional-abuse">
+                <label class="govuk-label govuk-radios__label" for="child-abuse-yes">Yes</label>
             </div>
+
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-abuse">
             <div class="govuk-form-group">
               <div class="govuk-checkboxes govuk-checkboxes--small">
-                <label class="govuk-label" for="proposal-howmany">Tick any of the following kinds of abuse that you have experienced:</label>
+                <label class="govuk-label" for="proposal-howmany">Tick any of the following kinds of abuse that the child(ren) have experienced:</label>
                   <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset">
                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l"></legend>
                       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="physical-abuse" name="physical-abuse" type="checkbox" value="physical-abuse">
-                          <label class="govuk-label govuk-checkboxes__label" for="physical-abuse">
-                            Physical abuse (this includes actions like )
+                          <input class="govuk-checkboxes__input" id="child-physical-abuse" name="physical-abuse" type="checkbox" value="physical-abuse">
+                          <label class="govuk-label govuk-checkboxes__label" for="child-physical-abuse">
+                            Physical abuse
                           </label>
                         </div>
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="emotional-abuse" name="emotional-abuse" type="checkbox" value="emotional-abuse">
-                            <label class="govuk-label govuk-checkboxes__label" for="emotional-abuse">
+                          <input class="govuk-checkboxes__input" id="child-emotional-abuse" name="emotional-abuse" type="checkbox" value="emotional-abuse">
+                            <label class="govuk-label govuk-checkboxes__label" for="child-emotional-abuse">
                               Emotional abuse
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="psychological-abuse" name="psychological-abuse" type="checkbox" value="psychological-abuse">
-                          <label class="govuk-label govuk-checkboxes__label" for="psychological-abuse">
+                          <input class="govuk-checkboxes__input" id="child-psychological-abuse" name="psychological-abuse" type="checkbox" value="psychological-abuse">
+                          <label class="govuk-label govuk-checkboxes__label" for="child-psychological-abuse">
                             Psychological abuse
                           </label>
                         </div>
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="sexual-abuse" name="sexual-abuse" type="checkbox" value="sexual-abuse">
-                          <label class="govuk-label govuk-checkboxes__label" for="sexual-abuse">
+                          <input class="govuk-checkboxes__input" id="child-sexual-abuse" name="sexual-abuse" type="checkbox" value="sexual-abuse">
+                          <label class="govuk-label govuk-checkboxes__label" for="child-sexual-abuse">
                             Sexual abuse
                           </label>
                         </div>
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="financial-abuse" name="financial-abuse" type="checkbox" value="financial-abuse">
-                          <label class="govuk-label govuk-checkboxes__label" for="financial-abuse">
+                          <input class="govuk-checkboxes__input" id="child-financial-abuse" name="financial-abuse" type="checkbox" value="financial-abuse">
+                          <label class="govuk-label govuk-checkboxes__label" for="child-financial-abuse">
                              Financial abuse
                           </label>
                         </div>
@@ -78,10 +80,10 @@
                   </div>
                 </div>
               </div>
-              </div>
+            </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="abuse-no" name="abuse" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="abuse-no">No</label>
+              <input class="govuk-radios__input" id="child-abuse-no" name="abuse" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="child-abuse-no">No</label>
             </div>
           </div>
         </div>

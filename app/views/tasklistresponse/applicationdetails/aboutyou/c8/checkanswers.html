@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Page title
+  Child arrangement respondent 
 {% endblock %}
 
 {% block header %}
@@ -34,7 +34,7 @@
               Name
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['first-name'] }} {{ data['last-name'] }} ({{ data['previous-name'] }})
+              {{ data['first-name'] }} {{ data['last-name'] }} {{ data['previous-name'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -47,7 +47,7 @@
               Date of birth
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['dob'] }}
+              {{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">

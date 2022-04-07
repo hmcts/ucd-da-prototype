@@ -1,0 +1,279 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper " id="main-content" role="main">
+
+       <form action="otherissues" method="post" novalidate>
+
+         <span class="govuk-caption-l">Safety concerns</span>
+         <h1 class="govuk-heading-l">What orders have been made?</h1>
+
+         <div class="govuk-form-group">
+     <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+       <div id="waste-hint" class="govuk-hint">
+         Select all that apply.
+       </div>
+       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+         <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="non-molestation" name="non-molestation" type="checkbox" data-aria-controls="conditional-non-molestation">
+           <label class="govuk-label govuk-checkboxes__label" for="non-molestation">
+             Non-molestation order
+           </label>
+         </div>
+
+         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-non-molestation">
+           <div class="govuk-form-group">
+             <label class="govuk-label" for="proposal-howmany">Date issued</label>
+             <textarea class="govuk-textarea" id="non-molestation-date" name="non-molestation-date" rows="1" aria-describedby="non-molestation-date-issued"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Length of order</label>
+             <textarea class="govuk-textarea" id="non-molestation-length" name="non-molestation-length" rows="1" aria-describedby="non-molestation-length"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Name of court</label>
+             <textarea class="govuk-textarea" id="non-molestation-court" name="non-molestation-court" rows="1" aria-describedby="non-molestation-court"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Is the order current?</label>
+             <div class="govuk-form-group">
+                 <div class="govuk-radios" data-module="govuk-radios">
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="non-molestation-current-yes" name="non-molestation-current" type="radio" value="Yes">
+                     <label class="govuk-label govuk-radios__label" for="non-molestation-current-yes">
+                       Yes
+                     </label>
+                   </div>
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="non-molestation-current-no" name="non-molestation-current" type="radio" value="No">
+                     <label class="govuk-label govuk-radios__label" for="non-molestation-current-no">
+                       No
+                     </label>
+                   </div>
+                 </div>
+              </div>
+           </div>
+         </div>
+
+
+         <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="occupation" name="occupation" type="checkbox" data-aria-controls="conditional-occupation">
+           <label class="govuk-label govuk-checkboxes__label" for="occupation">
+            Occupation order
+           </label>
+         </div>
+
+         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-occupation">
+           <div class="govuk-form-group">
+             <label class="govuk-label" for="proposal-howmany">Date issued</label>
+             <textarea class="govuk-textarea" id="occupation-date" name="occupation-date" rows="1" aria-describedby="occupation-date-issued"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Length of order</label>
+             <textarea class="govuk-textarea" id="occupation-length" name="occupation-length" rows="1" aria-describedby="occupation-length"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Name of court</label>
+             <textarea class="govuk-textarea" id="occupation-court" name="occupation-court" rows="1" aria-describedby="occupation-court"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Is the order current?</label>
+             <div class="govuk-form-group">
+                 <div class="govuk-radios" data-module="govuk-radios">
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="occupation-yes" name="occupation-current" type="radio" value="Yes">
+                     <label class="govuk-label govuk-radios__label" for="occupation-yes">
+                       Yes
+                     </label>
+                   </div>
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="occupation-no" name="occupation-current" type="radio" value="No">
+                     <label class="govuk-label govuk-radios__label" for="occupation-no">
+                       No
+                     </label>
+                   </div>
+                 </div>
+              </div>
+           </div>
+         </div>
+
+         <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="marriage" name="marriage" type="checkbox" data-aria-controls="conditional-marriage">
+           <label class="govuk-label govuk-checkboxes__label" for="marriage">
+             Forced marriage protection order
+           </label>
+         </div>
+
+         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-marriage">
+           <div class="govuk-form-group">
+             <label class="govuk-label" for="proposal-howmany">Date issued</label>
+             <textarea class="govuk-textarea" id="marriage-date" name="marriage-date" rows="1" aria-describedby="marriage-date-issued"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Length of order</label>
+             <textarea class="govuk-textarea" id="marriage-length" name="marriage-length" rows="1" aria-describedby="marriage-length"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Name of court</label>
+             <textarea class="govuk-textarea" id="marriage-court" name="marriage-court" rows="1" aria-describedby="marriage-court"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Is the order current?</label>
+             <div class="govuk-form-group">
+                 <div class="govuk-radios" data-module="govuk-radios">
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="marriage-current-yes" name="marriage-current" type="radio" value="Yes">
+                     <label class="govuk-label govuk-radios__label" for="marriage-current-yes">
+                       Yes
+                     </label>
+                   </div>
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="marriage-current-no" name="marriage-current" type="radio" value="No">
+                     <label class="govuk-label govuk-radios__label" for="marriage-current-no">
+                       No
+                     </label>
+                   </div>
+                 </div>
+              </div>
+           </div>
+         </div>
+         <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="restraining" name="restraining" type="checkbox" data-aria-controls="conditional-restraining">
+           <label class="govuk-label govuk-checkboxes__label" for="restraining">
+             Restraining order
+           </label>
+         </div>
+         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-restraining">
+           <div class="govuk-form-group">
+             <label class="govuk-label" for="proposal-howmany">Date issued</label>
+             <textarea class="govuk-textarea" id="restraining-date" name="restraining-date" rows="1" aria-describedby="restraining-date-issued"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Length of order</label>
+             <textarea class="govuk-textarea" id="restraining-length" name="restraining-length" rows="1" aria-describedby="restraining-length"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Name of court</label>
+             <textarea class="govuk-textarea" id="restraining-court" name="restraining-court" rows="1" aria-describedby="restraining-court"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Is the order current?</label>
+             <div class="govuk-form-group">
+                 <div class="govuk-radios" data-module="govuk-radios">
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="restraining-current-yes" name="restraining-current" type="radio" value="Yes">
+                     <label class="govuk-label govuk-radios__label" for="restraining-current-yes">
+                       Yes
+                     </label>
+                   </div>
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="restraining-current-no" name="restraining-current" type="radio" value="No">
+                     <label class="govuk-label govuk-radios__label" for="restraining-current-no">
+                       No
+                     </label>
+                   </div>
+                 </div>
+              </div>
+           </div>
+         </div>
+         <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="injunctive" name="injunctive" type="checkbox" data-aria-controls="conditional-injunctive">
+           <label class="govuk-label govuk-checkboxes__label" for="injunctive">
+             Other injunctive order
+           </label>
+         </div>
+         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-injunctive">
+           <div class="govuk-form-group">
+             <label class="govuk-label" for="proposal-howmany">Date issued</label>
+             <textarea class="govuk-textarea" id="injunctive-date" name="injunctive-date" rows="1" aria-describedby="injunctive-date-issued"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Length of order</label>
+             <textarea class="govuk-textarea" id="injunctive-length" name="injunctive-length" rows="1" aria-describedby="injunctive-length"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Name of court</label>
+             <textarea class="govuk-textarea" id="injunctive-court" name="injunctive-court" rows="1" aria-describedby="injunctive-court"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Is the order current?</label>
+             <div class="govuk-form-group">
+                 <div class="govuk-radios" data-module="govuk-radios">
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="injunctive-current-yes" name="injunctive-current" type="radio" value="Yes">
+                     <label class="govuk-label govuk-radios__label" for="injunctive-current-yes">
+                       Yes
+                     </label>
+                   </div>
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="injunctive-current-no" name="injunctive-current" type="radio" value="No">
+                     <label class="govuk-label govuk-radios__label" for="injunctive-current-no">
+                       No
+                     </label>
+                   </div>
+                 </div>
+              </div>
+           </div>
+         </div>
+         <div class="govuk-checkboxes__item">
+           <input class="govuk-checkboxes__input" id="undertaking" name="undertaking" type="checkbox" data-aria-controls="conditional-undertaking">
+           <label class="govuk-label govuk-checkboxes__label" for="undertaking">
+             Undertaking in place of order
+           </label>
+         </div>
+         <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-undertaking">
+           <div class="govuk-form-group">
+             <label class="govuk-label" for="proposal-howmany">Date issued</label>
+             <textarea class="govuk-textarea" id="undertaking-date" name="undertaking-date" rows="1" aria-describedby="undertaking-date-issued"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Length of order</label>
+             <textarea class="govuk-textarea" id="undertaking-length" name="undertaking-length" rows="1" aria-describedby="undertaking-length"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Name of court</label>
+             <textarea class="govuk-textarea" id="undertaking-court" name="undertaking-court" rows="1" aria-describedby="undertaking-court"></textarea>
+             <label class="govuk-label" for="proposal-howmany">Is the order current?</label>
+             <div class="govuk-form-group">
+                 <div class="govuk-radios" data-module="govuk-radios">
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="undertaking-current-yes" name="undertaking-current" type="radio" value="Yes">
+                     <label class="govuk-label govuk-radios__label" for="undertaking-current-yes">
+                       Yes
+                     </label>
+                   </div>
+                   <div class="govuk-radios__item">
+                     <input class="govuk-radios__input" id="undertaking-current-no" name="undertaking-current" type="radio" value="No">
+                     <label class="govuk-label govuk-radios__label" for="undertaking-current-no">
+                       No
+                     </label>
+                   </div>
+                 </div>
+              </div>
+           </div>
+         </div>
+       </div>
+
+     </fieldset>
+   </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </main>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

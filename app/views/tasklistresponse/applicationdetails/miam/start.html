@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Progress bars
+  Child arrangement respondent 
 {% endblock %}
 
 {% block header %}
@@ -17,16 +17,91 @@
 {% endblock %}
 
 {% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
 
+     <main class="govuk-main-wrapper " id="main-content" role="main">
 
+       <form action="checkanswers-MIAM" method="post" novalidate>
 
- <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-     About you page
+         <h1 class="govuk-heading-l">Mediation</h1>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              What is a Mediation Information and Assessment Meeting (MIAM)?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>MIAM:
+            <ul>
+              <li>Is less stressful and far quicker than going to court, and cheaper than getting legal representation</li>
+              <li>Helps you make arrangements over parenting, property and money</li>
+              <li>Lets you keep more control of your family’s future, and helps you put your child’s interests first</li>
+              <li>Helps you all move on quickly to the next stage of your lives</li>
+              <li>Is a process which works, with agreement reached in over 70% of cases.</li>
+              <li>The first meeting with a mediator is often called a Mediation Information & Assessment Meeting or MIAM. Whether it’s called a MIAM or a first meeting, it will cover the same things.</li>
+              <li>The MIAM will last about an hour,and will give you an opportunity to tell the mediator about your situation, and the issues that need to be decided. The mediator will tell you about the mediation process and other options for reaching agreements.</li>
+              <li>At the end of the meeting, the mediator will tell you whether your case is suitable for mediation, and you can decide whether you want to proceed with mediation or explore another option for resolving issues. The mediator can also give you information about other services which provide help and support.</li>
+              <li>The price of mediation will vary depending on where you live and how many sessions you go to. You may be able to get legal aid for mediation if you’re on a low income.</li>
+              <li>You don’t have to attend a MIAM if you have a valid reason. For example you or the children are at risk of harm.</li>
+            </ul></p>
+          </div>
+        </details>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="proposal-hint">
+          <legend class="govuk-fieldset__legend">
+              Have you attended a Mediation Information and Assessment Meeting (MIAM)?
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="MIAM-yes" name="MIAM" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="MIAM-yes">Yes</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="MIAM-no" name="MIAM" type="radio" data-aria-controls="conditional-MIAM">
+                <label class="govuk-label govuk-radios__label" for="MIAM-no">No</label>
+            </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-MIAM">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="proposal-howmany">Would you be willing to attend a MIAM?</label>
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      </legend>
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="MIAM-willing-Yes" name="MIAM-willing" type="radio" value="Yes">
+                            <label class="govuk-label govuk-radios__label" for="MIAM-willing-Yes">
+                              Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="MIAM-willing-No" name="MIAM-willing" type="radio" value="No">
+                            <label class="govuk-label govuk-radios__label" for="MIAM-willing-No">
+                              No
+                            </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </main>
     </div>
-    <div class="govuk-grid-column-one-third">
-    
-    		<details class="govuk-details" data-module="govuk-details">
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
  			 <summary class="govuk-details__summary">
    			 <span class="govuk-details__summary-text">
     		  Contacts for help
@@ -35,17 +110,15 @@
   			<div class="govuk-details__text">
    			 Ask a question or get any help in any language
    			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
-   			 
+
    			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
    			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
    			 <a href="#" class="govuk-link">Find out about call charges</a>
    			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
-   			 
 			  </div>
 			</details>
-    
     </div>
-  </div>
+</div>
 
 
 
