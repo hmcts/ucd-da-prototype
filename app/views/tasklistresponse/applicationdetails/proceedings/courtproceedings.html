@@ -1,51 +1,40 @@
 {% extends "layout.html" %}
-
 {% block pageTitle %}
   Page title
 {% endblock %}
-
 {% block header %}
   <!-- Blank header with no service name for the start page -->
-
 {{ govukHeader({
     homepageUrl: "/",
     serviceName: serviceName,
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
 }) }}
-
 {% endblock %}
-
 {% block content %}
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 <div class="govuk-width-container">
   <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
-
   <main class="govuk-main-wrapper " id="main-content" role="main">
-
-    <form action="/form-handler" method="post" novalidate>
-    
+    <form action="/tasklistresponse/start" method="post" novalidate>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
               Previous proceedings
             </h1>
-            <p class="govuk-body">Use this section to provide details of any other court 					cases now, or at any time in the past, which concern you or any of the child(ren) in this application</p>
+            <p class="govuk-body">Use this section to provide details of any other court cases now, or at any time in the past, which concern you or any of the child(ren) in this application</p>
           </legend>
          <div class="govuk-form-group">
-  			<h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" 		for="event-name">
-     			 Court name
-   			 </label>
- 			 </h1>
-  			<input class="govuk-input" id="event-name" name="event-name" type="text">
-		</div>
-			
-			<div class="govuk-!-padding-bottom-4"></div>
-            
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l"      for="event-name">
+                 Court name
+             </label>
+             </h1>
+            <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+            <div class="govuk-!-padding-bottom-4"></div>
             <h3 class="govuk-heading-s">Type of proceedings</h3>
-
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend">
@@ -53,26 +42,24 @@
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+        <input class="govuk-radios__input" id="emergency-yes" name="emergency" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="emergency-yes">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        <input class="govuk-radios__input" id="emergency-no" name="emergency" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="emergency-no">
           No
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+        <input class="govuk-radios__input" id="emergency-other" name="emergency" type="radio" value="other">
+        <label class="govuk-label govuk-radios__label" for="emergency-other">
           I don't know
         </label>
       </div>
-      
-      
-			<div class="govuk-!-padding-bottom-4"></div>      
+            <div class="govuk-!-padding-bottom-4"></div>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend">
@@ -80,25 +67,24 @@
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+        <input class="govuk-radios__input" id="supervision-yes" name="supervision" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="supervision-yes">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        <input class="govuk-radios__input" id="supervision-no" name="supervision" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="supervision-no">
           No
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+        <input class="govuk-radios__input" id="supervision-other" name="supervision" type="radio" value="other">
+        <label class="govuk-label govuk-radios__label" for="supervision-other">
           I don't know
         </label>
       </div>
-
-			<div class="govuk-!-padding-bottom-4"></div>      
+            <div class="govuk-!-padding-bottom-4"></div>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend">
@@ -106,25 +92,24 @@
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+        <input class="govuk-radios__input" id="care-yes" name="care" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="care-yes">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        <input class="govuk-radios__input" id="care-no" name="care" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="care-no">
           No
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+        <input class="govuk-radios__input" id="care-other" name="care" type="radio" value="other">
+        <label class="govuk-label govuk-radios__label" for="care-other">
           I don't know
         </label>
       </div>
-
-			<div class="govuk-!-padding-bottom-4"></div>
+            <div class="govuk-!-padding-bottom-4"></div>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend">
@@ -132,25 +117,24 @@
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+        <input class="govuk-radios__input" id="child-yes" name="child" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="child-yes">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        <input class="govuk-radios__input" id="child-no" name="child" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="child-no">
           No
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+        <input class="govuk-radios__input" id="child-other" name="child" type="radio" value="other">
+        <label class="govuk-label govuk-radios__label" for="child-other">
           I don't know
         </label>
-      </div>   
-
-			<div class="govuk-!-padding-bottom-4"></div>      
+      </div>
+            <div class="govuk-!-padding-bottom-4"></div>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend">
@@ -158,25 +142,24 @@
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+        <input class="govuk-radios__input" id="family-yes" name="family" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="family-yes">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        <input class="govuk-radios__input" id="family-no" name="family" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="family-no">
           No
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+        <input class="govuk-radios__input" id="family-other" name="family" type="radio" value="other">
+        <label class="govuk-label govuk-radios__label" for="family-other">
           I don't know
         </label>
-      </div> 
-
-			<div class="govuk-!-padding-bottom-4"></div>      
+      </div>
+            <div class="govuk-!-padding-bottom-4"></div>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend">
@@ -184,25 +167,24 @@
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+        <input class="govuk-radios__input" id="arrangements-yes" name="arrangements" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="arrangements-yes">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        <input class="govuk-radios__input" id="arrangements-no" name="arrangements" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="arrangements-no">
           No
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+        <input class="govuk-radios__input" id="arrangements-other" name="arrangements" type="radio" value="other">
+        <label class="govuk-label govuk-radios__label" for="arrangements-other">
           I don't know
         </label>
       </div>
-
-			<div class="govuk-!-padding-bottom-4"></div>      
+            <div class="govuk-!-padding-bottom-4"></div>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend">
@@ -210,61 +192,48 @@
     </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+        <input class="govuk-radios__input" id="financial-yes" name="financial" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="financial-yes">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        <input class="govuk-radios__input" id="financial-no" name="financial" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="financial-no">
           No
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+        <input class="govuk-radios__input" id="financial-other" name="financial" type="radio" value="other">
+        <label class="govuk-label govuk-radios__label" for="financial-other">
           I don't know
         </label>
       </div>
-
   </fieldset>
 </div>
-
-
-      <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-      </div>
-
-
+            <div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
   </main>
 </div>
     </div>
     <div class="govuk-grid-column-one-third">
-    
-    		<details class="govuk-details" data-module="govuk-details">
- 			 <summary class="govuk-details__summary">
-   			 <span class="govuk-details__summary-text">
-    		  Contacts for help
-  			  </span>
-  			</summary>
-  			<div class="govuk-details__text">
-   			 Ask a question or get any help in any language
-   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
-   			 
-   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
-   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
-   			 <a href="#" class="govuk-link">Find out about call charges</a>
-   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
-   			 
-			  </div>
-			</details>
-    
+            <details class="govuk-details" data-module="govuk-details">
+             <summary class="govuk-details__summary">
+             <span class="govuk-details__summary-text">
+              Contacts for help
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+             Ask a question or get any help in any language
+             <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+             <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+             <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+             <a href="#" class="govuk-link">Find out about call charges</a>
+             <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+              </div>
+            </details>
     </div>
   </div>
-
-
-
 {% endblock %}
