@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+
+           <h1 class="govuk-heading-l">Check your answers </h1>
+
+           <h2 class="govuk-heading-m">International element</h2>
+
+           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+             <div class="govuk-summary-list__row">
+               <dt class="govuk-summary-list__key">
+                 Is the life of the children, a parent, or anyone significant to the children mainly based in a country outside England or Wales?
+               </dt>
+               <dd class="govuk-summary-list__value">
+                 {{ data['steps-international-resident-form-international-resident-yes-field'] }} {{ data['steps-international-resident-form-international-resident-no-field'] }}
+               </dd>
+               <dd class="govuk-summary-list__actions">
+                 <a class="govuk-link" href="#">
+                   Edit<span class="govuk-visually-hidden">MIAM</span>
+                 </a>
+               </dd>
+             </div>
+             <div class="govuk-summary-list__row">
+               <dt class="govuk-summary-list__key">
+                 Do you think another person in this application may be able to apply for a similar order in a country outside England or Wales?
+               </dt>
+               <dd class="govuk-summary-list__value">
+                 {{ data['steps-international-resident-form-international-resident-yes-field-Yes'] }}{{ data['steps-international-resident-form-international-resident-no-field-No'] }}
+               </dd>
+               <dd class="govuk-summary-list__actions">
+                 <a class="govuk-link" href="#">
+                   Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                 </a>
+               </dd>
+             </div>
+             <div class="govuk-summary-list__row">
+               <dt class="govuk-summary-list__key">
+                 Has a request for information or other assistance involving the children been made to or by another country?
+               </dt>
+               <dd class="govuk-summary-list__value">
+                 {{ data['steps-international-resident-form-international-resident-yes-field'] }}{{ data['steps-international-resident-form-international-resident-no-field'] }}
+               </dd>
+               <dd class="govuk-summary-list__actions">
+                 <a class="govuk-link" href="#">
+                   Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                 </a>
+               </dd>
+             </div>
+           </dl>
+
+         <div>
+
+
+       <form action="/tasklistresponse/start" method="post" novalidate>
+
+         <input type="hidden" name="answers-checked" value="true">
+
+         <button class="govuk-button" data-module="govuk-button">
+           Save and continue
+         </button>
+
+       </form>
+
+     </div>
+      </main>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
