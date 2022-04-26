@@ -24,32 +24,22 @@
 
         <main class="govuk-main-wrapper " id="main-content" role="main">
 
-          <form action="contactdetails" method="post" novalidate>
+          <form action="checkanswers" method="post" novalidate>
 
-            <h1 class="govuk-heading-l">Have you lived at this address for the past 5 years?</h1>
+            <h1 class="govuk-heading-l">Your contact details</h1>
 
             <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="proposal-hint">
+              <label class="govuk-label" for="email">
+                Email address
+              </label>
+              <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+            </div>
 
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="history-yes" name="addresshistory" type="radio" value="yes">
-                    <label class="govuk-label govuk-radios__label" for="history-yes">Yes</label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="history-no" name="addresshistory" type="radio" value="no" data-aria-controls="conditional-address">
-                    <label class="govuk-label govuk-radios__label" for="history-no">No</label>
-                  </div>
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-address">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="more-detail">Provide details of previous addresses you have lived at in the last 5 years, starting with your most recent address</label>
-                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-                    </div>
-                  </div>
-
-                </div>
-
-              </fieldset>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="telephone-number">
+                UK telephone number
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel" placeholder="12345679">
             </div>
 
             <button class="govuk-button" data-module="govuk-button">

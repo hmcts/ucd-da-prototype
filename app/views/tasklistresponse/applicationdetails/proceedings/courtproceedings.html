@@ -24,214 +24,342 @@
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
 
-    <form action="/tasklistresponse/start" method="post" novalidate>
+    <form action="checkanswers-proceedings" method="post" novalidate>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              Previous proceedings
-            </h1>
-            <p class="govuk-body">Provide details of other court cases that concern you or any children in this application. Include details of cases that are currently ongoing, as well as past court cases.</p>
+            <span class="govuk-caption-l">Current or previous proceedings</span>
+            <h1 class="govuk-heading-l">Provide details of court cases the children have been involved in</h1>
+
           </legend>
-         <div class="govuk-form-group">
-  			<h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" 		for="event-name">
-     			 Court name
-   			 </label>
- 			 </h1>
-  			<input class="govuk-input" id="event-name" name="event-name" type="text">
-		</div>
 
-			<div class="govuk-!-padding-bottom-4"></div>
+			<div class="govuk-!-padding-bottom-3"></div>
 
-            <h3 class="govuk-heading-s">Type of proceedings</h3>
+        <h2 class="govuk-heading-l">Type of proceedings</h2>
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-     Emergency Protection Order (optional)
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="emergency-yes" name="emergency" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="emergency-yes">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="emergency-no" name="emergency" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="emergency-no">
-          No
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="emergency-other" name="emergency" type="radio" value="other">
-        <label class="govuk-label govuk-radios__label" for="emergency-other">
-          I don't know
-        </label>
-      </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend">
+             <b>Emergency Protection Order </b>(optional)
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="emergency-yes" name="emergency" type="radio" value="yes" data-aria-controls="conditional-emergency">
+                <label class="govuk-label govuk-radios__label" for="emergency-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-emergency">
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                      Court name
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="emergency-court" name="emergency-court" type="text">
+                </div>
+              <div class="govuk-form-group">
+                 <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                    Case number (if known)
+                  </label>
+                </h1>
+                 <input class="govuk-input" id="emergency-case" name="emergency-case" type="text">
+              </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="emergency-no" name="emergency" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="emergency-no">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="emergency-other" name="emergency" type="radio" value="other">
+                <label class="govuk-label govuk-radios__label" for="emergency-other">
+                  I don't know
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
+        	<div class="govuk-!-padding-bottom-4"></div>
 
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend">
+             <b>Supervision Order</b> (optional)
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="supervision-yes" name="supervision" type="radio" value="yes" data-aria-controls="conditional-supervision">
+                <label class="govuk-label govuk-radios__label" for="supervision-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-supervision">
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                      Court name
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="supervision-court" name="supervision-court" type="text">
+                </div>
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                      Case number (if known)
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="supervision-case" name="supervision-case" type="text">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="supervision-no" name="supervision" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="supervision-no">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="supervision-other" name="supervision" type="radio" value="other">
+                <label class="govuk-label govuk-radios__label" for="supervision-other">
+                  I don't know
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
+        <div class="govuk-!-padding-bottom-4"></div>
 
-			<div class="govuk-!-padding-bottom-4"></div>
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-     Supervision Order (optional)
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="supervision-yes" name="supervision" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="supervision-yes">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="supervision-no" name="supervision" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="supervision-no">
-          No
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="supervision-other" name="supervision" type="radio" value="other">
-        <label class="govuk-label govuk-radios__label" for="supervision-other">
-          I don't know
-        </label>
-      </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend">
+             <b>Care Order </b>(optional)
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="care-yes" name="care" type="radio" value="yes" data-aria-controls="conditional-care">
+                <label class="govuk-label govuk-radios__label" for="care-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-care">
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                      Court name
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="care-court" name="care-court" type="text">
+                </div>
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                      Case number (if known)
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="care-case" name="care-case" type="text">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="care-no" name="care" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="care-no">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="care-other" name="care" type="radio" value="other">
+                <label class="govuk-label govuk-radios__label" for="care-other">
+                  I don't know
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
-			<div class="govuk-!-padding-bottom-4"></div>
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-     Care Order (optional)
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="care-yes" name="care" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="care-yes">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="care-no" name="care" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="care-no">
-          No
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="care-other" name="care" type="radio" value="other">
-        <label class="govuk-label govuk-radios__label" for="care-other">
-          I don't know
-        </label>
-      </div>
+        <div class="govuk-!-padding-bottom-4"></div>
 
-			<div class="govuk-!-padding-bottom-4"></div>
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-     Child Abduction (optional)
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="child-yes" name="child" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="child-yes">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="child-no" name="child" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="child-no">
-          No
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="child-other" name="child" type="radio" value="other">
-        <label class="govuk-label govuk-radios__label" for="child-other">
-          I don't know
-        </label>
-      </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend">
+             <b>Child Abduction </b>(optional)
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="child-yes" name="child" type="radio" value="yes" data-aria-controls="conditional-child">
+                <label class="govuk-label govuk-radios__label" for="child-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-child">
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                      Court name
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="child-court" name="child-court" type="text">
+                </div>
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                      Case number (if known)
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="child-case" name="child-case" type="text">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="child-no" name="child" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="child-no">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="child-other" name="child" type="radio" value="other">
+                <label class="govuk-label govuk-radios__label" for="child-other">
+                  I don't know
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
-			<div class="govuk-!-padding-bottom-4"></div>
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-    Family Law Act 1996 Part 4 (non molestation or occupation order) (optional)
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="family-yes" name="family" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="family-yes">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="family-no" name="family" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="family-no">
-          No
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="family-other" name="family" type="radio" value="other">
-        <label class="govuk-label govuk-radios__label" for="family-other">
-          I don't know
-        </label>
-      </div>
+        <div class="govuk-!-padding-bottom-4"></div>
 
-			<div class="govuk-!-padding-bottom-4"></div>
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-     Child Arrangements Order (optional)
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="arrangements-yes" name="arrangements" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="arrangements-yes">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="arrangements-no" name="arrangements" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="arrangements-no">
-          No
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="arrangements-other" name="arrangements" type="radio" value="other">
-        <label class="govuk-label govuk-radios__label" for="arrangements-other">
-          I don't know
-        </label>
-      </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend">
+            <b>Family Law Act 1996 Part 4 (non molestation or occupation order) </b>(optional)
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="family-yes" name="family" type="radio" value="yes" data-aria-controls="conditional-family">
+                <label class="govuk-label govuk-radios__label" for="family-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-family">
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                      Court name
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="family-court" name="family-court" type="text">
+                </div>
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                      Case number (if known)
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="family-case" name="family-case" type="text">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="family-no" name="family" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="family-no">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="family-other" name="family" type="radio" value="other">
+                <label class="govuk-label govuk-radios__label" for="family-other">
+                  I don't know
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
-			<div class="govuk-!-padding-bottom-4"></div>
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-     Financial Order under Schedule 1 of the Children Act 1989 (optional)
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="financial-yes" name="financial" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="financial-yes">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="financial-no" name="financial" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="financial-no">
-          No
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="financial-other" name="financial" type="radio" value="other">
-        <label class="govuk-label govuk-radios__label" for="financial-other">
-          I don't know
-        </label>
-      </div>
+        <div class="govuk-!-padding-bottom-4"></div>
 
-  </fieldset>
-</div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend">
+             <b>Child Arrangements Order</b> (optional)
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="arrangements-yes" name="arrangements" type="radio" value="yes" data-aria-controls="conditional-arrangements">
+                <label class="govuk-label govuk-radios__label" for="arrangements-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-arrangements">
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                      Court name
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="arrangements-court" name="arrangements-court" type="text">
+                </div>
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                      Case number (if known)
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="arrangements-case" name="arrangements-case" type="text">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="arrangements-no" name="arrangements" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="arrangements-no">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="arrangements-other" name="arrangements" type="radio" value="other">
+                <label class="govuk-label govuk-radios__label" for="arrangements-other">
+                  I don't know
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-!-padding-bottom-4"></div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend">
+             <b>Financial Order under Schedule 1 of the Children Act 1989 </b>(optional)
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financial-yes" name="financial" type="radio" value="yes" data-aria-controls="conditional-financial">
+                <label class="govuk-label govuk-radios__label" for="financial-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-financial">
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                      Court name
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="financial-court" name="financial-court" type="text">
+                </div>
+                <div class="govuk-form-group">
+                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                      Case number (if known)
+                    </label>
+                  </h1>
+                   <input class="govuk-input" id="financial-case" name="financial-case" type="text">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financial-no" name="financial" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="financial-no">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financial-other" name="financial" type="radio" value="other">
+                <label class="govuk-label govuk-radios__label" for="financial-other">
+                  I don't know
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+          </fieldset>
+        </div>
             <div class="govuk-button-group">
   <button class="govuk-button" data-module="govuk-button">
     Continue

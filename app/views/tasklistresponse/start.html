@@ -17,83 +17,52 @@
 {% endblock %}
 
 {% block content %}
-
+  <form action="submitpage" method="post" novalidate>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
  		 <a href="#" class="govuk-back-link">Back</a>
       <h1 class="govuk-heading-xl">
-        Sam Richards
+        Respond to the application
       </h1>
 
-      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Read and respond to the application</h2>
-      <p class="govuk-body govuk-!-margin-bottom-7">Read through the application and then respond to the questions about the case</p>
+      <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Read and respond to the application</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">Read through the application and then respond to the questions about the case</p> !-->
 
   </div>
 </div>
+
 
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <ol class="app-task-list">
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">1. </span> Application about a child
+            <span class="app-task-list__section-number">1. </span> Legal representation
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="eligibility-status">
-                  Applicant's submission
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Do you have a legal representation?
                 </a>
               </span>
               <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
             </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="read-declaration-status">
-                  Your response to the application
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
-            </li>
           </ul>
         </li>
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">2. </span> Legal representation
+            <span class="app-task-list__section-number">2. </span> Application details
           </h2>
           <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="company-information-status">
-                  Do you have a legal representative?
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="company-information-status">Completed</strong>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">3. </span> Application details
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="applicationdetails/aboutyou/start" aria-describedby="application-detail-about-you">
-                  About you
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
-            </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                  <a href="applicationdetails/miam/start" aria-describedby="application-details-miam">
                   Mediation (MIAM)
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -101,30 +70,78 @@
                   Current or previous proceedings
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
             </li>
           </ul>
         </li>
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">4. </span> Safety concerns
+            <span class="app-task-list__section-number">2. </span> Safety concerns
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="safetyconcerns/riskofharm/start" aria-describedby="risk-of-harm-or-violence">
-                  Risk of harm or violence
+                <a href="safetyconcerns/yoursafety/safetyinfo" aria-describedby="your-safety">
+                  Your safety
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/childrensafety/childrenabuse" aria-describedby="children-safety">
+                  The children's safety
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/abduction/abduction" aria-describedby="abduction">
+                  Abduction concerns
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/otherconcerns/drugs" aria-describedby="risk-of-harm-or-violence">
+                  Other concerns
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/existingorders/orders" aria-describedby="risk-of-harm-or-violence">
+                  Existing orders
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/contact/unsupervised" aria-describedby="risk-of-harm-or-violence">
+                  Contact between children and applicants
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/ordersrequired/ordersrequired" aria-describedby="risk-of-harm-or-violence">
+                  What are you asking the court to decide?
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
             </li>
          </ul>
         </li>
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">5. </span> Additional information
+            <span class="app-task-list__section-number">4. </span> Additional information
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
@@ -133,31 +150,24 @@
                   International element
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
             </li>
-        	<li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="additionalinformation/attendingcourt/start" aria-describedby="attending-court">
-                  Attending the court
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
-            </li>
+
           </ul>
         </li>
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">6. </span> Sign and submit
+            <span class="app-task-list__section-number">4. </span> Sign and submit
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="signandsubmit/statementoftruth/start" aria-describedby="statement-of-truth">
+                <a href="statementoftruth/statementoftruth" aria-describedby="statement-of-truth">
                   Statement of truth
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">To do</strong>
             </li>
          </ul>
         </li>
@@ -166,9 +176,7 @@
     Save and continue
   </button>
 
-  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-    Save as draft
-  </button>
+
 </div>
       </ol>
     </div>
@@ -194,6 +202,7 @@
 
     </div>
   </div>
+  </form>
 
 
 

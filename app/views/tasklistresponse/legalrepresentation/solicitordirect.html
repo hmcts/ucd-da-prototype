@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="childrenabuse-answer" method="post" novalidate>
+
+
+         <h1 class="govuk-heading-xl">Direct your case to your legal representative</h1>
+
+         <p> Here should be a guide to redirect the case to solicitor </p>
+
+
+
+          <h3 class="govuk-heading-s">If you agree, you confirm that you do not wish to complete this response on your own adn that you will personally direct your case to your legal representative.</h3>
+            <p> Your responses will not be considered. If you wish to complete the response, go back and select that you do not have legal representation.</p>
+          <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+              I agree
+            </button>
+
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Go back
+            </button>
+          </div>
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}
