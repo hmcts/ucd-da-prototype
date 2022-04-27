@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Tasklist
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <form action="/respondenttasklist/startreply" method="post" novalidate>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body-s"><b>Subject:</b> You have been named in a child arrangements case: 'Case name'<p>
+
+
+
+          <h2 class="govuk-heading-l">You have been named in a child arrangements case</h2>
+
+          <p class="govuk-body">Dear Sam Richards,</p>
+
+          <p class="govuk-body">An application has been made to the court and you are named as a respondent.</p>
+
+          <p class="govuk-body">Sarah Murphy has applied to the court for an order about a child.</p>
+
+          <p class="govuk-body">You should respond to the case so that your point of view is represented. The case will proceed even if you do not respond.</p>
+
+          <h3 class="govuk-heading-m">What to do next</h3>
+
+          <p class="govuk-body">We have sent you a pack in the post the contains:</p>
+            <ul class="govuk-list govuk-list--bullet">
+             <li>a letter that tells you how to respond</li>
+             <li>forms for you to complete</li>
+             <li>information on what happens next, and support available</li>
+           </ul>
+
+         <p class="govuk-body">You should respond to the letter within 14 days of receiving it. You have the option to respond to the application online, or by post. </p>
+
+         <h3 class="govuk-heading-m">Manage your case online</h3>
+
+         <p class="govuk-body">You can view the case documents online via the dashboard.</p>
+           <ol class="govuk-list govuk-list--bullet">
+            <li>Create an online account: <a href="respondenttasklist/startreply" class="govuk-link" rel="external" target="_blank">https://www.gov.uk/child-arrangements</a> or sign in if you have an existing account</li>
+            <li>Enter your case code: 000MC004SG1681LM </li>
+            <li>Enter your access code: XYZ100LM</li>
+            <li>4.	Review and manage your case</li>
+          </ol>
+
+         <p class="govuk-body">After you have responded, you can check the progress of your case by logging in to your online account.</p>
+
+         <h3 class="govuk-heading-m">Legal help and representation</h3>
+
+         <p class="govuk-body">You may want to seek legal advice, or arrange legal representation as part of your case.</p>
+         <p class="govuk-body">See the GOV.UK guidance on finding a legal adviser:</p>
+           <p><a href="https://www.gov.uk/find-legal-advice/find-legal-adviser" class="govuk-link" rel="external" target="_blank">https://www.gov.uk/find-legal-advice/find-legal-adviser</a></p.>
+
+           <h3 class="govuk-heading-m">Help and assistance</h3>
+
+           <p class="govuk-body">There are national and local organisations you can contact for advice and support.</p>
+
+           <p class="govuk-body">Citizens Advice:
+              <a href="https://www.citizensadvice.org.uk/law-and-courts/" class="govuk-link" rel="external" target="_blank">https://www.citizensadvice.org.uk/law-and-courts/</a></p>
+
+              <p class="govuk-body">Advicenow:
+                 <a href="https://www.advicenow.org.uk" class="govuk-link" rel="external" target="_blank">https://www.advicenow.org.uk</a></p>
+
+            <p class="govuk-body">For more information on the court process, see the GOV.UK guidance for separated parents on children and family courts:</p>
+              <p><a href="https://www.gov.uk/government/publications/guide-for-separated-parents-children-and-the-family-courts-cb7" class="govuk-link" rel="external" target="_blank">https://www.gov.uk/government/publications/guide-for-separated-parents-children-and-the-family-courts-cb7</a></p.>
+<p></p>
+          <p class="govuk-body">HM Courts and Tribunals Service (HMCTS)</p>
+          <p class="govuk-body">This is an automated message, please do not respond to this email.</p>
+
+        </div>
+      </div>
+    </form>
+  </main>
+</div>
+
+
+
+{% endblock %}
