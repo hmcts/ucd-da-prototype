@@ -5,11 +5,6 @@ $( ".addchild-button" ).on("click",function() {
 });  
 
 $(".upload-addnew").on('click', function(){
-
-  // Create clone of <div class='input-form'>
   var newel = $('.uploadcomponent:last').clone();
-  // Add after last <div class='input-form'>
   $(newel).insertAfter(".uploadcomponent:last");
-
-
 });
