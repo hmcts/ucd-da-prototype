@@ -50,6 +50,7 @@
         <!-- start components here -->
 
         <div class="uploadcomponent">
+
               
           <div class="govuk-grid-column-three-quarters govuk-!-margin-bottom-3">
 
@@ -60,6 +61,20 @@
             <div class="file-upload--border">
               <input class="govuk-file-upload govuk-!-font-size-16" id="file-upload-1" name="file-upload-1" type="file">
             </div>
+
+
+            <div class="govuk-form-group govuk-!-margin-top-3">
+              <label class="govuk-label govuk-!-font-size-16" for="sort">
+                Type of document
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="published">Recently published</option>
+                <option value="updated" selected>Recently updated</option>
+                <option value="views">Most views</option>
+                <option value="comments">Most comments</option>
+              </select>
+            </div>
+
 
             <div class="govuk-warning-text">
               <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
