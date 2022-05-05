@@ -61,7 +61,7 @@ const router = express.Router()
                 res.redirect('/tasklistresponse/applicationdetails/proceedings/courtproceedings')
               } else {
                 // Send user to ineligible page
-                res.redirect('/tasklistresponse/start')
+                res.redirect('/tasklistresponse/applicationdetails/proceedings/checkanswers-proceedings')
               }
 
             });
@@ -73,7 +73,7 @@ const router = express.Router()
                 // Check whether the variable matches a condition
                 if (miam == "yes"){
                   // Send user to next page
-                  res.redirect('/tasklistresponse/start')
+                  res.redirect('/tasklistresponse/applicationdetails/miam/checkanswers-MIAM')
 
                 }else {
                     // Send user to ineligible page
@@ -348,10 +348,26 @@ const router = express.Router()
 
                                                 }else {
                                                     // Send user to ineligible page
-                                                    res.redirect('/tasklistresponse/start')
+                                                    res.redirect('/tasklistresponse/aboutyou/confidentiality/feedbackno')
                                                 }
 
                                               });
+
+                                              router.post('/tasklistresponse/aboutyou/confidentiality/startalternative-answer', function (req, res) {
+                                                  // Make a variable and give it the value from 'how-many-balls'
+                                                  var noConDe = req.session.data['confidential']
+
+                                                  // Check whether the variable matches a condition
+                                                  if (noConDe == "yes"){
+                                                    // Send user to next page
+                                                    res.redirect('/tasklistresponse/aboutyou/confidentiality/feedback')
+
+                                                  }else {
+                                                      // Send user to ineligible page
+                                                      res.redirect('/tasklistresponse/aboutyou/confidentiality/feedbackno')
+                                                  }
+
+                                                });
 
                                               router.post('/tasklistresponse/aboutyou/confidentiality/detailsknown-answer', function (req, res) {
                                                   // Make a variable and give it the value from 'how-many-balls'
@@ -400,10 +416,26 @@ const router = express.Router()
 
             }else {
                 // Send user to ineligible page
-                res.redirect('/respondenttasklist/startreply')
+                res.redirect('/respondenttasklist/aboutyou/confidentiality/feedbackno')
             }
 
           });
+
+          router.post('/respondenttasklist/aboutyou/confidentiality/startalternative-answer', function (req, res) {
+              // Make a variable and give it the value from 'how-many-balls'
+              var noConf = req.session.data['confidential']
+
+              // Check whether the variable matches a condition
+              if (noConf == "yes"){
+                // Send user to next page
+                res.redirect('/respondenttasklist/aboutyou/confidentiality/feedback')
+
+              }else {
+                  // Send user to ineligible page
+                  res.redirect('/respondenttasklist/aboutyou/confidentiality/feedbackno')
+              }
+
+            });
 
           router.post('/respondenttasklist/applications/responsetoallegations/start-answer', function (req, res) {
               // Make a variable and give it the value from 'how-many-balls'
@@ -436,5 +468,7 @@ const router = express.Router()
                 }
 
               });
+
+
 
 module.exports = router
