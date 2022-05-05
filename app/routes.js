@@ -297,7 +297,7 @@ const router = express.Router()
                                             // Check whether the variable matches a condition
                                             if (legRep == "yes"){
                                               // Send user to next page
-                                              res.redirect('/tasklistresponse/legalrepresentation/solicitordirect')
+                                              res.redirect('/tasklistresponse/legalrepresentation/solicitorresponse')
 
                                             }else {
                                                 // Send user to ineligible page
@@ -305,6 +305,71 @@ const router = express.Router()
                                             }
 
                                           });
+
+                                          router.post('/tasklistresponse/legalrepresentation/solicitorresponse-answer', function (req, res) {
+                                              // Make a variable and give it the value from 'how-many-balls'
+                                              var legRep = req.session.data['selffill']
+
+                                              // Check whether the variable matches a condition
+                                              if (legRep == "yes"){
+                                                // Send user to next page
+                                                res.redirect('/tasklistresponse/legalrepresentation/solicitornotdirect')
+
+                                              }else {
+                                                  // Send user to ineligible page
+                                                  res.redirect('/tasklistresponse/legalrepresentation/solicitordirect')
+                                              }
+
+                                            });
+
+                                          router.post('/tasklistresponse/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
+                                              // Make a variable and give it the value from 'how-many-balls'
+                                              var limFacts = req.session.data['factors']
+
+                                              // Check whether the variable matches a condition
+                                              if (limFacts == "yes"){
+                                                // Send user to next page
+                                                res.redirect('/tasklistresponse/aboutyou/tellusyourhearingneeds/factors')
+
+                                              }else {
+                                                  // Send user to ineligible page
+                                                  res.redirect('/tasklistresponse/aboutyou/tellusyourhearingneeds/intermediary')
+                                              }
+
+                                            });
+                                            router.post('/tasklistresponse/aboutyou/confidentiality/start-answer', function (req, res) {
+                                                // Make a variable and give it the value from 'how-many-balls'
+                                                var conDetails = req.session.data['confidential']
+
+                                                // Check whether the variable matches a condition
+                                                if (conDetails == "yes"){
+                                                  // Send user to next page
+                                                  res.redirect('/tasklistresponse/aboutyou/confidentiality/feedback')
+
+                                                }else {
+                                                    // Send user to ineligible page
+                                                    res.redirect('/tasklistresponse/start')
+                                                }
+
+                                              });
+
+                                              router.post('/tasklistresponse/aboutyou/confidentiality/detailsknown-answer', function (req, res) {
+                                                  // Make a variable and give it the value from 'how-many-balls'
+                                                  var detKnown = req.session.data['detailsknown']
+
+                                                  // Check whether the variable matches a condition
+                                                  if (detKnown == "yes"){
+                                                    // Send user to next page
+                                                    res.redirect('/tasklistresponse/aboutyou/confidentiality/startalternative')
+
+                                                  }else {
+                                                      // Send user to ineligible page
+                                                      res.redirect('/tasklistresponse/aboutyou/confidentiality/start')
+                                                  }
+
+                                                });
+
+
 
   //Ameet's forms below
 
@@ -323,5 +388,53 @@ const router = express.Router()
           }
 
         });
+
+        router.post('/respondenttasklist/aboutyou/confidentiality/start-answer', function (req, res) {
+            // Make a variable and give it the value from 'how-many-balls'
+            var confDetails = req.session.data['confidential']
+
+            // Check whether the variable matches a condition
+            if (confDetails == "yes"){
+              // Send user to next page
+              res.redirect('/respondenttasklist/aboutyou/confidentiality/feedback')
+
+            }else {
+                // Send user to ineligible page
+                res.redirect('/respondenttasklist/startreply')
+            }
+
+          });
+
+          router.post('/respondenttasklist/applications/responsetoallegations/start-answer', function (req, res) {
+              // Make a variable and give it the value from 'how-many-balls'
+              var ansAlleg = req.session.data['answer']
+
+              // Check whether the variable matches a condition
+              if (ansAlleg == "yes"){
+                // Send user to next page
+                res.redirect('/respondenttasklist/applications/responsetoallegations/applicantabuse')
+
+              }else {
+                  // Send user to ineligible page
+                  res.redirect('/respondenttasklist/startreply')
+              }
+
+            });
+
+            router.post('/respondenttasklist/aboutyou/confidentiality/detailsknown-answer', function (req, res) {
+                // Make a variable and give it the value from 'how-many-balls'
+                var detailsKnown = req.session.data['detailsknown']
+
+                // Check whether the variable matches a condition
+                if (detailsKnown == "yes"){
+                  // Send user to next page
+                  res.redirect('/respondenttasklist/aboutyou/confidentiality/startalternative')
+
+                }else {
+                    // Send user to ineligible page
+                    res.redirect('/respondenttasklist/aboutyou/confidentiality/start')
+                }
+
+              });
 
 module.exports = router

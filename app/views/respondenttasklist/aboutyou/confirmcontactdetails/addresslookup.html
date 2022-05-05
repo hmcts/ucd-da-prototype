@@ -24,28 +24,35 @@
 
         <main class="govuk-main-wrapper " id="main-content" role="main">
 
-          <form action="checkanswers" method="post" novalidate>
+          <form action="addresslookupcont" method="post" novalidate>
 
-            <h1 class="govuk-heading-xl">Your contact details</h1>
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Your address
+                </h1>
+              </legend>
+              <div class="govuk-!-padding-bottom-4"></div>
+
+
             <div class="govuk-form-group">
-              <label class="govuk-label" for="telephone-number">
-                UK telephone number
-              </label>
-              <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel" placeholder="12345679">
+              <label for="steps-address-lookup-form-postcode-field" class="govuk-label">Your current postcode</label>
+              <input id="steps-address-lookup-form-postcode-field" class="govuk-input govuk-!-width-one-third" autocomplete="postal-code" type="text" value="" name="steps_address_lookup_form[postcode]">
             </div>
 
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="email">
-                Email address
-              </label>
-              <input class="govuk-input govuk-input--width-20" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
-            </div>
+  <p class="govuk-body govuk-!-margin-bottom-8">
+    <a class="govuk-link ga-pageLink" data-ga-category="address lookup" data-ga-label="applicant manual entry" href="/steps/applicant/address_details/239d6d34-ae29-4f89-8ca6-b6ae5de503b7">I live outside the UK</a>
+  </p>
+
+
+
 
             <button class="govuk-button" data-module="govuk-button">
               Continue
             </button>
-          </form>
 
+
+          </form>
 
         </main>
       </div>
