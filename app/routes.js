@@ -16,7 +16,7 @@ const router = express.Router()
             res.redirect('/tasklistresponse/safetyconcerns/abduction/policeinvolvement')
           } else {
             // Send user to ineligible page
-            res.redirect('/tasklistresponse/start')
+            res.redirect('/tasklistresponse/safetyconcerns/abduction/checkanswers')
           }
 
         });
@@ -173,7 +173,7 @@ const router = express.Router()
 
                             }else {
                                 // Send user to ineligible page
-                                res.redirect('/tasklistresponse/start')
+                                res.redirect('/tasklistresponse/safetyconcerns/yoursafety/generalno')
                             }
 
                           });
@@ -189,7 +189,7 @@ const router = express.Router()
 
                               }else {
                                   // Send user to ineligible page
-                                  res.redirect('/tasklistresponse/start')
+                                  res.redirect('/tasklistresponse/safetyconcerns/childrensafety/generalno')
                               }
 
                             });
@@ -285,7 +285,7 @@ const router = express.Router()
 
                                           }else {
                                               // Send user to ineligible page
-                                              res.redirect('/tasklistresponse/start')
+                                              res.redirect('/tasklistresponse/safetyconcerns/existingorders/checkanswers')
                                           }
 
                                         });
@@ -384,6 +384,7 @@ const router = express.Router()
                                                   }
 
                                                 });
+
 
 
 

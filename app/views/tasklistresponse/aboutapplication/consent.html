@@ -26,7 +26,7 @@
 
         <main class="govuk-main-wrapper " id="main-content" role="main">
 
-              <form action="../start" method="post" novalidate>
+              <form action="checkanswers" method="post" novalidate>
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -44,16 +44,16 @@
                         </h2>
                         <div class="govuk-radios" data-module="govuk-radios">
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="confidential-yes" name="confidential" type="radio" value="yes">
-                            <label class="govuk-label govuk-radios__label" for="confidential-yes">
+                            <input class="govuk-radios__input" id="consent-yes" name="consent" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="consent-yes">
                               Yes
                             </label>
                           </div>
 
 
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="confidential-no" name="confidential" type="radio" value="no" data-aria-controls="conditional-confidential">
-                            <label class="govuk-label govuk-radios__label" for="confidential-no">
+                            <input class="govuk-radios__input" id="consent-no" name="consent" type="radio" value="no" data-aria-controls="conditional-confidential">
+                            <label class="govuk-label govuk-radios__label" for="consent-no">
                               No
                             </label>
                           </div>
@@ -76,29 +76,32 @@
                             When did you receive the application?
                           </h2>
                         </legend>
+                        <div id="passport-issued-hint" class="govuk-hint">
+                          For example, 27 3 2007
+                        </div>
                         <div class="govuk-date-input" id="passport-issued">
                           <div class="govuk-date-input__item">
                             <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                              <label class="govuk-label govuk-date-input__label" for="receive-day">
                                 Day
                               </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="receive-day" name="receive-day" type="text" pattern="[0-9]*" inputmode="numeric">
                             </div>
                           </div>
                           <div class="govuk-date-input__item">
                             <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                              <label class="govuk-label govuk-date-input__label" for="receive-month">
                                 Month
                               </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="receive-month" name="receive-month" type="text" pattern="[0-9]*" inputmode="numeric">
                             </div>
                           </div>
                           <div class="govuk-date-input__item">
                             <div class="govuk-form-group">
-                              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                              <label class="govuk-label govuk-date-input__label" for="receive-year">
                                 Year
                               </label>
-                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="receive-year" name="receive-year" type="text" pattern="[0-9]*" inputmode="numeric">
                             </div>
                           </div>
                         </div>
@@ -110,7 +113,7 @@
                 </div>
 
                 <button class="govuk-button" data-module="govuk-button">
-                  Continue
+                  Save and continue
                 </button>
               </form>
 
