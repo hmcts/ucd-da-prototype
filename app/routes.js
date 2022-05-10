@@ -73,7 +73,7 @@ const router = express.Router()
                 // Check whether the variable matches a condition
                 if (miam == "yes"){
                   // Send user to next page
-                  res.redirect('/tasklistresponse/applicationdetails/miam/checkanswers-MIAM')
+                  res.redirect('/tasklistresponse/applicationdetails/miam/checkanswers-MIAMyes')
 
                 }else {
                     // Send user to ineligible page
@@ -81,6 +81,22 @@ const router = express.Router()
                 }
 
               });
+
+              router.post('/tasklistresponse/applicationdetails/miam/willingnesstoattend-answer', function (req, res) {
+                  // Make a variable and give it the value from 'how-many-balls'
+                  var miamWill = req.session.data['MIAM-willing']
+
+                  // Check whether the variable matches a condition
+                  if (miamWill == "yes"){
+                    // Send user to next page
+                    res.redirect('/tasklistresponse/applicationdetails/miam/checkanswers-MIAM')
+
+                  }else {
+                      // Send user to ineligible page
+                      res.redirect('/tasklistresponse/applicationdetails/miam/checkanswers-MIAMnono')
+                  }
+
+                });
 
               router.post('/tasklistresponse/safetyconcerns/yoursafety/sexualabuse-answer', function (req, res) {
                   // Make a variable and give it the value from 'how-many-balls'
