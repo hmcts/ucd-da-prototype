@@ -406,22 +406,7 @@ const router = express.Router()
 
   //Ameet's forms below
 
-      router.post('/respondenttasklist/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
-          // Make a variable and give it the value from 'how-many-balls'
-          var limFactors = req.session.data['factors']
-
-          // Check whether the variable matches a condition
-          if (limFactors == "yes"){
-            // Send user to next page
-            res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/factors')
-
-          }else {
-              // Send user to ineligible page
-              res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/intermediary')
-          }
-
-        });
-
+      
         router.post('/respondenttasklist/aboutyou/confidentiality/start-answer', function (req, res) {
             // Make a variable and give it the value from 'how-many-balls'
             var confDetails = req.session.data['confidential']
@@ -465,7 +450,7 @@ const router = express.Router()
 
               }else {
                   // Send user to ineligible page
-                  res.redirect('/respondenttasklist/startreply')
+                  res.redirect('/respondenttasklist/applications/responsetoallegations/checkanswers-no')
               }
 
             });
@@ -485,6 +470,22 @@ const router = express.Router()
                 }
 
               });
+
+              router.post('/respondenttasklist/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
+                  // Make a variable and give it the value from 'how-many-balls'
+                  var reasonAdj = req.session.data['reasonable-adjustments']
+
+                  // Check whether the variable matches a condition
+                  if (reasonAdj == "No"){
+                    // Send user to next page
+                    res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/safetyrequirements')
+
+                  }else {
+                      // Send user to ineligible page
+                      res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/documents')
+                  }
+
+                });
 
 
 

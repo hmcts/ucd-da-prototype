@@ -26,26 +26,25 @@
 
         <main class="govuk-main-wrapper " id="main-content" role="main">
 
-              <form action="start-answer" method="post" novalidate>
+              <form action="intermediary" method="post" novalidate>
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                      <h1 class="govuk-fieldset__heading">
-                        Keeping your contact details private
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-heading-l">
+                        Attending the hearing
                       </h1>
-
                     </legend>
-                    <div class="govuk-!-padding-bottom-6"></div>
-                      <p class="govuk-body-m">The answers you give in your response will be shared with the other people named in this application (the applicants). This will include your contact details.</p>
-                      <p class="govuk-body-m">For example, if you believe the other people in the case pose a risk to you or the children, you can ask the court to keep your contact details private.</p>
 
-
-
-                      <div class="govuk-!-padding-bottom-3"></div>
                     <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset">
-                        <h3 class="govuk-heading-m">Do you want to keep your contact details private from the other people named in the application (the applicants)?
-                        </h3>
+                        <legend class="govuk-fieldset__legend">
+                            <strong>Special arrangements</strong>
+                        </legend>
+
+                        <p>In some cases, the court can make special arrangements for an adult or child involved in the case.</p>
+                        <p>For example - the court may provide a separate waiting room that is set apart from the respondent.</p>
+                        <p>Will the court need to make special arrangements for the applicant, or any child involved in the case?</p>
+
                         <div class="govuk-radios" data-module="govuk-radios">
                           <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="confidential-yes" name="confidential" type="radio" value="yes" data-aria-controls="conditional-confidential">
@@ -54,31 +53,21 @@
                             </label>
                           </div>
                           <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-confidential">
-                            <div class="govuk-form-group">
 
-                              <label class="govuk-label" for="privatedetails">Which contact details do you want to keep private from the other people in this application?</label>
-                              <div id="confidential-hint" class="govuk-hint">
-                                You've said that the applicants know some of your contact details. Make sure you select contact details the applicants do not already know.</div>
                                   <fieldset class="govuk-fieldset">
                                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                                      <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="private-address" name="private" type="checkbox" value="address">
-                                        <label class="govuk-label govuk-checkboxes__label" for="private-address">
-                                          Address
-                                        </label>
+                                      <div class="govuk-form-group">
                                       </div>
-                                      <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="private-number" name="private" type="checkbox" value="number">
-                                        <label class="govuk-label govuk-checkboxes__label" for="private-number">
-                                          Phone number
-                                        </label>
-                                      </div>
-                                      <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="private-email" name="private" type="checkbox" value="e-mail">
-                                        <label class="govuk-label govuk-checkboxes__label" for="private-email">
-                                          Email
-                                        </label>
+                                      <label class="govuk-label govuk-!-margin-bottom-4" for="event-name">
+                                        Give details of the special arrangements that are required.
+                                      </label>
+
+                                      <label class="govuk-label govuk-!-margin-bottom-4" for="event-name">
+                                        For example, a screen to separate the applicant from the respondent.
+                                      </label>
+                                      <div class="govuk-form-group">
+                                        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
                                       </div>
                                     </div>
                                   </fieldset>
@@ -91,20 +80,23 @@
                               No
                             </label>
                           </div>
-                        </div>
-                      </fieldset>
                     </div>
 
                   </fieldset>
                 </div>
-
-                <button class="govuk-button" data-module="govuk-button">
-                  Save and continue
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  Previous
+                </button>
+                <button class="govuk-button" data-module="govuk-button" >
+                  Continue
                 </button>
               </form>
 
         </main>
       </div>
+
+
+
 
     </div>
     <div class="govuk-grid-column-one-third">

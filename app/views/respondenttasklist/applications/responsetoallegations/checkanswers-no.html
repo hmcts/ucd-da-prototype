@@ -24,44 +24,33 @@
 
       <main class="govuk-main-wrapper " id="main-content" role="main">
 
-           <h1 class="govuk-heading-l">Check your answers </h1>
+           <h1 class="govuk-heading-xl">Check your answers </h1>
 
-           <h2 class="govuk-heading-l">Your consent to the application</h2>
+           <h2 class="govuk-heading-l">Your response to the allegations of harm or violence</h2>
 
            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
              <div class="govuk-summary-list__row">
-               <dt class="govuk-summary-list__key govuk-!-width-one-half">
-                 Your consent to the application
+               <dt class="govuk-summary-list__key">
+                 Do you wish to respond to the applicants' allegations of harm and violence?
                </dt>
                <dd class="govuk-summary-list__value">
-                 {{ data['consent-yes'] }} {{ data['consent-no'] }}
+                 No
                </dd>
                <dd class="govuk-summary-list__actions">
-                 <a class="govuk-link" href="#">
-                   Edit<span class="govuk-visually-hidden">consent</span>
+                 <a class="govuk-link" href="start">
+                   Edit<span class="govuk-visually-hidden">response</span>
                  </a>
                </dd>
              </div>
-             <div class="govuk-summary-list__row">
-               <dt class="govuk-summary-list__key govuk-!-width-one-half">
-                 When did you receive the application?
-               </dt>
-               <dd class="govuk-summary-list__value">
-                 {{ data['receive-day'] }} {{ data['receive-month'] }} {{ data['receive-year'] }}
-               </dd>
-               <dd class="govuk-summary-list__actions">
-                 <a class="govuk-link" href="#">
-                   Edit<span class="govuk-visually-hidden">receive</span>
-                 </a>
-               </dd>
-             </div>
+
+
 
            </dl>
 
          <div>
 
 
-       <form action="/tasklistresponse/start" method="post" novalidate>
+       <form action="../../startreply" method="post" novalidate>
 
          <input type="hidden" name="answers-checked" value="true">
 
