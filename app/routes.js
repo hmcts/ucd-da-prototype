@@ -489,4 +489,57 @@ const router = express.Router()
 
 
 
+
+  //Nadeems forms below:
+
+  router.post('/applicantjourney/aboutyou/confidentiality/start-answer', function (req, res) {
+      // Make a variable and give it the value from 'how-many-balls'
+      var conDetails = req.session.data['confidential']
+
+      // Check whether the variable matches a condition
+      if (conDetails == "yes"){
+        // Send user to next page
+        res.redirect('/applicantjourney/aboutyou/confidentiality/feedback')
+
+      }else {
+          // Send user to ineligible page
+          res.redirect('/applicantjourney/aboutyou/confidentiality/feedbackno')
+      }
+
+    });
+
+    router.post('/applicantjourney/aboutyou/confidentiality/startalternative-answer', function (req, res) {
+        // Make a variable and give it the value from 'how-many-balls'
+        var noConDe = req.session.data['confidential']
+
+        // Check whether the variable matches a condition
+        if (noConDe == "yes"){
+          // Send user to next page
+          res.redirect('/applicantjourney/aboutyou/confidentiality/feedback')
+
+        }else {
+            // Send user to ineligible page
+            res.redirect('/applicantjourney/aboutyou/confidentiality/feedbackno')
+        }
+
+      });
+
+    router.post('/applicantjourney/aboutyou/confidentiality/detailsknown-answer', function (req, res) {
+        // Make a variable and give it the value from 'how-many-balls'
+        var detKnown = req.session.data['detailsknown']
+
+        // Check whether the variable matches a condition
+        if (detKnown == "yes"){
+          // Send user to next page
+          res.redirect('/applicantjourney/aboutyou/confidentiality/startalternative')
+
+        }else {
+            // Send user to ineligible page
+            res.redirect('/applicantjourney/aboutyou/confidentiality/start')
+        }
+
+      });
+
+
+
 module.exports = router

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Progress bars
+ Applicant tasklist
 {% endblock %}
 
 {% block header %}
@@ -26,13 +26,41 @@
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
         Sam Richards
       </h1>
+      <p class="govuk-body">CCD ID: #1636575673018538</p>
   </div>
 
   <div class="govuk-grid-column-two-thirds">
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-      <img src="../public/images/banners/postapplicationissued.png" width="100%" alt="Progress stage: Response submitted">
+      <div class="hmcts-progress-bar-vertical" role="progressbar">
+        <ol class="hmcts-progress-bar__list">
+        
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Current Step 1: </span>Application submitted</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 2: </span>Hearings</span>
+          </li>
+          
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 3: </span>Orders & hearings outcome</span>
+          </li>
+
+          <li class="hmcts-progress-bar__list-item">
+            <span class="hmcts-progress-bar__icon"></span>
+            <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 4: </span>Case closed</span>
+          </li>
+
+        </ol>
+      </div> 
+
+
+
       <div class="govuk-!-padding-bottom-4"></div>
 
       <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
@@ -42,19 +70,44 @@
           </h2>
         </div>
         <div class="govuk-notification-banner__content">
-          <p class="govuk-notification-banner__heading">
-            You have been named as the respondent in an application about a child.
+          <p class="govuk-notification-banner__heading">Your application is being reviewed.</p>
+          <p class="govuk-body">You will be contacted to tell you what you need to do next.</p>
+          <p class="govuk-body">Please review or update the <a class="govuk-body" href="#">About you section</a> below to ensure we have your most up to date personal details</p>
+          <p class="govuk-body"><strong>Important documents</strong></p>
+          <p class="govuk-body">
+            <a href="" aria-describedby="">Application submitted</a><br>
+            <a href="" aria-describedby="">Confidentiality</a><br>
+            <a href="" aria-describedby="">Witness statement</a>
           </p>
-          <p class="govuk-body">This means that another person (the applicant) has applied to a court to make a decision about a child.</p>
-          <p class="govuk-body">You should read the application and respond to it by <strong>12 July 2022</strong></p>
-          <p class="govuk-notification-banner__heading">
-            <a class="govuk-notification-banner__link" href="../tasklistresponse/start">Start your response</a>
-          </p>
-
         </div>
       </div>
 
+
+      <h class="govuk-heading-m">Domestic abuse application</h2>
+      <p class="govuk-body">Below are all the tasks to update you on the progress made with your application  and what you will need to do next.</p>
+
+
       <ol class="app-task-list">
+
+
+        <li>
+          <h2 class="app-task-list__section">
+             Messages
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="eligibility-status">
+                 Send and reply to messages
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--red" id="eligibility-status">NEW</strong>
+            </li>
+          </ul>
+        </li>
+
+
+
         <li>
           <h2 class="app-task-list__section">
              About you
@@ -62,11 +115,11 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="aboutyou/confidentiality/start" aria-describedby="eligibility-status">
+                <a href="aboutyou/confidentiality/detailsknown" aria-describedby="eligibility-status">
                   Keep your details private
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">To do</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">COMPLETED</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -74,15 +127,7 @@
                   Confirm or edit your contact details
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">To do</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="aboutyou/tellusyourhearingneeds/start" aria-describedby="read-declaration-status">
-                  Enter your hearing needs
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">To do</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">COMPLETED</strong>
             </li>
           </ul>
         </li>
@@ -95,83 +140,96 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="#" aria-describedby="company-information-status">
-                  Applicant's request for child arrangements
+                  Application submitted (FL401)
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="company-information-status">Completed</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="company-information-status">DOWNLOAD</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="#" aria-describedby="company-information-status">
-                  Allegations of harm or violence made against you
+                  Confidentiality (C8)
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="company-information-status">Completed</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="company-information-status">DOWNLOAD</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="../tasklistresponse/start" aria-describedby="company-information-status">
-                  Your response to the child arrangements application
+                <a href="" aria-describedby="company-information-status">
+                  Witness statement
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">To do</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="company-information-status">
-                  Your response to the allegations of harm or violence
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">To do</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="company-information-status">
-                  Review and submit your response
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">To do</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--green" id="eligibility-status">DOWNLOAD</strong>
             </li>
           </ul>
         </li>
 
         <li>
           <h2 class="app-task-list__section">
-            Your hearings
+            Hearings
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="applicationdetails/aboutyou/start" aria-describedby="application-detail-about-you">
-                  Check your hearing details
+                <a href="" aria-describedby="application-detail-about-you">
+                  Attending the hearing
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Pending</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--blue" id="submit-pay-status">PENDING</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                 <a href="applicationdetails/miam/start" aria-describedby="application-details-miam">
-                  Request a change to your hearing
+                <a href="" aria-describedby="application-detail-about-you">
+                  Check your hearing details
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Pending</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--blue" id="submit-pay-status">PENDING</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                 <a href="" aria-describedby="application-details-miam">
+                  Hearing outcomes
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--blue" id="submit-pay-status">PENDING</strong>
             </li>
 
           </ul>
         </li>
 
+
+
         <li>
           <h2 class="app-task-list__section">
-             Your documents
+             Orders and directions
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="safetyconcerns/riskofharm/start" aria-describedby="risk-of-harm-or-violence">
-                  Read your documents
+                  Orders
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Pending</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--blue" id="submit-pay-status">PENDING</strong>
+            </li>
+         </ul>
+        </li>
+
+
+
+
+        <li>
+          <h2 class="app-task-list__section">
+             Documents
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/riskofharm/start" aria-describedby="risk-of-harm-or-violence">
+                  All documents
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--blue" id="submit-pay-status">PENDING</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -179,15 +237,7 @@
                   Upload a document
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Pending</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="safetyconcerns/riskofharm/start" aria-describedby="risk-of-harm-or-violence">
-                  See all the documents relating to this application
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Not available</strong>
+              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--blue" id="submit-pay-status">PENDING</strong>
             </li>
          </ul>
         </li>
@@ -199,11 +249,11 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="additionalinformation/internationlelement/start" aria-describedby="international-element">
+                <a href="#" aria-describedby="international-element">
                   Review your final order
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Pending</strong>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="submit-pay-status">PENDING</strong>
             </li>
 
           </ul>
@@ -239,6 +289,30 @@
           <div class="govuk-!-padding-bottom-2"></div>
         </li>
       </ul>
+
+
+
+    	<details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+
+
+
+
 
   </div>
 </div>
