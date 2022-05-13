@@ -1,3 +1,4 @@
+
 {#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
 {%- set assetPath = '/govuk/assets' -%}
 
@@ -57,12 +58,20 @@
       meta: {
         items: [
           {
-            href: "https://govuk-prototype-kit.herokuapp.com/",
-            text: "GOV.UK Prototype Kit " + releaseVersion
+            href: "/footer/cookies",
+            text: "Cookies"
           },
           {
-            href: "/prototype-admin/clear-data",
-            text: "Clear data"
+            href: "/footer/privacypolicy",
+            text: "Privacy Policy"
+          },
+          {
+            href: "/footer/accessibility",
+            text: "Accessibility statement"
+          },
+          {
+            href: "/footer/termsandconditions",
+            text: "Terms and conditions"
           }
         ],
         visuallyHiddenTitle: "Footer links"
