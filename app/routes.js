@@ -542,4 +542,22 @@ const router = express.Router()
 
 
 
+      router.post('/applicantjourney/tellusyourhearingneeds/start-answer', function (req, res) {
+        // Make a variable and give it the value from 'how-many-balls'
+        var reasonAdj = req.session.data['reasonable-adjustments']
+
+        // Check whether the variable matches a condition
+        if (reasonAdj == "No"){
+          // Send user to next page
+          res.redirect('/applicantjourney/tellusyourhearingneeds/safetyrequirements')
+
+        }else {
+            // Send user to ineligible page
+            res.redirect('/applicantjourney/tellusyourhearingneeds/documents')
+        }
+
+      });
+
+
+
 module.exports = router
