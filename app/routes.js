@@ -313,11 +313,11 @@ const router = express.Router()
                                             // Check whether the variable matches a condition
                                             if (legRep == "yes"){
                                               // Send user to next page
-                                              res.redirect('/tasklistresponse/legalrepresentation/solicitorresponse')
+                                              res.redirect('/tasklistresponse/legalrepresentation/solicitordirect')
 
                                             }else {
                                                 // Send user to ineligible page
-                                                res.redirect('/tasklistresponse/start')
+                                                res.redirect('/tasklistresponse/legalrepresentation/solicitornotdirect')
                                             }
 
                                           });
@@ -406,7 +406,7 @@ const router = express.Router()
 
   //Ameet's forms below
 
-      
+
         router.post('/respondenttasklist/aboutyou/confidentiality/start-answer', function (req, res) {
             // Make a variable and give it the value from 'how-many-balls'
             var confDetails = req.session.data['confidential']
@@ -486,6 +486,7 @@ const router = express.Router()
                   }
 
                 });
+
 
 
 

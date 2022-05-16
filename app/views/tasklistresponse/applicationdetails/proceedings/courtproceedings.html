@@ -30,17 +30,17 @@
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <span class="govuk-caption-l">Current or previous proceedings</span>
-            <h1 class="govuk-heading-xl">Provide details of court cases the children have been involved in</h1>
+            <h1 class="govuk-heading-xl">Provide details of court cases you or the children have been involved in</h1>
 
           </legend>
 
 			<div class="govuk-!-padding-bottom-3"></div>
 
-        <h2 class="govuk-heading-l">Type of proceedings</h2>
+
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
              <b>Emergency Protection Order </b>
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
@@ -52,18 +52,19 @@
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-emergency">
                 <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
                       Court name
                     </label>
-                  </h1>
-                   <input class="govuk-input" id="emergency-court" name="emergency-court" type="text">
+                  </h3>
+                   <input class="govuk-input govuk-!-width-one-half" id="emergency-court" name="emergency-court" type="text">
                 </div>
               <div class="govuk-form-group">
-                 <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                 <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
                     Case number (if known)
                   </label>
-                </h1>
-                 <input class="govuk-input" id="emergency-case" name="emergency-case" type="text">
+                </h3>
+                <div class="govuk-hint" id="steps-court-orders-details-form-non-molestation-case-number-hint">For example, BS19F99999</div>
+                 <input class="govuk-input govuk-!-width-one-half" id="emergency-case" name="emergency-case" type="text">
               </div>
               </div>
               <div class="govuk-radios__item">
@@ -86,7 +87,7 @@
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
              <b>Supervision Order</b>
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
@@ -98,18 +99,20 @@
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-supervision">
                 <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
                       Court name
                     </label>
-                  </h1>
-                   <input class="govuk-input" id="supervision-court" name="supervision-court" type="text">
+                  </h3>
+                   <input class="govuk-input govuk-!-width-one-half" id="supervision-court" name="supervision-court" type="text">
                 </div>
                 <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
                       Case number (if known)
                     </label>
-                  </h1>
-                   <input class="govuk-input" id="supervision-case" name="supervision-case" type="text">
+                  </h3>
+
+                  <div class="govuk-hint" id="steps-court-orders-details-form-non-molestation-case-number-hint">For example, BS19F99999</div>
+                   <input class="govuk-input govuk-!-width-one-half" id="supervision-case" name="supervision-case" type="text">
                 </div>
               </div>
               <div class="govuk-radios__item">
@@ -132,7 +135,7 @@
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
              <b>Care Order </b>
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
@@ -144,18 +147,19 @@
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-care">
                 <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
                       Court name
                     </label>
-                  </h1>
-                   <input class="govuk-input" id="care-court" name="care-court" type="text">
+                  </h3>
+                   <input class="govuk-input govuk-!-width-one-half" id="care-court" name="care-court" type="text">
                 </div>
                 <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
                       Case number (if known)
                     </label>
-                  </h1>
-                   <input class="govuk-input" id="care-case" name="care-case" type="text">
+                  </h3>
+                  <div class="govuk-hint" id="steps-court-orders-details-form-non-molestation-case-number-hint">For example, BS19F99999</div>
+                   <input class="govuk-input govuk-!-width-one-half" id="care-case" name="care-case" type="text">
                 </div>
               </div>
               <div class="govuk-radios__item">
@@ -178,7 +182,7 @@
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
              <b>Child Abduction </b>
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
@@ -190,18 +194,19 @@
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-child">
                 <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
                       Court name
                     </label>
-                  </h1>
-                   <input class="govuk-input" id="child-court" name="child-court" type="text">
+                  </h3>
+                   <input class="govuk-input govuk-!-width-one-half" id="child-court" name="child-court" type="text">
                 </div>
                 <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
                       Case number (if known)
                     </label>
-                  </h1>
-                   <input class="govuk-input" id="child-case" name="child-case" type="text">
+                  </h3>
+                  <div class="govuk-hint" id="steps-court-orders-details-form-non-molestation-case-number-hint">For example, BS19F99999</div>
+                   <input class="govuk-input govuk-!-width-one-half" id="child-case" name="child-case" type="text">
                 </div>
               </div>
               <div class="govuk-radios__item">
@@ -224,53 +229,7 @@
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend">
-            <b>Family Law Act 1996 Part 4 (non molestation or occupation order) </b>
-            </legend>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="family-yes" name="family" type="radio" value="yes" data-aria-controls="conditional-family">
-                <label class="govuk-label govuk-radios__label" for="family-yes">
-                  Yes
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-family">
-                <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
-                      Court name
-                    </label>
-                  </h1>
-                   <input class="govuk-input" id="family-court" name="family-court" type="text">
-                </div>
-                <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
-                      Case number (if known)
-                    </label>
-                  </h1>
-                   <input class="govuk-input" id="family-case" name="family-case" type="text">
-                </div>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="family-no" name="family" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="family-no">
-                  No
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="family-other" name="family" type="radio" value="other">
-                <label class="govuk-label govuk-radios__label" for="family-other">
-                  I don't know
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="govuk-!-padding-bottom-4"></div>
-
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
              <b>Child Arrangements Order</b>
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
@@ -282,18 +241,19 @@
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-arrangements">
                 <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
                       Court name
                     </label>
-                  </h1>
-                   <input class="govuk-input" id="arrangements-court" name="arrangements-court" type="text">
+                  </h3>
+                   <input class="govuk-input govuk-!-width-one-half" id="arrangements-court" name="arrangements-court" type="text">
                 </div>
                 <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
                       Case number (if known)
                     </label>
-                  </h1>
-                   <input class="govuk-input" id="arrangements-case" name="arrangements-case" type="text">
+                  </h3>
+                  <div class="govuk-hint" id="steps-court-orders-details-form-non-molestation-case-number-hint">For example, BS19F99999</div>
+                   <input class="govuk-input govuk-!-width-one-half" id="arrangements-case" name="arrangements-case" type="text">
                 </div>
               </div>
               <div class="govuk-radios__item">
@@ -316,7 +276,7 @@
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
              <b>Financial Order under Schedule 1 of the Children Act 1989 </b>
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
@@ -328,18 +288,19 @@
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-financial">
                 <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
+                   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="court-name">
                       Court name
                     </label>
-                  </h1>
-                   <input class="govuk-input" id="financial-court" name="financial-court" type="text">
+                  </h3>
+                   <input class="govuk-input govuk-!-width-one-half" id="financial-court" name="financial-court" type="text">
                 </div>
                 <div class="govuk-form-group">
-                   <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
+                   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"	for="case-number">
                       Case number (if known)
                     </label>
-                  </h1>
-                   <input class="govuk-input" id="financial-case" name="financial-case" type="text">
+                  </h3>
+                  <div class="govuk-hint" id="steps-court-orders-details-form-non-molestation-case-number-hint">For example, BS19F99999</div>
+                   <input class="govuk-input govuk-!-width-one-half" id="financial-case" name="financial-case" type="text">
                 </div>
               </div>
               <div class="govuk-radios__item">
@@ -358,9 +319,576 @@
           </fieldset>
         </div>
 
-          </fieldset>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"><span class="govuk-fieldset__heading">Non-molestation order</span>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input id="steps-court-orders-details-form-non-molestation-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[non_molestation]" aria-controls="steps-court-orders-details-form-non-molestation-yes-conditional" aria-expanded="false">
+                <label for="steps-court-orders-details-form-non-molestation-yes-field" class="govuk-label govuk-radios__label">Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="steps-court-orders-details-form-non-molestation-yes-conditional">
+                <div class="govuk-form-group">
+                  <label for="steps-court-orders-details-form-non-molestation-case-number-field" class="govuk-label govuk-label--s">Case number
+                  </label>
+                  <div class="govuk-hint" id="steps-court-orders-details-form-non-molestation-case-number-hint">For example, BS19F99999</div>
+                  <input id="steps-court-orders-details-form-non-molestation-case-number-field" class="govuk-input govuk-!-width-one-half" aria-describedby="steps-court-orders-details-form-non-molestation-case-number-hint" type="text" name="steps_court_orders_details_form[non_molestation_case_number]">
+                </div>
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="steps-court-orders-details-form-non-molestation-issue-date-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <span class="govuk-fieldset__heading">What date was it made?</span>
+                    </legend>
+                    <span class="govuk-hint" id="steps-court-orders-details-form-non-molestation-issue-date-hint">For example, 31 3 2015</span>
+                    <div class="govuk-date-input">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_non_molestation_issue_date_3i">Day</label>
+                          <input id="steps_court_orders_details_form_non_molestation_issue_date_3i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_court_orders_details_form[non_molestation_issue_date(3i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_non_molestation_issue_date_2i">Month
+                          </label>
+                          <input id="steps_court_orders_details_form_non_molestation_issue_date_2i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_court_orders_details_form[non_molestation_issue_date(2i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                         <div class="govuk-form-group">
+                           <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_non_molestation_issue_date_1i">Year
+                           </label>
+                           <input id="steps_court_orders_details_form_non_molestation_issue_date_1i" class="govuk-input govuk-date-input__input govuk-input--width-4" name="steps_court_orders_details_form[non_molestation_issue_date(1i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                         </div>
+                       </div>
+                     </div>
+                   </fieldset>
+                 </div>
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-non-molestation-length-field" class="govuk-label govuk-label--s">How long was the order for?</label>
+              <input id="steps-court-orders-details-form-non-molestation-length-field" class="govuk-input govuk-!-width-one-half" type="text" name="steps_court_orders_details_form[non_molestation_length]">
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <span class="govuk-fieldset__heading">Is the order current?</span>
+                </legend>
+                <input value="" type="hidden" name="steps_court_orders_details_form[non_molestation_is_current]" id="steps_court_orders_details_form_non_molestation_is_current">
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item"><input id="steps-court-orders-details-form-non-molestation-is-current-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[non_molestation_is_current]">
+                    <label for="steps-court-orders-details-form-non-molestation-is-current-yes-field" class="govuk-label govuk-radios__label">Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input id="steps-court-orders-details-form-non-molestation-is-current-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_court_orders_details_form[non_molestation_is_current]">
+                    <label for="steps-court-orders-details-form-non-molestation-is-current-no-field" class="govuk-label govuk-radios__label">No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-non-molestation-court-name-field" class="govuk-label govuk-label--s">Which court issued the order?</label>
+              <input id="steps-court-orders-details-form-non-molestation-court-name-field" class="govuk-input" type="text" name="steps_court_orders_details_form[non_molestation_court_name]">
+            </div>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input id="steps-court-orders-details-form-non-molestation-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_court_orders_details_form[non_molestation]">
+            <label for="steps-court-orders-details-form-non-molestation-no-field" class="govuk-label govuk-radios__label">No
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="care-other" name="care" type="radio" value="other">
+            <label class="govuk-label govuk-radios__label" for="care-other">
+              I don't know
+            </label>
+          </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <span class="govuk-fieldset__heading">Occupation order</span>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input id="steps-court-orders-details-form-occupation-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[occupation]" aria-controls="steps-court-orders-details-form-occupation-yes-conditional" aria-expanded="false"><label for="steps-court-orders-details-form-occupation-yes-field" class="govuk-label govuk-radios__label">Yes</label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="steps-court-orders-details-form-occupation-yes-conditional">
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-occupation-case-number-field" class="govuk-label govuk-label--s">Case number
+              </label>
+              <div class="govuk-hint" id="steps-court-orders-details-form-occupation-case-number-hint">For example, BS19F99999</div>
+              <input id="steps-court-orders-details-form-occupation-case-number-field" class="govuk-input govuk-!-width-one-half" aria-describedby="steps-court-orders-details-form-occupation-case-number-hint" type="text" name="steps_court_orders_details_form[occupation_case_number]">
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="steps-court-orders-details-form-occupation-issue-date-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <span class="govuk-fieldset__heading">What date was it made?</span>
+                </legend>
+                <span class="govuk-hint" id="steps-court-orders-details-form-occupation-issue-date-hint">For example, 31 3 2015</span>
+                <div class="govuk-date-input">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_occupation_issue_date_3i">Day
+                      </label>
+                      <input id="steps_court_orders_details_form_occupation_issue_date_3i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_court_orders_details_form[occupation_issue_date(3i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_occupation_issue_date_2i">Month
+                      </label>
+                      <input id="steps_court_orders_details_form_occupation_issue_date_2i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_court_orders_details_form[occupation_issue_date(2i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_occupation_issue_date_1i">Year
+                      </label>
+                      <input id="steps_court_orders_details_form_occupation_issue_date_1i" class="govuk-input govuk-date-input__input govuk-input--width-4" name="steps_court_orders_details_form[occupation_issue_date(1i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-occupation-length-field" class="govuk-label govuk-label--s">How long was the order for?
+              </label>
+              <input id="steps-court-orders-details-form-occupation-length-field" class="govuk-input govuk-!-width-one-half" type="text" name="steps_court_orders_details_form[occupation_length]">
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <span class="govuk-fieldset__heading">Is the order current?</span>
+                </legend>
+                <input value="" type="hidden" name="steps_court_orders_details_form[occupation_is_current]" id="steps_court_orders_details_form_occupation_is_current">
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                  <input id="steps-court-orders-details-form-occupation-is-current-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[occupation_is_current]">
+                  <label for="steps-court-orders-details-form-occupation-is-current-yes-field" class="govuk-label govuk-radios__label">Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input id="steps-court-orders-details-form-occupation-is-current-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_court_orders_details_form[occupation_is_current]">
+                  <label for="steps-court-orders-details-form-occupation-is-current-no-field" class="govuk-label govuk-radios__label">No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-occupation-court-name-field" class="govuk-label govuk-label--s">Which court issued the order?
+              </label>
+              <input id="steps-court-orders-details-form-occupation-court-name-field" class="govuk-input" type="text" name="steps_court_orders_details_form[occupation_court_name]">
+            </div>
+           </div>
+           <div class="govuk-radios__item">
+             <input id="steps-court-orders-details-form-occupation-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_court_orders_details_form[occupation]">
+             <label for="steps-court-orders-details-form-occupation-no-field" class="govuk-label govuk-radios__label">No
+             </label>
+           </div>
+           <div class="govuk-radios__item">
+             <input class="govuk-radios__input" id="care-other" name="care" type="radio" value="other">
+             <label class="govuk-label govuk-radios__label" for="care-other">
+               I don't know
+             </label>
+           </div>
+         </div>
+       </fieldset>
+     </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <span class="govuk-fieldset__heading">Forced marriage protection order</span>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input id="steps-court-orders-details-form-forced-marriage-protection-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[forced_marriage_protection]" aria-controls="steps-court-orders-details-form-forced-marriage-protection-yes-conditional" aria-expanded="false">
+            <label for="steps-court-orders-details-form-forced-marriage-protection-yes-field" class="govuk-label govuk-radios__label">Yes
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="steps-court-orders-details-form-forced-marriage-protection-yes-conditional">
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-forced-marriage-protection-case-number-field" class="govuk-label govuk-label--s">Case number
+              </label>
+              <div class="govuk-hint" id="steps-court-orders-details-form-forced-marriage-protection-case-number-hint">For example, BS19F99999</div>
+              <input id="steps-court-orders-details-form-forced-marriage-protection-case-number-field" class="govuk-input govuk-!-width-one-half" aria-describedby="steps-court-orders-details-form-forced-marriage-protection-case-number-hint" type="text" name="steps_court_orders_details_form[forced_marriage_protection_case_number]">
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="steps-court-orders-details-form-forced-marriage-protection-issue-date-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <span class="govuk-fieldset__heading">What date was it made?</span>
+                </legend>
+                <span class="govuk-hint" id="steps-court-orders-details-form-forced-marriage-protection-issue-date-hint">For example, 31 3 2015</span>
+                <div class="govuk-date-input">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_forced_marriage_protection_issue_date_3i">Day
+                      </label>
+                      <input id="steps_court_orders_details_form_forced_marriage_protection_issue_date_3i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_court_orders_details_form[forced_marriage_protection_issue_date(3i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_forced_marriage_protection_issue_date_2i">Month
+                      </label>
+                      <input id="steps_court_orders_details_form_forced_marriage_protection_issue_date_2i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_court_orders_details_form[forced_marriage_protection_issue_date(2i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_forced_marriage_protection_issue_date_1i">Year
+                      </label>
+                      <input id="steps_court_orders_details_form_forced_marriage_protection_issue_date_1i" class="govuk-input govuk-date-input__input govuk-input--width-4" name="steps_court_orders_details_form[forced_marriage_protection_issue_date(1i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-forced-marriage-protection-length-field" class="govuk-label govuk-label--s">How long was the order for?
+              </label>
+              <input id="steps-court-orders-details-form-forced-marriage-protection-length-field" class="govuk-input govuk-!-width-one-half" type="text" name="steps_court_orders_details_form[forced_marriage_protection_length]">
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <span class="govuk-fieldset__heading">Is the order current?</span>
+                </legend>
+                <input value="" type="hidden" name="steps_court_orders_details_form[forced_marriage_protection_is_current]" id="steps_court_orders_details_form_forced_marriage_protection_is_current">
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input id="steps-court-orders-details-form-forced-marriage-protection-is-current-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[forced_marriage_protection_is_current]">
+                    <label for="steps-court-orders-details-form-forced-marriage-protection-is-current-yes-field" class="govuk-label govuk-radios__label">Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input id="steps-court-orders-details-form-forced-marriage-protection-is-current-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_court_orders_details_form[forced_marriage_protection_is_current]">
+                    <label for="steps-court-orders-details-form-forced-marriage-protection-is-current-no-field" class="govuk-label govuk-radios__label">No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-forced-marriage-protection-court-name-field" class="govuk-label govuk-label--s">Which court issued the order?</label>
+              <input id="steps-court-orders-details-form-forced-marriage-protection-court-name-field" class="govuk-input" type="text" name="steps_court_orders_details_form[forced_marriage_protection_court_name]">
+            </div>
+           </div>
+           <div class="govuk-radios__item">
+             <input id="steps-court-orders-details-form-forced-marriage-protection-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_court_orders_details_form[forced_marriage_protection]">
+             <label for="steps-court-orders-details-form-forced-marriage-protection-no-field" class="govuk-label govuk-radios__label">No
+             </label>
+           </div>
+           <div class="govuk-radios__item">
+             <input class="govuk-radios__input" id="care-other" name="care" type="radio" value="other">
+             <label class="govuk-label govuk-radios__label" for="care-other">
+               I don't know
+             </label>
+           </div>
+         </div>
+       </fieldset>
+     </div>
+
+     <div class="govuk-form-group">
+       <fieldset class="govuk-fieldset" aria-describedby="steps-court-orders-details-form-restraining-hint">
+         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+           <span class="govuk-fieldset__heading">Restraining order</span>
+         </legend>
+         <span class="govuk-hint" id="steps-court-orders-details-form-restraining-hint">Under the Protection from Harassment Act 1997</span>
+         <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input id="steps-court-orders-details-form-restraining-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[restraining]" aria-controls="steps-court-orders-details-form-restraining-yes-conditional" aria-expanded="false">
+            <label for="steps-court-orders-details-form-restraining-yes-field" class="govuk-label govuk-radios__label">Yes
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="steps-court-orders-details-form-restraining-yes-conditional">
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-restraining-case-number-field" class="govuk-label govuk-label--s">Case number
+              </label>
+              <div class="govuk-hint" id="steps-court-orders-details-form-restraining-case-number-hint">For example, BS19F99999</div>
+              <input id="steps-court-orders-details-form-restraining-case-number-field" class="govuk-input govuk-!-width-one-half" aria-describedby="steps-court-orders-details-form-restraining-case-number-hint" type="text" name="steps_court_orders_details_form[restraining_case_number]">
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="steps-court-orders-details-form-restraining-issue-date-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <span class="govuk-fieldset__heading">What date was it made?</span>
+                </legend>
+                <span class="govuk-hint" id="steps-court-orders-details-form-restraining-issue-date-hint">For example, 31 3 2015</span>
+                <div class="govuk-date-input">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_restraining_issue_date_3i">Day
+                      </label>
+                      <input id="steps_court_orders_details_form_restraining_issue_date_3i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_court_orders_details_form[restraining_issue_date(3i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_restraining_issue_date_2i">Month
+                      </label>
+                      <input id="steps_court_orders_details_form_restraining_issue_date_2i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_court_orders_details_form[restraining_issue_date(2i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_restraining_issue_date_1i">Year
+                      </label>
+                      <input id="steps_court_orders_details_form_restraining_issue_date_1i" class="govuk-input govuk-date-input__input govuk-input--width-4" name="steps_court_orders_details_form[restraining_issue_date(1i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-restraining-length-field" class="govuk-label govuk-label--s">How long was the order for?
+              </label>
+              <input id="steps-court-orders-details-form-restraining-length-field" class="govuk-input govuk-!-width-one-half" type="text" name="steps_court_orders_details_form[restraining_length]">
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <span class="govuk-fieldset__heading">Is the order current?</span>
+                </legend>
+                <input value="" type="hidden" name="steps_court_orders_details_form[restraining_is_current]" id="steps_court_orders_details_form_restraining_is_current">
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input id="steps-court-orders-details-form-restraining-is-current-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[restraining_is_current]">
+                    <label for="steps-court-orders-details-form-restraining-is-current-yes-field" class="govuk-label govuk-radios__label">Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input id="steps-court-orders-details-form-restraining-is-current-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_court_orders_details_form[restraining_is_current]">
+                    <label for="steps-court-orders-details-form-restraining-is-current-no-field" class="govuk-label govuk-radios__label">No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-restraining-court-name-field" class="govuk-label govuk-label--s">Which court issued the order?
+              </label>
+              <input id="steps-court-orders-details-form-restraining-court-name-field" class="govuk-input" type="text" name="steps_court_orders_details_form[restraining_court_name]">
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input id="steps-court-orders-details-form-restraining-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_court_orders_details_form[restraining]">
+            <label for="steps-court-orders-details-form-restraining-no-field" class="govuk-label govuk-radios__label">No
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="care-other" name="care" type="radio" value="other">
+            <label class="govuk-label govuk-radios__label" for="care-other">
+              I don't know
+            </label>
+          </div>
         </div>
-            <div class="govuk-button-group">
+      </fieldset>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <span class="govuk-fieldset__heading">Other injunctive order</span>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input id="steps-court-orders-details-form-injunctive-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[injunctive]" aria-controls="steps-court-orders-details-form-injunctive-yes-conditional" aria-expanded="false">
+            <label for="steps-court-orders-details-form-injunctive-yes-field" class="govuk-label govuk-radios__label">Yes
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="steps-court-orders-details-form-injunctive-yes-conditional">
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-injunctive-case-number-field" class="govuk-label govuk-label--s">Case number
+              </label>
+              <div class="govuk-hint" id="steps-court-orders-details-form-injunctive-case-number-hint">For example, BS19F99999</div>
+              <input id="steps-court-orders-details-form-injunctive-case-number-field" class="govuk-input govuk-!-width-one-half" aria-describedby="steps-court-orders-details-form-injunctive-case-number-hint" type="text" name="steps_court_orders_details_form[injunctive_case_number]">
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="steps-court-orders-details-form-injunctive-issue-date-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <span class="govuk-fieldset__heading">What date was it made?</span>
+                </legend>
+                <span class="govuk-hint" id="steps-court-orders-details-form-injunctive-issue-date-hint">For example, 31 3 2015</span>
+                <div class="govuk-date-input">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_injunctive_issue_date_3i">Day
+                      </label>
+                      <input id="steps_court_orders_details_form_injunctive_issue_date_3i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_court_orders_details_form[injunctive_issue_date(3i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_injunctive_issue_date_2i">Month
+                      </label>
+                      <input id="steps_court_orders_details_form_injunctive_issue_date_2i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_court_orders_details_form[injunctive_issue_date(2i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_injunctive_issue_date_1i">Year
+                      </label>
+                      <input id="steps_court_orders_details_form_injunctive_issue_date_1i" class="govuk-input govuk-date-input__input govuk-input--width-4" name="steps_court_orders_details_form[injunctive_issue_date(1i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-injunctive-length-field" class="govuk-label govuk-label--s">How long was the order for?
+              </label>
+              <input id="steps-court-orders-details-form-injunctive-length-field" class="govuk-input govuk-!-width-one-half" type="text" name="steps_court_orders_details_form[injunctive_length]">
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <span class="govuk-fieldset__heading">Is the order current?
+                  </span>
+                </legend>
+                <input value="" type="hidden" name="steps_court_orders_details_form[injunctive_is_current]" id="steps_court_orders_details_form_injunctive_is_current">
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input id="steps-court-orders-details-form-injunctive-is-current-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[injunctive_is_current]">
+                    <label for="steps-court-orders-details-form-injunctive-is-current-yes-field" class="govuk-label govuk-radios__label">Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input id="steps-court-orders-details-form-injunctive-is-current-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_court_orders_details_form[injunctive_is_current]">
+                    <label for="steps-court-orders-details-form-injunctive-is-current-no-field" class="govuk-label govuk-radios__label">No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="govuk-form-group">
+              <label for="steps-court-orders-details-form-injunctive-court-name-field" class="govuk-label govuk-label--s">Which court issued the order?
+              </label>
+              <input id="steps-court-orders-details-form-injunctive-court-name-field" class="govuk-input" type="text" name="steps_court_orders_details_form[injunctive_court_name]">
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input id="steps-court-orders-details-form-injunctive-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_court_orders_details_form[injunctive]">
+            <label for="steps-court-orders-details-form-injunctive-no-field" class="govuk-label govuk-radios__label">No
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="care-other" name="care" type="radio" value="other">
+            <label class="govuk-label govuk-radios__label" for="care-other">
+              I don't know
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <span class="govuk-fieldset__heading">Undertaking in place of an order</span>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input id="steps-court-orders-details-form-undertaking-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[undertaking]" aria-controls="steps-court-orders-details-form-undertaking-yes-conditional" aria-expanded="false">
+                      <label for="steps-court-orders-details-form-undertaking-yes-field" class="govuk-label govuk-radios__label">Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="steps-court-orders-details-form-undertaking-yes-conditional">
+                      <div class="govuk-form-group">
+                        <label for="steps-court-orders-details-form-undertaking-case-number-field" class="govuk-label govuk-label--s">Case number
+                        </label>
+                        <div id="event-name-hint" class="govuk-hint"id="steps-court-orders-details-form-undertaking-case-number-hint">For example, BS19F99999</div>
+                        <input id="steps-court-orders-details-form-undertaking-case-number-field" class="govuk-input govuk-!-width-one-half" aria-describedby="steps-court-orders-details-form-undertaking-case-number-hint" type="text" name="steps_court_orders_details_form[undertaking_case_number]">
+                      </div>
+
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="steps-court-orders-details-form-undertaking-issue-date-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                            <span class="govuk-fieldset__heading">What date was it made?
+                            </span>
+                          </legend>
+                          <span class="govuk-hint" id="steps-court-orders-details-form-undertaking-issue-date-hint">For example, 31 3 2015</span>
+                          <div class="govuk-date-input">
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_undertaking_issue_date_3i">Day
+                              </label>
+                              <input id="steps_court_orders_details_form_undertaking_issue_date_3i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_court_orders_details_form[undertaking_issue_date(3i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_undertaking_issue_date_2i">Month
+                              </label>
+                              <input id="steps_court_orders_details_form_undertaking_issue_date_2i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_court_orders_details_form[undertaking_issue_date(2i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="steps_court_orders_details_form_undertaking_issue_date_1i">Year
+                              </label>
+                              <input id="steps_court_orders_details_form_undertaking_issue_date_1i" class="govuk-input govuk-date-input__input govuk-input--width-4" name="steps_court_orders_details_form[undertaking_issue_date(1i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                      <div class="govuk-form-group">
+                        <label for="steps-court-orders-details-form-undertaking-length-field" class="govuk-label govuk-label--s">How long was the order for?
+                      </label>
+                      <input id="steps-court-orders-details-form-undertaking-length-field" class="govuk-input govuk-!-width-one-half" type="text" name="steps_court_orders_details_form[undertaking_length]">
+                    </div>
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                            <span class="govuk-fieldset__heading">Is the order current?</span>
+                          </legend>
+                          <input value="" type="hidden" name="steps_court_orders_details_form[undertaking_is_current]" id="steps_court_orders_details_form_undertaking_is_current">
+                          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input id="steps-court-orders-details-form-undertaking-is-current-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[undertaking_is_current]">
+                              <label for="steps-court-orders-details-form-undertaking-is-current-yes-field" class="govuk-label govuk-radios__label">Yes
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input id="steps-court-orders-details-form-undertaking-is-current-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_court_orders_details_form[undertaking_is_current]">
+                              <label for="steps-court-orders-details-form-undertaking-is-current-no-field" class="govuk-label govuk-radios__label">No
+                              </label>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <div class="govuk-form-group">
+                        <label for="steps-court-orders-details-form-undertaking-court-name-field" class="govuk-label govuk-label--s">Which court issued the order?
+                        </label>
+                        <input id="steps-court-orders-details-form-undertaking-court-name-field" class="govuk-input" type="text" name="steps_court_orders_details_form[undertaking_court_name]">
+                      </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input id="steps-court-orders-details-form-undertaking-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_court_orders_details_form[undertaking]">
+                      <label for="steps-court-orders-details-form-undertaking-no-field" class="govuk-label govuk-radios__label">No
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="care-other" name="care" type="radio" value="other">
+                      <label class="govuk-label govuk-radios__label" for="care-other">
+                        I don't know
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </fieldset>
+          </div>
+
   <button class="govuk-button" data-module="govuk-button">
     Save and continue
   </button>
