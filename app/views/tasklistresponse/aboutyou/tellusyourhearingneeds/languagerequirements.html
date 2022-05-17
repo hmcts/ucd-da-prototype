@@ -26,13 +26,12 @@
 
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-               <form action="checkanswersreqs" method="post" novalidate>
-                 <span class="govuk-caption-l">Safety requirements</span>
-                 <h1 class="govuk-heading-xl">Do you or the children need special safety arrangements at court?</h1>
+               <form action="start" method="post" novalidate>
+                 <span class="govuk-caption-l">Language requirements</span>
+                 <h1 class="govuk-heading-xl">Do you have any language requirements?</h1>
 
                <div class="govuk-inset-text">
-                Not every court has the facilities listed here, and some need to be agreed by a judge, for example the use of protective screens.
-                 <p>The court will contact you to discuss safety arrangements before your hearing.</p>
+                 Think about all communication with the tribunal, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.
                </div>
 
                <div class="govuk-form-group">
@@ -44,7 +43,7 @@
                      <div class="govuk-checkboxes__item">
                        <input class="govuk-checkboxes__input" id="reasonable-adjustments" name="reasonable-adjustments" type="checkbox" value="I need documents in an alternative format">
                        <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
-                         Separate waiting room
+                         I need to speak in Welsh
 
 
                        </label>
@@ -52,54 +51,19 @@
                      <div class="govuk-checkboxes__item">
                        <input class="govuk-checkboxes__input" id="reasonable-adjustments-2" name="reasonable-adjustments" type="checkbox" value="I need help communicating and understanding">
                        <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
-                        Separate exits and entrances
+                         I need to read and write in Welsh
 
                        </label>
                      </div>
-                     <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-2" name="reasonable-adjustments" type="checkbox" value="I need help communicating and understanding">
-                       <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
-                         Screens to separate the people in the case
-                        <div id="reasonable-adjustments-1-hint" class="govuk-hint">
-                          This needs to be approved by a judge
-                        </div>
-                       </label>
-                     </div>
-
-                     <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-2" name="reasonable-adjustments" type="checkbox" value="I need help communicating and understanding">
-                       <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
-                        Separate toilets
-
-                       </label>
-                     </div>
-                     <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-2" name="reasonable-adjustments" type="checkbox" value="I need help communicating and understanding">
-                       <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
-                        Advanced viewing of the court
-
-                       </label>
-                     </div>
-                     <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-2" name="reasonable-adjustments" type="checkbox" value="I need help communicating and understanding">
-                       <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
-                        Video links
-                        <div id="reasonable-adjustments-1-hint" class="govuk-hint">
-                          This needs to be approved by a judge
-                        </div>
-
-                       </label>
-                     </div>
-
                      <div class="govuk-checkboxes__item">
                        <input class="govuk-checkboxes__input" id="reasonable-adjustments-3" name="reasonable-adjustments" type="checkbox" value="I need to bring support with me to a hearing" aria-controls="certain-interpreter-conditional">
                        <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
-                         Other
+                         I need an interpreter in a certain language
                        </label>
                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="certain-interpreter-conditional">
                          <div class="govuk-form-group">
-                           <label for="steps-attending-court-language-form-language-interpreter-details-field" class="govuk-label">Provide details of what you or the children need</label>
-                           <textarea id="steps-attending-court-language-form-language-interpreter-details-field" class="govuk-textarea" rows="2" name="steps_attending_court_language_form[language_interpreter_details]">
+                           <label for="steps-attending-court-language-form-language-interpreter-details-field" class="govuk-label">Give details of the language you require (including dialect, if applicable)</label>
+                           <textarea id="steps-attending-court-language-form-language-interpreter-details-field" class="govuk-textarea" rows="3" name="steps_attending_court_language_form[language_interpreter_details]">
                            </textarea>
                          </div>
 
@@ -112,7 +76,7 @@
                      <div class="govuk-checkboxes__item">
                        <input class="govuk-checkboxes__input" id="reasonable-adjustments-none" name="reasonable-adjustments" type="checkbox" value="No, I do not need any extra support at this time" data-behaviour="exclusive">
                        <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments-none">
-                         No, I do not have any safety requirements at this time
+                         No, I do not have any language requirements at this time
                        </label>
                      </div>
                    </div>

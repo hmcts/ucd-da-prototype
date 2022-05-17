@@ -24,44 +24,92 @@
 
         <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
 
-        <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-                <form action="start-answer" method="post" novalidate>
+               <form action="start-answer" method="post" novalidate>
 
-                  <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" aria-describedby="steps-attending-court-intermediary-form-intermediary-help-hint">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <h1 class="govuk-fieldset__heading">
-                          <span class="govuk-caption-l govuk-!-padding-bottom-2">Requirements to attend court</span>
-                          Are there any adults involved in the case who have a barrier to taking part in court proceedings?</h1>
-                        </legend><span class="govuk-hint" id="steps-attending-court-intermediary-form-intermediary-help-hint">For example - they may have a disability, a health concern or other circumstances that make it difficult to take part in proceedings.</span>
-                  <div class="govuk-!-padding-bottom-4"></div>
-                  <div class="govuk-radios" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input id="factors-yes" class="govuk-radios__input" type="radio" value="yes" name="factors">
-                      <label for="factors-yes" class="govuk-label govuk-radios__label">Yes</label>
-                    </div>
+                 <span class="govuk-caption-l">Reasonable adjustments</span>
+                 <h1 class="govuk-heading-xl">Do you have a physical, mental or learning disability or health condition that means you need support during your case?</h1>
 
-                    <div class="govuk-radios__item">
-                      <input id="factors-no" class="govuk-radios__input" type="radio" value="no" name="factors">
-                      <label for="factors-no" class="govuk-label govuk-radios__label">No</label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input id="factors-other" class="govuk-radios__input" type="radio" value="other" name="factors">
-                      <label for="factors-other" class="govuk-label govuk-radios__label">Do not know</label>
-                    </div>
-                    </div>
-                  </fieldset>
-                  </div>
-                  <div class="govuk-button-group">
-                    <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Continue</button>
+               <div class="govuk-inset-text">
+                 We know some people need support to access information and use our services. We often call this a reasonable adjustment. Some reasonable adjustments need to be agreed by the judge or HMCTS. You can discuss with the tribunal if your needs change.
+               </div>
 
-                  </div>
-            </form>
+               <div class="govuk-form-group">
+                 <fieldset class="govuk-fieldset" aria-describedby="reasonable-adjustments-hint">
+                   <div id="reasonable-adjustments-hint" class="govuk-hint">
+                     Select all that apply to you - specific requirements can be given next
+                   </div>
+                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="alternative-format" name="reasonable-adjustments" type="checkbox" value="I need documents in an alternative format">
+                       <label class="govuk-label govuk-checkboxes__label" for="alternative-format">
+                         I need documents in an alternative format
+                         <div id="reasonable-adjustments-1-hint" class="govuk-hint">
+                           for example, braille or different colours and sizes
+                         </div>
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="help-communicating" name="reasonable-adjustments" type="checkbox" value="I need help communicating and understanding">
+                       <label class="govuk-label govuk-checkboxes__label" for="help-communicating">
+                         I need help communicating and understanding
+                         <div id="reasonable-adjustments-2-hint" class="govuk-hint">
+                           for example, sight, hearing, speaking or interpretation
+                         </div>
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="bring-support" name="reasonable-adjustments" type="checkbox" value="I need to bring support with me to a hearing">
+                       <label class="govuk-label govuk-checkboxes__label" for="bring-support">
+                         I need to bring support with me to a hearing
+                         <div id="reasonable-adjustments-3-hint" class="govuk-hint">
+                           for example, someone you know or an assistance animal
+                         </div>
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="feel-comfortable" name="reasonable-adjustments" type="checkbox" value="I need something to feel comfortable during a hearing">
+                       <label class="govuk-label govuk-checkboxes__label" for="feel-comfortable">
+                         I need something to feel comfortable during a hearing
+                         <div id="reasonable-adjustments-4-hint" class="govuk-hint">
+                           for example, breaks or extra space
+                         </div>
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="help-travelling" name="reasonable-adjustments" type="checkbox" value="I need help travelling to, or moving around tribunal building">
+                       <label class="govuk-label govuk-checkboxes__label" for="help-travelling">
+                         I need help travelling to, or moving around tribunal buildings
+                         <div id="reasonable-adjustments-5-hint" class="govuk-hint">
+                           access and mobility support if a hearing takes place in person
+                         </div>
+                       </label>
+                     </div>
+
+                     <div class="govuk-checkboxes__divider">or</div>
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-none" name="reasonable-adjustments" type="checkbox" value="No" data-behaviour="exclusive">
+                       <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments-none">
+                         No, I do not need any extra support at this time
+                       </label>
+                     </div>
+                   </div>
+
+                 </fieldset>
+               </div>
+
+
+               <button class="govuk-button" data-module="govuk-button" type="submit">
+                 Save and continue
+               </button>
 
 
 
-          </main>
+
+
+              </form>
+        </main>
       </div>
 
 

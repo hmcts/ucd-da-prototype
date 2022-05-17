@@ -67,6 +67,8 @@
                       </fieldset>
                     </div>
 
+
+
                     <div class="govuk-!-padding-bottom-2"></div>
 
                     <div class="govuk-form-group">
@@ -106,6 +108,37 @@
                           </div>
                         </div>
 
+                      </fieldset>
+                    </div>
+
+                    <div class="govuk-!-padding-bottom-2"></div>
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                      <h2 class="govuk-heading-m">Is there a court order in force preventing the applicant from making applications to the court without first applying for permission?
+                        </h2>
+                        <div class="govuk-radios" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="consent-yes" name="consent" type="radio" value="yes" data-aria-controls="orderprevention-confidential">
+                            <label class="govuk-label govuk-radios__label" for="consent-yes">
+                              Yes
+                            </label>
+                          </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="orderprevention-confidential">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="privatedetails">Provide details of the court order</label>
+                              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                              </div>
+                            </div>
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="consent-no" name="consent" type="radio" value="no" >
+                            <label class="govuk-label govuk-radios__label" for="consent-no">
+                              No
+                            </label>
+                          </div>
+
+                        </div>
                       </fieldset>
                     </div>
 
