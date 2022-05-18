@@ -54,5 +54,20 @@
   },
   "jest": {
     "testRunner": "jest-jasmine2"
-  }
+  },
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmcts/ucd-da-prototype.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hmcts/ucd-da-prototype/issues"
+  },
+  "homepage": "https://github.com/hmcts/ucd-da-prototype#readme"
 }
