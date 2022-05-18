@@ -563,4 +563,38 @@ const router = express.Router()
 
 
 
+      router.post('/applicantjourneyca/aboutyou/confidentiality/start-answer', function (req, res) {
+        // Make a variable and give it the value from 'how-many-balls'
+        var conDetails = req.session.data['confidential']
+  
+        // Check whether the variable matches a condition
+        if (conDetails == "yes"){
+          // Send user to next page
+          res.redirect('/applicantjourneyca/aboutyou/confidentiality/feedback')
+  
+        }else {
+            // Send user to ineligible page
+            res.redirect('/applicantjourneyca/aboutyou/confidentiality/feedbackno')
+        }
+  
+      });
+  
+      router.post('/applicantjourneyca/aboutyou/confidentiality/startalternative-answer', function (req, res) {
+          // Make a variable and give it the value from 'how-many-balls'
+          var noConDe = req.session.data['confidential']
+  
+          // Check whether the variable matches a condition
+          if (noConDe == "yes"){
+            // Send user to next page
+            res.redirect('/applicantjourneyca/aboutyou/confidentiality/feedback')
+  
+          }else {
+              // Send user to ineligible page
+              res.redirect('/applicantjourneyca/aboutyou/confidentiality/feedbackno')
+          }
+  
+        });
+
+
+
 module.exports = router
