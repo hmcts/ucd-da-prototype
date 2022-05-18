@@ -29,16 +29,13 @@
 
       <h1 class="govuk-heading-xl">
         <span class="govuk-caption-l">Upload documents</span>
-        Witness statement and evidence
+        Witness statements and evidence
       </h1>
 
-    <p class="govuk-body">Consider when providing evidence:</p>
+      <p class="govuk-body">If you are uploading documents from a computer, name the files clearly. For example, letter-from-school.doc.</p>
 
-    <ul class="govuk-list govuk-list--bullet govuk-list--spaced govuk-!-padding-bottom-4">
-      <li>if you are taking a picture of a letter, place it on a flat surface and take the picture from above</li>
-      <li>If you are uploading documents from a compute, name the files clearly. For example, 'letter-from-school.doc'</li>
-      <li>Files must end with JPG, BMP, PNG,TIF, PDF, DOC or DOCX</li>
-    </ul>
+      <p class="govuk-body">Files must end with JPG, BMP, PNG,TIF, PDF, DOC or DOCX.</p>
+
 
       <details class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
@@ -57,28 +54,6 @@
               </div>
         </details>
 
-        <details class="govuk-details" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    Rules about sharing emails, letters and documents:
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  <p class="govuk-body">You must copy any correspondence you send to the court to the other parties in the case. The only exceptions are::</p>
-                  <ol class="govuk-list govuk-list--number">
-                    <li>When there is a very good reason not to, for example safety concerns.</li>
-                    <li>The correspondence is purely administrative.</li>
-                    <li>A party has a confidential address. In these circumstances the court will
-                      forward the correspondence for you.</li>
-                    <li>When you are prevented by law from communicating with another party (for
-                      example by an injunction order) and that other party does not have a legal
-                      representative to whom you can send the correspondence.</li>
-                  </ol>
-                  <p class="govuk-body">You must clearly state in your correspondence that it has been copied to the other parties and give their names and their status in the proceedings or state the reason why it has not been copied. If you fail to do so the court will usually return your correspondence to you without taking any further action.</p>
-
-<p>If you do not copy your correspondence to the other parties, you must say in your correspondence with the court which of the exceptions listed here you are relying on and why you consider it applies in your case.</p>
-                </div>
-          </details>
 
         <!-- start components here -->
 
@@ -89,17 +64,34 @@
           <div class=" govuk-!-margin-bottom-3">
 
             <div class="govuk-warning-text govuk-!-margin-bottom-4">
-
               <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-
               <strong class="govuk-warning-text__text govuk-!-font-size-16">
-
                 <span class="govuk-warning-text__assistive">Warning</span>
-                If there is information you do not want to share with the other people in the case,
-                make sure it is not included in any documents you upload. If this is not possible and you have to upload private information, you can ask the court to restrict who can see the document
+                If there is information that must not be shared with the other people in the case,
+                make sure it is not included in any documents you upload. If this is not possible you
+                can ask the court to restrict who can see the document.
               </strong>
-
             </div>
+
+            <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Rules about sharing emails, letters and documents:
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+
+                      <p class="govuk-body">When you upload documents, including emails and letters, these are automatically shared with the other people in the case. The only exceptions are if:</p>
+                      <ol class="govuk-list govuk-list--bullet">
+                        <li>there is a very good reason not to share the document, for example safety concerns.</li>
+                        <li>the document is not something the judge needs to see</li>
+                        <li>one of the people in the case has an address that needs to be kept private</li>
+                      </ol>
+
+                      <p class="govuk-body">If you believe a document you are uploading must not be shared with the other people in the case, you can ask the court to keep it private.</p>
+
+                    </div>
+              </details>
 
             <div class="govuk-form-group govuk-inset-text govuk-!-margin-bottom-9">
 
@@ -116,10 +108,9 @@
                      <input class="govuk-checkboxes__input" id="reasonable-adjustments-3" name="reasonable-adjustments" type="checkbox" value="I need to bring support with me to a hearing" aria-controls="certain-interpreter-conditional" aria-expanded="true">
 
                      <label class="govuk-label govuk-checkboxes__label govuk-!-margin-bottom-4" for="reasonable-adjustments">
-                       Tick this box if you want to restrict who can see this document.
-                       A document marked as private will only be shared with court staff
-                       and the Children and Family Court Advisory and Support Service (Cafcass),
-                       unless the court decides it needs to be shared with the other parties in the case.
+                      <P>Tick this box if you want to restrict who can see this document.</p>  <p>A document marked as private will only be shared
+                      with the court staff and the Children and Family Court Advisory and Support Service (Cafcass or Cafcass Cymru), unless the court
+                      decides it needs to be shared with the other people in the case.</p>
                      </label>
 
                      <div class="govuk-checkboxes__conditional" id="certain-interpreter-conditional">
@@ -185,14 +176,15 @@
         <br><br><br><br>
 
 
+        <div class="govuk-button-group">
 
 
-
-        <form action="uploadsuccess" method="post" novalidate>
           <button class="govuk-button" data-module="govuk-button">
             Save and continue
           </button>
-        </form>
+
+
+        </div>
 
         <br>
 

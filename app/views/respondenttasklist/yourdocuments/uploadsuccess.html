@@ -32,7 +32,7 @@
 
     <h1 class="govuk-heading-xl">
       <span class="govuk-caption-l">Upload documents</span>
-      Select the type of document to upload that supports this application
+      Select the type of document you want to upload
     </h1>
 
       <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
@@ -48,7 +48,75 @@
         </div>
       </div>
 
-    <p class="govuk-body  govuk-!-margin-bottom-6">Select the type document to upload that supports this application</p>
+
+    <div class="upload-component govuk-!-margin-bottom-2">
+
+      <form action="uploaddocuments" method="post" novalidate>
+
+        <h2 class="app-task-list__section">
+           Witness statements and evidence
+        </h2>
+
+        <p class="govuk-body">Includes medical records, letters from school and witness statements.</p>
+
+        <select class="govuk-select govuk-!-width-one-half govuk-!-margin-right-9" id="sort" name="sort">
+          <option value="published"selected>Witness statements</option>
+          <option value="updated">Statements of supporting evidence</option>
+          <option value="updated">Digital downloads</option>
+          <option value="views">Photographic evidence</option>
+          <option value="views">Mobile phone screenshots</option>
+          <option value="views">Medical records</option>
+          <option value="comments">Letters from school</option>
+        </select>
+
+        <button class="govuk-button upload-addnew govuk-button--secondary" data-module="govuk-button">
+          Upload this document
+        </button>
+
+      </form>
+
+    </div>
+
+      <div class="uploadedfiles govuk-!-margin-bottom-3" style=" display: inline-block">
+
+            <p class="govuk-body">
+              <strong>Uploaded files for witness statement and evidence</strong>
+            </p>
+
+            <dl class="govuk-summary-list">
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__value">
+                    witness_statement.pdf
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <strong>Marked as private</strong>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Remove<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+
+                  <dt class="govuk-summary-list__value">
+                    witness_statement2.pdf
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <strong>Marked as private</strong>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Remove<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                  </dd>
+
+                </div>
+
+              </dl>
+      </div>
 
       <div class="upload-component govuk-!-margin-bottom-6">
 
@@ -58,10 +126,9 @@
              Applications
           </h2>
 
-          <p class="govuk-body">Applications inludes permission to start proceedings and compensation for financial loss</p>
+          <p class="govuk-body">Includes applications for permission to start proceedings.</p>
 
           <select class="govuk-select govuk-!-width-one-half govuk-!-margin-right-9" id="sort" name="sort">
-            <option value="published"selected>MIAM certificate</option>
             <option value="updated">Previous orders submitted with application</option>
             <option value="views">Permission to start proceedings (C2)</option>
             <option value="comments">Compensation for financial loss (C79)</option>
@@ -75,77 +142,6 @@
 
       </div>
 
-
-      <div class="upload-component govuk-!-margin-bottom-2">
-
-        <form action="uploaddocuments" method="post" novalidate>
-
-          <h2 class="app-task-list__section">
-             Witness statements and evidence
-          </h2>
-
-          <p class="govuk-body">Witness statements and evidence includes Medical record, letters from school and witness statemets</p>
-
-          <select class="govuk-select govuk-!-width-one-half govuk-!-margin-right-9" id="sort" name="sort">
-            <option value="published"selected>Witness statements</option>
-            <option value="updated">Statements of supporting evidence</option>
-            <option value="updated">Digital downloads</option>
-            <option value="views">Photographic evidence</option>
-            <option value="views">Mobile phone screenshots</option>
-            <option value="views">Medical records</option>
-            <option value="comments">Letters from school</option>
-          </select>
-
-          <button class="govuk-button upload-addnew govuk-button--secondary" data-module="govuk-button">
-            Upload this document
-          </button>
-
-        </form>
-
-      </div>
-
-        <div class="uploadedfiles govuk-!-margin-bottom-6" style=" display: inline-block">
-
-              <p class="govuk-body">
-                <strong>Uploaded files for witness statement and evidence</strong>
-              </p>
-
-              <dl class="govuk-summary-list">
-
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__value">
-                      witness_statement.pdf
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      <strong>Marked as private</strong>
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="#">
-                        Remove<span class="govuk-visually-hidden"> name</span>
-                      </a>
-                    </dd>
-                  </div>
-
-                  <div class="govuk-summary-list__row">
-
-                    <dt class="govuk-summary-list__value">
-                      witness_statement2.pdf
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      <strong>Marked as private</strong>
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="#">
-                        Remove<span class="govuk-visually-hidden"> name</span>
-                      </a>
-                    </dd>
-
-                  </div>
-
-                </dl>
-        </div>
-
-
       <div class="upload-component govuk-!-margin-bottom-6">
 
         <form action="uploaddocuments" method="post" novalidate>
@@ -154,13 +150,13 @@
              Expert reports
           </h2>
 
-          <p class="govuk-body">Expert reports includes medical reports, test results and police reports</p>
+          <p class="govuk-body">Includes medical reports, drug test results and police reports.</p>
 
           <select class="govuk-select govuk-!-width-one-half govuk-!-margin-right-9" id="sort" name="sort">
             <option value="published"selected>Medical reports</option>
             <option value="updated">DNA reports</option>
             <option value="views">Paternity test reports</option>
-            <option value="comments">Results of hair strand/blood tests</option>
+            <option value="comments">Results of hair strand or blood tests</option>
             <option value="comments">Police disclosures</option>
           </select>
 
@@ -180,10 +176,10 @@
              Correspondence to/from court
           </h2>
 
-          <p class="govuk-body">Correspondence to/from court includes witness availability and letters of complaint</p>
+          <p class="govuk-body">Includes emails and letters.</p>
 
           <select class="govuk-select govuk-!-width-one-half govuk-!-margin-right-9" id="sort" name="sort">
-            <option value="published"selected>Emails to the court to request hearings adjourned</option>
+            <option value="published"selected>Emails to ask to change a hearing date</option>
             <option value="updated">Witness availability</option>
             <option value="views">Letter of complaint</option>
           </select>

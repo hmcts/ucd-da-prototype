@@ -31,7 +31,7 @@
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                       <h1 class="govuk-fieldset__heading">
-                        Your consent to the application
+                        Your understanding of the application
                       </h1>
                     </legend>
 
@@ -40,7 +40,7 @@
                       <div class="govuk-!-padding-bottom-3"></div>
                     <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset">
-                      <h2 class="govuk-heading-m">Provide your consent to the application
+                      <h2 class="govuk-heading-m">Do you provide your consent to the application?
                         </h2>
                         <div class="govuk-radios" data-module="govuk-radios">
                           <div class="govuk-radios__item">
@@ -59,7 +59,7 @@
                           </div>
                           <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-confidential">
                             <div class="govuk-form-group">
-                              <label class="govuk-label" for="privatedetails">Give reason why you oppose the application</label>
+                              <label class="govuk-label" for="privatedetails">Give your reasons for not consenting to the application.</label>
                               <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
                               </div>
                             </div>
@@ -115,25 +115,25 @@
 
                     <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset">
-                      <h2 class="govuk-heading-m">Is there a court order in force preventing the applicant from making applications to the court without first applying for permission?
+                      <h2 class="govuk-heading-m">Is the applicant required to seek permission from the court before making applications?
                         </h2>
                         <div class="govuk-radios" data-module="govuk-radios">
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="consent-yes" name="consent" type="radio" value="yes" data-aria-controls="orderprevention-confidential">
-                            <label class="govuk-label govuk-radios__label" for="consent-yes">
+                            <input class="govuk-radios__input" id="orderinplace-yes" name="orderinplace" type="radio" value="yes" data-aria-controls="orderinplace-confidential">
+                            <label class="govuk-label govuk-radios__label" for="orderinplace-yes">
                               Yes
                             </label>
                           </div>
-                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="orderprevention-confidential">
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="orderinplace-confidential">
                             <div class="govuk-form-group">
-                              <label class="govuk-label" for="privatedetails">Provide details of the court order</label>
-                              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                              <label class="govuk-label" for="orderinplacedetails">Provide details of the court order in place.</label>
+                              <textarea class="govuk-textarea" id="orderinplacedetails" name="orderinplacedetails" rows="5" aria-describedby="orderinplacedetails-hint"></textarea>
                               </div>
                             </div>
 
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="consent-no" name="consent" type="radio" value="no" >
-                            <label class="govuk-label govuk-radios__label" for="consent-no">
+                            <input class="govuk-radios__input" id="orderinplace-no" name="orderinplace" type="radio" value="no" >
+                            <label class="govuk-label govuk-radios__label" for="orderinplace-no">
                               No
                             </label>
                           </div>
