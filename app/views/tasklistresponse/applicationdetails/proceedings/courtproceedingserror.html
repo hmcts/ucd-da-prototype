@@ -26,6 +26,66 @@
 
     <form action="checkanswers-proceedings" method="post" novalidate>
 
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem on this page
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#childrenorders">Enter the case number of the Emergency Protection Order </a>
+            </li>
+            <li>
+              <a href="#protection">Enter the date the Emergency Protection Order was made</a>
+            </li>
+            <li>
+              <a href="#childrenorders">Enter how long the Emergency Protection Order was for</a>
+            </li>
+            <li>
+              <a href="#childrenorders">Select yes if the Emergency Protection Order is a current order  </a>
+            </li>
+            <li>
+              <a href="#childrenorders">Enter which court issued the Emergency Protection Order </a>
+            </li>
+            <li>
+              <a href="#childrenorders">Select yes if the children were involved in a Supervision Order</a>
+            </li>
+            <li>
+              <a href="#protection">Select yes if the children were involved in a Court Order</a>
+            </li>
+            <li>
+              <a href="#childrenorders">Select yes if the children were involved in a Child Abduction Order</a>
+            </li>
+            <li>
+              <a href="#protection">Select yes if the children were involved in a Child Arrangements Order</a>
+            </li>
+            <li>
+              <a href="#childrenorders">Select yes if the children were involved in a Financial Order under Schedule 1 of the Children Act 1989</a>
+            </li>
+            <li>
+              <a href="#protection">Select yes if you have had a Non-molestation Order</a>
+            </li>
+            <li>
+              <a href="#protection">Select yes if you have had an Occupation order Order</a>
+            </li>
+            <li>
+              <a href="#protection">Select yes if you have had a Forced Marriage Protection Order</a>
+            </li>
+            <li>
+              <a href="#protection">Select yes if you have had a Restraining Order</a>
+            </li>
+            <li>
+              <a href="#protection">Select yes if you have had an Other Injunctive Order</a>
+            </li>
+            <li>
+              <a href="#protection">Select yes if you have had an Undertaking in Place of an Order</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -38,31 +98,41 @@
 
 
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
              <b>Emergency Protection Order </b>
             </legend>
+
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="emergency-yes" name="emergency" type="radio" value="yes" data-aria-controls="conditional-emergency">
+                <input class="govuk-radios__input" id="emergency-yes" name="emergency" type="radio" value="yes" data-aria-controls="conditional-emergency" checked="checked">
                 <label class="govuk-label govuk-radios__label" for="emergency-yes">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-emergency">
-                <div class="govuk-form-group">
+
+                <div class="govuk-form-group govuk-form-group--error">
                   <label for="steps-court-orders-details-form-restraining-case-number-field" class="govuk-label govuk-label--s">Case number
                   </label>
-                  <div class="govuk-hint" id="steps-court-orders-details-form-restraining-case-number-hint">For example, BS19F99999</div>
-                  <input id="steps-court-orders-details-form-restraining-case-number-field" class="govuk-input govuk-!-width-one-half" aria-describedby="steps-court-orders-details-form-restraining-case-number-hint" type="text" name="steps_court_orders_details_form[restraining_case_number]">
+                      <div class="govuk-hint" id="steps-court-orders-details-form-restraining-case-number-hint">For example, BS19F99999</div>
+                      <p id="more-detail-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> Enter the case number of the Emergency Protection Order
+                      </p>
+                  <input id="steps-court-orders-details-form-restraining-case-number-field" class="govuk-input govuk-!-width-one-half" aria-describedby="steps-court-orders-details-form-restraining-case-number-hint" type="text" name="steps_court_orders_details_form[restraining_case_number]"></input>
                 </div>
-                <div class="govuk-form-group">
+
+                <div class="govuk-form-group govuk-form-group--error">
                   <fieldset class="govuk-fieldset" aria-describedby="steps-court-orders-details-form-restraining-issue-date-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                       <span class="govuk-fieldset__heading">What date was it made?</span>
                     </legend>
                     <span class="govuk-hint" id="steps-court-orders-details-form-restraining-issue-date-hint">For example, 31 3 2015</span>
+                    <p id="more-detail-error" class="govuk-error-message">
+                      <span class="govuk-visually-hidden">Error:</span> Enter the date the Emergency Protection Order was made
+                    </p>
                     <div class="govuk-date-input">
                       <div class="govuk-date-input__item">
                         <div class="govuk-form-group">
@@ -88,16 +158,24 @@
                     </div>
                   </fieldset>
                 </div>
-                <div class="govuk-form-group">
+
+                <div class="govuk-form-group govuk-form-group--error">
                   <label for="steps-court-orders-details-form-restraining-length-field" class="govuk-label govuk-label--s">How long was the order for?
                   </label>
+                  <p id="more-detail-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Enter how long the Emergency Protection Order was for
+                  </p>
                   <input id="steps-court-orders-details-form-restraining-length-field" class="govuk-input govuk-!-width-one-half" type="text" name="steps_court_orders_details_form[restraining_length]">
                 </div>
-                <div class="govuk-form-group">
+
+                <div class="govuk-form-group govuk-form-group--error">
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                       <span class="govuk-fieldset__heading">Is this a current order?</span>
                     </legend>
+                    <p id="more-detail-error" class="govuk-error-message">
+                      <span class="govuk-visually-hidden">Error:</span> Select yes if the Emergency Protection Order is a current order
+                    </p>
                     <input value="" type="hidden" name="steps_court_orders_details_form[restraining_is_current]" id="steps_court_orders_details_form_restraining_is_current">
                     <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                       <div class="govuk-radios__item">
@@ -113,9 +191,13 @@
                     </div>
                   </fieldset>
                 </div>
-                <div class="govuk-form-group">
+
+                <div class="govuk-form-group govuk-form-group--error">
                   <label for="steps-court-orders-details-form-restraining-court-name-field" class="govuk-label govuk-label--s">Which court issued the order?
                   </label>
+                  <p id="more-detail-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Enter which court issued the Emergency Protection Order
+                  </p>
                   <input id="steps-court-orders-details-form-restraining-court-name-field" class="govuk-input" type="text" name="steps_court_orders_details_form[restraining_court_name]">
                 </div>
               </div>
@@ -137,11 +219,16 @@
 
         	<div class="govuk-!-padding-bottom-4"></div>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-             <b>Supervision Order</b>
-            </legend>
+        <div class="govuk-form-group govuk-form-group--error">
+           <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+             </legend>
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+               <b>Supervision Order </b>
+              </legend>
+              <p id="where-do-you-live-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>Select yes if the children were involved in a Supervision Order
+              </p>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="supervision-yes" name="supervision" type="radio" value="yes" data-aria-controls="conditional-supervision">
@@ -236,11 +323,16 @@
 
         <div class="govuk-!-padding-bottom-4"></div>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-             <b>Care Order </b>
-            </legend>
+        <div class="govuk-form-group govuk-form-group--error">
+           <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+             </legend>
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+               <b>Care Order </b>
+              </legend>
+              <p id="where-do-you-live-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>Select yes if the children were involved in a Care Order
+              </p>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="care-yes" name="care" type="radio" value="yes" data-aria-controls="conditional-care">
@@ -335,11 +427,16 @@
 
         <div class="govuk-!-padding-bottom-4"></div>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-             <b>Child Abduction </b>
-            </legend>
+        <div class="govuk-form-group govuk-form-group--error">
+           <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+             </legend>
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+               <b>Child Abduction</b>
+              </legend>
+              <p id="where-do-you-live-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>Select yes if the children were involved in a Child Abduction
+              </p>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="child-yes" name="child" type="radio" value="yes" data-aria-controls="conditional-child">
@@ -434,11 +531,16 @@
 
         <div class="govuk-!-padding-bottom-4"></div>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-             <b>Child Arrangements Order</b>
-            </legend>
+        <div class="govuk-form-group govuk-form-group--error">
+           <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+             </legend>
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+               <b>Child Arrangements Order</b>
+              </legend>
+              <p id="where-do-you-live-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>Select yes if the children were involved in a Child Arrangements Order
+              </p>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="arrangements-yes" name="arrangements" type="radio" value="yes" data-aria-controls="conditional-arrangements">
@@ -533,11 +635,16 @@
 
         <div class="govuk-!-padding-bottom-4"></div>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-             <b>Financial Order under Schedule 1 of the Children Act 1989 </b>
-            </legend>
+        <div class="govuk-form-group govuk-form-group--error">
+           <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+             </legend>
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+               <b>Financial Order under Schedule 1 of the Children Act 1989</b>
+              </legend>
+              <p id="where-do-you-live-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span>Select yes if the children were involved in a Financial Order under Schedule 1 of the Children Act 1989
+              </p>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="financial-yes" name="financial" type="radio" value="yes" data-aria-controls="conditional-financial">
@@ -632,10 +739,16 @@
         </div>
 
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"><span class="govuk-fieldset__heading">Non-molestation Order</span>
-            </legend>
+        <div class="govuk-form-group govuk-form-group--error">
+           <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+             </legend>
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+               <b>Non-molestation Order</b>
+              </legend>
+              <p id="where-do-you-live-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Select yes if you have had a Non-molestation Order
+              </p>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input id="steps-court-orders-details-form-non-molestation-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[non_molestation]" aria-controls="steps-court-orders-details-form-non-molestation-yes-conditional" aria-expanded="false">
@@ -723,11 +836,16 @@
         </fieldset>
       </div>
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <span class="govuk-fieldset__heading">Occupation Order</span>
-          </legend>
+      <div class="govuk-form-group govuk-form-group--error">
+         <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+           </legend>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+             <b>Occupation Order</b>
+            </legend>
+            <p id="where-do-you-live-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Select yes if you have had an Occupation Order
+            </p>
           <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
             <input id="steps-court-orders-details-form-occupation-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[occupation]" aria-controls="steps-court-orders-details-form-occupation-yes-conditional" aria-expanded="false"><label for="steps-court-orders-details-form-occupation-yes-field" class="govuk-label govuk-radios__label">Yes</label>
@@ -816,11 +934,16 @@
        </fieldset>
      </div>
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <span class="govuk-fieldset__heading">Forced Marriage Protection Order</span>
+     <div class="govuk-form-group govuk-form-group--error">
+        <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
           </legend>
+           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <b>Forced Marriage Protection Order</b>
+           </legend>
+           <p id="where-do-you-live-error" class="govuk-error-message">
+             <span class="govuk-visually-hidden">Error:</span> Select yes if you have had a Forced Marriage Protection Order
+           </p>
           <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
             <input id="steps-court-orders-details-form-forced-marriage-protection-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[forced_marriage_protection]" aria-controls="steps-court-orders-details-form-forced-marriage-protection-yes-conditional" aria-expanded="false">
@@ -910,11 +1033,16 @@
        </fieldset>
      </div>
 
-     <div class="govuk-form-group">
-       <fieldset class="govuk-fieldset" aria-describedby="steps-court-orders-details-form-restraining-hint">
-         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-           <span class="govuk-fieldset__heading">Restraining Order</span>
-         </legend>
+     <div class="govuk-form-group govuk-form-group--error">
+        <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          </legend>
+           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <b>Restraining Order</b>
+           </legend>
+           <p id="where-do-you-live-error" class="govuk-error-message">
+             <span class="govuk-visually-hidden">Error:</span> Select yes if you have had a Restraining Order
+           </p>
          <span class="govuk-hint" id="steps-court-orders-details-form-restraining-hint">Under the Protection from Harassment Act 1997</span>
          <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
@@ -1006,11 +1134,16 @@
       </fieldset>
     </div>
 
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <span class="govuk-fieldset__heading">Other Injunctive Order</span>
-        </legend>
+    <div class="govuk-form-group govuk-form-group--error">
+       <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+         </legend>
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+           <b>Other Injuctive Order</b>
+          </legend>
+          <p id="where-do-you-live-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Select yes if you have had an Other Injuctive Order
+          </p>
         <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
             <input id="steps-court-orders-details-form-injunctive-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[injunctive]" aria-controls="steps-court-orders-details-form-injunctive-yes-conditional" aria-expanded="false">
@@ -1102,11 +1235,16 @@
       </fieldset>
       </div>
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <span class="govuk-fieldset__heading">Undertaking in Place of an Order</span>
-          </legend>
+      <div class="govuk-form-group govuk-form-group--error">
+         <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+           </legend>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+             <b>Undertaking in Place of an Order</b>
+            </legend>
+            <p id="where-do-you-live-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Select yes if you have had an Undertaking in Place of an Order
+            </p>
           <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
                       <input id="steps-court-orders-details-form-undertaking-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_court_orders_details_form[undertaking]" aria-controls="steps-court-orders-details-form-undertaking-yes-conditional" aria-expanded="false">
