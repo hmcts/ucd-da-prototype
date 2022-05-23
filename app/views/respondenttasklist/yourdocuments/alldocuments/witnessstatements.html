@@ -20,7 +20,7 @@
 <form action="/respondenttasklist/startreply" method="post" novalidate>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
- 		 <a href="/respondenttasklist/startreply" class="govuk-back-link">Back</a>
+ 		 <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
         View all documents
       </h1>
@@ -40,11 +40,9 @@
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h2 class="govuk-heading-m govuk-!-margin-bottom-12" >
-          Documentation
-      </h2>
 
-      <p class="govuk-body govuk-!-margin-bottom-7">Listed below are all the documents related to this child arrangements case</p>
+
+
 
       <ol class="app-task-list">
         <li>
@@ -54,7 +52,7 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                <a href="/public/pdf/example-witness-statement.pdf" aria-describedby="eligibility-status" target="_blank"">
                   Witness statement - James harvy
                 </a>
               </span>
@@ -62,7 +60,7 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                <a href="/public/pdf/example-witness-statement.pdf" aria-describedby="eligibility-status" target="_blank"">
                   Witness statement - susan collins
                 </a>
               </span>
@@ -70,7 +68,7 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                <a href="/public/pdf/example-witness-statement.pdf" aria-describedby="eligibility-status" target="_blank"">
                   Witness statement - David marshall
                 </a>
               </span>
@@ -78,7 +76,7 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                <a href="/public/pdf/example-witness-statement.pdf" aria-describedby="eligibility-status" target="_blank"">
                   Witness statement - Simon mortlock
                 </a>
               </span>
@@ -92,12 +90,12 @@
 
 
             <div class="govuk-button-group">
-              <button class="govuk-button govuk-button--secondary" href="/respondenttasklist/startreply" data-module="govuk-button">
-                Previous
-              </button>
+              <a href="alldocuments" class="govuk-button govuk-button--secondary" data-module="govuk-button" >
+                  Go back
+              </a>
 
               <button class="govuk-button" href="/respondenttasklist/startreply" data-module="govuk-button">
-                Save and continue
+                Continue
               </button>
 
            </div>
