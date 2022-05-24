@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Tasklist
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<form action="/darespondenttasklist/start" method="post" novalidate>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+ 		 <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+        View all documents
+      </h1>
+
+      <p class="govuk-body">Respondent reference #1636575673018538</p>
+
+      <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-2">View all documents</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">Read through the application and then respond to the questions about the case</p> !-->
+
+  </div>
+</div>
+
+<div class="govuk-inset-text">
+  Some documents will only be accessible if granted access by the court
+</div>
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+             Witness statements
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/public/pdf/example-witness-statement.pdf" aria-describedby="eligibility-status" target="_blank"">
+                  Witness statement - James harvy
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/public/pdf/example-witness-statement.pdf" aria-describedby="eligibility-status" target="_blank"">
+                  Witness statement - susan collins
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Viewed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/public/pdf/example-witness-statement.pdf" aria-describedby="eligibility-status" target="_blank"">
+                  Witness statement - David marshall
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Viewed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/public/pdf/example-witness-statement.pdf" aria-describedby="eligibility-status" target="_blank"">
+                  Witness statement - Simon mortlock
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Viewed</strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+      <div class="govuk-button-group">
+
+
+            <div class="govuk-button-group">
+              <a href="alldocuments" class="govuk-button govuk-button--secondary" data-module="govuk-button" >
+                  Go back
+              </a>
+
+              <button class="govuk-button" href="/darespondenttasklist/start" data-module="govuk-button">
+                Continue
+              </button>
+
+           </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+
+    </div>
+ </div>
+  </form>
+
+
+
+{% endblock %}
