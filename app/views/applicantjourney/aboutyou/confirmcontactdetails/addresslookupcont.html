@@ -41,7 +41,7 @@
               <div class="govuk-!-padding-bottom-2"></div>
               <p class="govuk-body">
                 <strong>MK9 3DX</strong>
-                <a class="govuk-link govuk-!-margin-left-6" href="/steps/address/lookup/239d6d34-ae29-4f89-8ca6-b6ae5de503b7">Change postcode</a>
+                <a class="govuk-link govuk-!-margin-left-6" href="addresslookup">Change postcode</a>
               </p>
 
 
@@ -55,9 +55,17 @@
             </select>
           </div>
 
-          <p class="govuk-body govuk-!-margin-bottom-8">
-            <a class="govuk-link ga-pageLink" data-ga-category="address lookup" data-ga-label="address not listed" href="/steps/applicant/address_details/239d6d34-ae29-4f89-8ca6-b6ae5de503b7">I can’t find the address in the list</a>
+          <p class="govuk-body govuk-!-margin-bottom-6">
+            <a class="govuk-link ga-pageLink" data-ga-category="address lookup" data-ga-label="address not listed" href="#">I can’t find the address in the list</a>
           </p>
+
+          <div class="govuk-form-group govuk-!-margin-bottom-6 unlisted-addreess">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+                Your address
+              </label>
+            </h1>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>
 
 
 
@@ -94,6 +102,25 @@
     </div>
 
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+  $( document ).ready(function() {
+
+    $('.unlisted-addreess').hide();
+
+    $('.ga-pageLink').click(function(){
+
+      $('.unlisted-addreess').show();
+
+    });
+
+});
+
+</script>
 
 
 
