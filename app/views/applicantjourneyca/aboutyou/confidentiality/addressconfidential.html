@@ -9,7 +9,7 @@
 
 {{ govukHeader({
     homepageUrl: "/",
-    serviceName: "Child arrangements",
+    serviceName: serviceName,
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
 }) }}
@@ -30,23 +30,24 @@
              <form action="start-answer" method="post" novalidate>
               <div class="govuk-form-group">
                  <fieldset class="govuk-fieldset">
-                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                     <span class="govuk-caption-l">Keeping your contact details private</span>
                      <h1 class="govuk-fieldset__heading">
-                       Keeping your contact details private
+                       Do you want to keep your contact details private from the other people named in the application (the applicants)?
                      </h1>
 
                    </legend>
                    <div class="govuk-!-padding-bottom-6"></div>
                      <p class="govuk-body-m">The answers you give in your response will be shared with the other people named in this application (the applicants). This will include your contact details.</p>
-                     <p class="govuk-body-m">If you believe the other people in the case pose a risk to you or the children, you can ask the court to keep your contact details private.</p>
+                     <p class="govuk-body-m">For example, if you believe the other people in the case pose a risk to you or the children, you can ask the court to keep your contact details private.</p>
+
 
 
 
                      <div class="govuk-!-padding-bottom-3"></div>
                    <div class="govuk-form-group">
                      <fieldset class="govuk-fieldset">
-                       <h3 class="govuk-heading-m">Do you want to keep your contact details private from the other people named in the application (the applicants)?
-                       </h3>
+
                        <div class="govuk-radios" data-module="govuk-radios">
                          <div class="govuk-radios__item">
                            <input class="govuk-radios__input" id="confidential-yes" name="confidential" type="radio" value="yes" data-aria-controls="conditional-confidential">
@@ -57,14 +58,16 @@
                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-confidential">
                           <div class="govuk-form-group">
 
-                             <label class="govuk-label" for="privatedetails">Which contact details do you want to keep private from the other people in this application?</label>
-                             <div id="confidential-hint" class="govuk-hint">
-                               You've said that the applicants know some of your contact details. Make sure you select contact details the applicants do not already know.</div>
+                             <label class="govuk-label" for="privatedetails">Specify which contact details you want to keep private. <p>Make sure you only select details the applicants do not already know.</p>
+                             </label>
+
+
+
                                  <fieldset class="govuk-fieldset">
                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                                      <div class="govuk-checkboxes__item">
-                                       <input class="govuk-checkboxes__input" id="private-address" name="private" type="checkbox" value="address">
+                                       <input class="govuk-checkboxes__input" id="private-address" name="private" type="checkbox" value="address" checked="checked">
                                        <label class="govuk-label govuk-checkboxes__label" for="private-address">
                                          Address
                                        </label>
@@ -104,16 +107,17 @@
                      </fieldset>
                    </div>
                  </fieldset>
-                </div>
+              </div>
 
 
                <button class="govuk-button" data-module="govuk-button">
-                 Continue
+                 Save and continue
                </button>
              </form>
 
        </main>
      </div>
+    </div>
 
 
    <div class="govuk-grid-column-one-third">

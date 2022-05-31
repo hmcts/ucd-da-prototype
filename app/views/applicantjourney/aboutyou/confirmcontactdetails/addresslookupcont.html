@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Child arrangement respondent
+Non Molestation and Occupation
 {% endblock %}
 
 {% block header %}
@@ -59,10 +59,29 @@
             <a class="govuk-link ga-pageLink" data-ga-category="address lookup" data-ga-label="address not listed" href="#">I can’t find the address in the list</a>
           </p>
 
-          <div class="govuk-form-group govuk-!-margin-bottom-6 unlisted-addreess">
+          <div class="govuk-form-group govuk-!-margin-bottom-6 unlisted-address">
 
 
             <div class="govuk-!-padding-bottom-4">
+
+
+              <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+                <h2 class="govuk-error-summary__title" id="error-summary-title">
+                  There is a problem
+                </h2>
+                <div class="govuk-error-summary__body">
+                  <ul class="govuk-list govuk-error-summary__list">
+                    <li>
+                      <a href="#">Enter the Building and street</a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+
+
+
+
 
               <div class="govuk-form-group">
                 <label for="steps-applicant-address-details-form-address-line-1-field" class="govuk-label">Building and street
@@ -152,11 +171,11 @@
 
   $( document ).ready(function() {
 
-    $('.unlisted-addreess').hide();
+    $('.unlisted-address').hide();
 
     $('.ga-pageLink').click(function(){
 
-      $('.unlisted-addreess').show();
+      $('.unlisted-address').show();
 
     });
 

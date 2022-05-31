@@ -9,7 +9,7 @@
 
 {{ govukHeader({
     homepageUrl: "/",
-    serviceName: "Child arrangements",
+    serviceName: serviceName,
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
 }) }}
@@ -39,39 +39,7 @@
               <br>H24 HE</p>
               <div class="govuk-!-padding-bottom-4"></div>
 
-              <!--<div class="govuk-form-group">
-                <label class="govuk-label" for="address-line-1">
-                  Building (or house number) and street <span class="govuk-visually-hidden">line 1 of 2</span>
-                </label>
-                <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1" placeholder="24 Happy Hill">
-              </div>
 
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="address-line-2">
-                  <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
-                </label>
-                <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
-              </div>
-
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="address-town">
-                  Town or city
-                </label>
-                <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2" placeholder="Happy End">
-              </div>
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="county">
-                  County (optional)
-                </label>
-                <input class="govuk-input govuk-!-width-two-thirds" id="county" name="county" type="text" autocomplete="address-level2">
-              </div>
-
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="address-postcode">
-                  Postcode
-                </label>
-                <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code" placeholder="H24 HE">
-              </div>!-->
 
             </fieldset>
             <div class="govuk-button-group">
@@ -81,7 +49,7 @@
             <button class="govuk-button" data-module="govuk-button">
               Save and continue
             </button>
-            <a class="govuk-link" href="addresslookup">Edit address</a>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="addresslookup">Edit address</a>
           </div>
 
           </form>

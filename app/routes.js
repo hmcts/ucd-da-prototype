@@ -615,18 +615,18 @@ const router = express.Router()
 
 
 
-      router.post('/applicantjourney/tellusyourhearingneeds/start-answer', function (req, res) {
+      router.post('/applicantjourney/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
         // Make a variable and give it the value from 'how-many-balls'
         var reasonAdj = req.session.data['reasonable-adjustments']
 
         // Check whether the variable matches a condition
         if (reasonAdj == "No"){
           // Send user to next page
-          res.redirect('/applicantjourney/tellusyourhearingneeds/safetyrequirements')
+          res.redirect('/applicantjourney/aboutyou/tellusyourhearingneeds/safetyrequirements')
 
         }else {
             // Send user to ineligible page
-            res.redirect('/applicantjourney/tellusyourhearingneeds/documents')
+            res.redirect('/applicantjourney/aboutyou/tellusyourhearingneeds/documents')
         }
 
       });
@@ -661,6 +661,41 @@ const router = express.Router()
           }else {
               // Send user to ineligible page
               res.redirect('/applicantjourneyca/aboutyou/confidentiality/feedbackno')
+          }
+  
+        });
+
+
+        router.post('/applicantjourneyca/aboutyou/confidentiality/detailsknown-answer', function (req, res) {
+          // Make a variable and give it the value from 'how-many-balls'
+          var detKnown = req.session.data['detailsknown']
+  
+          // Check whether the variable matches a condition
+          if (detKnown == "yes"){
+            // Send user to next page
+            res.redirect('/applicantjourneyca/aboutyou/confidentiality/startalternative')
+  
+          }else {
+              // Send user to ineligible page
+              res.redirect('/applicantjourneyca/aboutyou/confidentiality/start')
+          }
+  
+        });
+  
+  
+  
+        router.post('/applicantjourneyca/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
+          // Make a variable and give it the value from 'how-many-balls'
+          var reasonAdj = req.session.data['reasonable-adjustments']
+  
+          // Check whether the variable matches a condition
+          if (reasonAdj == "No"){
+            // Send user to next page
+            res.redirect('/applicantjourneyca/aboutyou/tellusyourhearingneeds/safetyrequirements')
+  
+          }else {
+              // Send user to ineligible page
+              res.redirect('/applicantjourneyca/aboutyou/tellusyourhearingneeds/documents')
           }
   
         });
