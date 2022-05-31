@@ -1,4 +1,4 @@
-  {% extends "layout.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
   Upload documents
@@ -9,7 +9,7 @@
 
 {{ govukHeader({
     homepageUrl: "/",
-    serviceName: "Non Molestation and Occupation",
+    serviceName: serviceName,
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
 }) }}
@@ -21,7 +21,7 @@
 
 
 
-<a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+<a href="/respondenttasklist/startreply" class="govuk-back-link">Back</a>
 
   <div class="govuk-grid-row">
 
@@ -138,7 +138,7 @@
 
 
          <div class="govuk-!-padding-bottom-4"></div>
-        <form action="../start" method="post" novalidate>
+        <form action="../startreply" method="post" novalidate>
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
