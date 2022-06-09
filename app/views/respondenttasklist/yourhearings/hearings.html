@@ -1,53 +1,32 @@
 {% extends "layout.html" %}
-
 {% block pageTitle %}
   Hearing details
 {% endblock %}
-
 {% block header %}
   <!-- Blank header with no service name for the start page -->
-
 {{ govukHeader({
     homepageUrl: "/",
     serviceName: serviceName,
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
 }) }}
-
 {% endblock %}
-
 {% block content %}
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
-
   </div>
 </div>
-
  <div class="govuk-grid-row">
-
     <div class="govuk-grid-column-two-thirds">
-
-
-
-
-
-
         <h2 class="govuk-heading-l govuk-!-margin-top-6">
             Your hearing details
           </h2>
-
-
-
       <h3 class="govuk-heading-m govuk-!-margin-top-6">Case status</h3>
-
 <h4 class="govuk-heading-m">
         <img src="../../../../public/images/tick.PNG" width="30px" height="30px"/>
         <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-left-9">
           <div class="govuk-summary-list__row">
-
             <dt class="govuk-summary-list__key">
               Case status
             </dt>
@@ -56,23 +35,16 @@
             </dd>
           </div>
         </dl>
-
-
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
       <h3 class="govuk-heading-m">Your next hearing</h3>
-
       <div>
         <h4  class="govuk-heading-m">
           <img src="../../../../public/images/tick.PNG" width="30px" height="30px" style="margin: 0 25px 0 0" />
-
           Final hearing
         </h4>
       </div>
         <h4  class="govuk-heading-s govuk-!-margin-left-9"> You are required to attend this hearing</h4>
-
     <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-left-9">
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
             Date
@@ -81,7 +53,6 @@
           11 July 2021
         </dd>
       </div>
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Time
@@ -90,7 +61,6 @@
           10.30am
         </dd>
       </div>
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Duration of hearing
@@ -107,36 +77,30 @@
           Virtual
         </dd>
       </div>
-
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Hearing link
+        </dt>
+        <dd class="govuk-summary-list__value">
+          You will receive an email from the court with a link to your hearing
+        </dd>
+      </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Court name
         </dt>
         <dd class="govuk-summary-list__value">
-          Bristol family court
+          Bristol Civil and Family Justice Centre
         </dd>
       </div>
-
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-         Court address
-        </dt>
-        <dd class="govuk-summary-list__value">
-            Bristol  Avenue, Bristol, BL1 2A3<br>
-            <a href="">Useful documents (Map)</a>
-        </dd>
-      </div>
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Hearing needs
         </dt>
         <dd class="govuk-summary-list__value">
-            <a href="../aboutyou/tellusyourhearingneeds/languagerequirements">Hearing needs</a>
+            <a href="../aboutyou/tellusyourhearingneeds/languagerequirements">Your needs when you go to court</a>
         </dd>
       </div>
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Judge title
@@ -145,8 +109,6 @@
             Your honour
         </dd>
       </div>
-
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Judge last name
@@ -155,39 +117,28 @@
             Smith
         </dd>
       </div>
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         Judge email address
+         Judge's email address
         </dt>
         <dd class="govuk-summary-list__value">
             email@address.com
         </dd>
       </div>
-
-
     </dl>
-
-  <div class="govuk-!-padding-bottom-2 "></div>
-    <div class="govuk-hint govuk-!-margin-left-9">
-      <a href="">Read this page</a> if you wish to request a change to the date or time of your hearing.
-    </div>
-
+    <div class="govuk-!-padding-bottom-2 "></div>
+      <p class="govuk-body govuk-!-margin-left-9">
+        <a href="requestachange/start">What to do if you need to change your hearing date.</a>
+      </p>
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-
-
     <h3 class="govuk-heading-m">Your previous hearings</h3>
-
       <div>
         <h4  class="govuk-heading-m">
           <img src="../../../../public/images/tick.PNG" width="30px" height="30px" style="margin: 0 25px 0 0" />
-
           First hearing
         </h4>
       </div>
     <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-left-9">
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Date
@@ -196,7 +147,6 @@
           28 June 2021
         </dd>
       </div>
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Time
@@ -205,7 +155,6 @@
           9am
         </dd>
       </div>
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Type of hearing
@@ -214,17 +163,14 @@
           In person
         </dd>
       </div>
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Court name
         </dt>
         <dd class="govuk-summary-list__value">
-          Bristol family court
+          Bristol Civil and Family Justice Centre
         </dd>
       </div>
-
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Court address
@@ -234,17 +180,14 @@
             <a href="">Useful documents (Map)</a>
         </dd>
       </div>
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Hearing needs
         </dt>
         <dd class="govuk-summary-list__value">
-            <a href="../aboutyou/tellusyourhearingneeds/languagerequirements">Hearing needs</a>
+            <a href="../aboutyou/tellusyourhearingneeds/languagerequirements">Your needs when you go to court</a>
         </dd>
       </div>
-
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Hearing outcome
@@ -253,8 +196,6 @@
             <a href="">HearingOutcome.pdf</a>
         </dd>
       </div>
-
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Judge title
@@ -263,8 +204,6 @@
             Your honour
         </dd>
       </div>
-
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Judge last name
@@ -273,32 +212,23 @@
             Smith
         </dd>
       </div>
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         Judge email address
+         Judge's email address
         </dt>
         <dd class="govuk-summary-list__value">
             email@address.com
         </dd>
       </div>
-
-
     </dl>
-
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-left-9">
-
     <div>
       <h4  class="govuk-heading-m">
         <img src="../../../../public/images/tick.PNG" width="30px" height="30px" style="margin: 0 25px 0 0" />
-
         Pre hearing review
       </h4>
     </div>
-
-  
     <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-left-9">
-
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
            Date
@@ -307,7 +237,6 @@
             17 June 2021
           </dd>
         </div>
-
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
            Time
@@ -324,18 +253,14 @@
             In person
           </dd>
         </div>
-
-
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
            Court name
           </dt>
           <dd class="govuk-summary-list__value">
-            Bristol family court
+            Bristol Civil and Family Justice Centre
           </dd>
         </div>
-
-
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
            Court address
@@ -345,16 +270,14 @@
               <a href="">Useful documents (Map)</a>
           </dd>
         </div>
-
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
            Hearing needs
           </dt>
           <dd class="govuk-summary-list__value">
-              <a href="../aboutyou/tellusyourhearingneeds/languagerequirements">Hearing needs</a>
+              <a href="../aboutyou/tellusyourhearingneeds/languagerequirements">Your needs when you go to court</a>
           </dd>
         </div>
-
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
              Hearing outcome
@@ -363,7 +286,6 @@
                 <a href="">HearingOutcome.pdf</a>
             </dd>
           </div>
-
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
            Judge title
@@ -372,8 +294,6 @@
               Your honour
           </dd>
         </div>
-
-
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
            Judge last name
@@ -382,75 +302,35 @@
               Smith
           </dd>
         </div>
-
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-           Judge email address
+           Judge's email address
           </dt>
           <dd class="govuk-summary-list__value">
               email@address.com
           </dd>
         </div>
-
-
       </dl>
-
-
-
-
-
-
       <div class="govuk-button-group">
         <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="../startreply">Go back</a>
        </div>
-
-
-
-
-
-
-
-
 </div>
-
-
-
 <div class="govuk-grid-column-one-third">
-
-
-
-
-
-    	<details class="govuk-details" data-module="govuk-details">
- 			 <summary class="govuk-details__summary">
-   			 <span class="govuk-details__summary-text">
-    		  Contacts for help
-  			  </span>
-  			</summary>
-  			<div class="govuk-details__text">
-   			 Ask a question or get any help in any language
-   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
-
-   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
-   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
-   			 <a href="#" class="govuk-link">Find out about call charges</a>
-   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
-
-			  </div>
-			</details>
-
-
-
-
-
+        <details class="govuk-details" data-module="govuk-details">
+             <summary class="govuk-details__summary">
+             <span class="govuk-details__summary-text">
+              Contacts for help
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+             Ask a question or get any help in any language
+             <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+             <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+             <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+             <a href="#" class="govuk-link">Find out about call charges</a>
+             <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+              </div>
+            </details>
   </div>
-
-
-
-
-
   </div>
-
-
-
 {% endblock %}
