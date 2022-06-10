@@ -37,21 +37,21 @@
                  </div>
 
              <div class="govuk-radios__item">
-               <input id="steps-international-resident-form-international-resident-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_international_resident_form[international_resident]" aria-controls="steps-international-resident-form-international-resident-yes-conditional" aria-expanded="false">
-               <label for="steps-international-resident-form-international-resident-yes-field" class="govuk-label govuk-radios__label">Yes
+               <input id="internationalrequest-yes" class="govuk-radios__input" type="radio" value="Yes" name="internationalrequest" aria-controls="internationalrequest-yes-conditional" aria-expanded="false" {{ checked("internationalrequest", "yes") }}>
+               <label for="internationalrequest-yes" class="govuk-label govuk-radios__label">Yes
                </label>
              </div>
-             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="steps-international-resident-form-international-resident-yes-conditional">
+             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="internationalrequest-yes-conditional">
                <div class="govuk-form-group">
-                 <label for="steps-international-resident-form-international-resident-details-field" class="govuk-label">Provide details
+                 <label for="internationalrequest-details-field" class="govuk-label">Provide details
                  </label>
-                 <textarea id="steps-international-resident-form-international-resident-details-field" class="govuk-textarea" rows="5" name="steps_international_resident_form[international_resident_details]">
+                 <textarea id="internationalrequest-details-field" class="govuk-textarea" rows="5" name="internationalrequest-textarea">
                  </textarea>
                </div>
              </div>
             <div class="govuk-radios__item">
-              <input id="steps-international-resident-form-international-resident-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_international_resident_form[international_resident]">
-              <label for="steps-international-resident-form-international-resident-no-field" class="govuk-label govuk-radios__label">No
+              <input id="internationalrequest-no" class="govuk-radios__input" type="radio" value="No" name="internationalrequest">
+              <label for="internationalrequest-no" class="govuk-label govuk-radios__label">No
               </label>
             </div>
            </div>

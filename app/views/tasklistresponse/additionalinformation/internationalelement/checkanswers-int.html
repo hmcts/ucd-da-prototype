@@ -34,24 +34,26 @@
                  Do the children live outside of England or Wales?
                </dt>
                <dd class="govuk-summary-list__value">
-                 {{ data['steps-international-resident-form-international-resident-yes-field'] }} {{ data['steps-international-resident-form-international-resident-no-field'] }}
+                 {{ data['internationalchild'] }}
+                <p> {{ data['internationalchild-textarea'] }}</p>
                </dd>
                <dd class="govuk-summary-list__actions">
-                 <a class="govuk-link" href="#">
-                   Edit<span class="govuk-visually-hidden">MIAM</span>
+                 <a class="govuk-link" href="start">
+                   Edit<span class="govuk-visually-hidden">child</span>
                  </a>
                </dd>
              </div>
              <div class="govuk-summary-list__row">
                <dt class="govuk-summary-list__key govuk-!-width-one-half">
-                 Do the childrens' parents or anyone significant to the children live outside of England or Wales?
+                 Do the children's parents or anyone significant to the children live outside of England or Wales?
                </dt>
                <dd class="govuk-summary-list__value">
-                 {{ data['steps-international-resident-form-international-resident-yes-field-Yes'] }}{{ data['steps-international-resident-form-international-resident-no-field-No'] }}
+                 {{ data['internationalparents'] }}
+                 <p> {{ data['internationalparents-textarea'] }}</p>
                </dd>
                <dd class="govuk-summary-list__actions">
-                 <a class="govuk-link" href="#">
-                   Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                 <a class="govuk-link" href="parents">
+                   Edit<span class="govuk-visually-hidden">parents</span>
                  </a>
                </dd>
              </div>
@@ -60,11 +62,12 @@
                 Could another person in the application apply for a similar order in a country outside England or Wales?
                </dt>
                <dd class="govuk-summary-list__value">
-                 {{ data['steps-international-resident-form-international-resident-yes-field'] }}{{ data['steps-international-resident-form-international-resident-no-field'] }}
+                 {{ data['outsidejurisdiction'] }}
+                 <p> {{ data['outsidejurisdiction-textarea'] }}</p>
                </dd>
                <dd class="govuk-summary-list__actions">
-                 <a class="govuk-link" href="#">
-                   Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                 <a class="govuk-link" href="jurisdiction">
+                   Edit<span class="govuk-visually-hidden">jurisdiction</span>
                  </a>
                </dd>
              </div>
@@ -73,11 +76,12 @@
                  Has another country asked (or been asked) for information or help for the children?
                </dt>
                <dd class="govuk-summary-list__value">
-                 {{ data['steps-international-resident-form-international-resident-yes-field'] }}{{ data['steps-international-resident-form-international-resident-no-field'] }}
+                 {{ data['internationalrequest'] }}
+                 <p> {{ data['internationalrequest-textarea'] }}</p>
                </dd>
                <dd class="govuk-summary-list__actions">
-                 <a class="govuk-link" href="#">
-                   Edit<span class="govuk-visually-hidden">MIAM-willing</span>
+                 <a class="govuk-link" href="request">
+                   Edit<span class="govuk-visually-hidden">internationalrequest</span>
                  </a>
                </dd>
              </div>
@@ -100,6 +104,25 @@
       </main>
     </div>
   </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+       <summary class="govuk-details__summary">
+         <span class="govuk-details__summary-text">
+          Contacts for help
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+         Ask a question or get any help in any language
+         <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+         <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+         <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+         <a href="#" class="govuk-link">Find out about call charges</a>
+         <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+        </div>
+      </details>
+    </div>
 </div>
 
 
