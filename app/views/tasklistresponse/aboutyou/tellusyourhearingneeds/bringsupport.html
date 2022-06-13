@@ -41,18 +41,32 @@
                    </div>
                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                      <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="reasonable-adjustments" name="reasonable-adjustments" type="checkbox" value="I need documents in an alternative format">
+                       <input class="govuk-checkboxes__input" id="reasonable-adjustments" name="reasonable-adjustments" type="checkbox" value="I need documents in an alternative format" aria-controls="reasonable-adjustments-conditional">
                        <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
                          A support worker or carer
 
                        </label>
+                       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="reasonable-adjustments-conditional">
+                         <div class="govuk-form-group">
+                           <label for="reasonable-adjustment-details" class="govuk-label">Describe what you need</label>
+                           <textarea id="reasonable-adjustment-details" class="govuk-textarea" rows="1" name="reasonable-adjustment-details">
+                           </textarea>
+                         </div>
+                         </div>
                      </div>
                      <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-2" name="reasonable-adjustments" type="checkbox" value="I need help communicating and understanding">
+                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-2" name="reasonable-adjustments" type="checkbox" value="I need help communicating and understanding" aria-controls="reasonable-adjustments-2-conditional">
                        <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
                          A friend or family member
 
                        </label>
+                       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="reasonable-adjustments-2-conditional">
+                         <div class="govuk-form-group">
+                           <label for="reasonable-adjustment-details" class="govuk-label">Describe what you need</label>
+                           <textarea id="reasonable-adjustment-details-2" class="govuk-textarea" rows="1" name="reasonable-adjustment-details-2">
+                           </textarea>
+                         </div>
+                         </div>
                      </div>
                      <div class="govuk-checkboxes__item">
                        <input class="govuk-checkboxes__input" id="reasonable-adjustments-3" name="reasonable-adjustments" type="checkbox" value="I need to bring support with me to a hearing">

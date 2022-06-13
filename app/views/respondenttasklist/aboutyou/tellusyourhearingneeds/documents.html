@@ -40,13 +40,21 @@
                      Select all that apply to you
                    </div>
                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
                      <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="reasonable-adjustments" name="reasonable-adjustments" type="checkbox" value="I need documents in an alternative format">
+                       <input class="govuk-checkboxes__input" id="reasonable-adjustments" name="reasonable-adjustments" type="checkbox" value="I need documents in an alternative format" aria-controls="reasonable-adjustments-conditional">
                        <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
                          I need documents printed in a particular colour or font
-
                        </label>
+                       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="reasonable-adjustments-conditional">
+                         <div class="govuk-form-group">
+                           <label for="reasonable-adjustment-details" class="govuk-label">Describe what you need</label>
+                           <textarea id="reasonable-adjustment-details" class="govuk-textarea" rows="1" name="reasonable-adjustment-details">
+                           </textarea>
+                         </div>
+                         </div>
                      </div>
+
                      <div class="govuk-checkboxes__item">
                        <input class="govuk-checkboxes__input" id="reasonable-adjustments-2" name="reasonable-adjustments" type="checkbox" value="I need help communicating and understanding">
                        <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
@@ -62,11 +70,18 @@
                        </label>
                      </div>
                      <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-4" name="reasonable-adjustments" type="checkbox" value="I need something to feel comfortable during a hearing">
+                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-4" name="reasonable-adjustments" type="checkbox" value="I need something to feel comfortable during a hearing" aria-controls="reasonable-adjustments-4-conditional">
                        <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
                          Documents in large print
 
                        </label>
+                       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="reasonable-adjustments-4-conditional">
+                         <div class="govuk-form-group">
+                           <label for="reasonable-adjustment-details" class="govuk-label">Describe what you need</label>
+                           <textarea id="reasonable-adjustment-details-2" class="govuk-textarea" rows="1" name="reasonable-adjustment-details-2">
+                           </textarea>
+                         </div>
+                         </div>
                      </div>
                      <div class="govuk-checkboxes__item">
                        <input class="govuk-checkboxes__input" id="reasonable-adjustments-5" name="reasonable-adjustments" type="checkbox" value="I need help travelling to, or moving around court building">
