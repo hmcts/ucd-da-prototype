@@ -93,7 +93,7 @@
 
            <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Correspondence address
+                Address for post
               </dt>
               <dd class="govuk-summary-list__value">
                 11 New Happy Hill
@@ -123,21 +123,7 @@
                 </a>
               </dd>
             </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Phone number
-              </dt>
-              <dd class="govuk-summary-list__value">
-  <!--this will be prepopulated from the C100 but overwritten by their input. If no input from C100, it will highlight that it needs to be filled-->
-                <!--{{ data['telephone-number'] }}-->
-                123456789
-                <div id="prepopulated-hint" class="govuk-hint"></div>
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="contactdetails">Edit<span class="govuk-visually-hidden">number</span>
-                </a>
-              </dd>
-            </div>
+
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Email
@@ -156,12 +142,29 @@
               </dd>
             </div>
 
-           <div class="govuk-summary-list__row">
+            <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Contact instructions (safe call time)
+                Phone number
               </dt>
               <dd class="govuk-summary-list__value">
-                13:30
+  <!--this will be prepopulated from the C100 but overwritten by their input. If no input from C100, it will highlight that it needs to be filled-->
+                <!--{{ data['telephone-number'] }}-->
+                123456789
+                <div id="prepopulated-hint" class="govuk-hint"></div>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="contactdetails">Edit<span class="govuk-visually-hidden">number</span>
+                </a>
+              </dd>
+            </div>
+
+
+           <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                When to call you
+              </dt>
+              <dd class="govuk-summary-list__value">
+                1:30pm
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="contactdetails">Edit<span class="govuk-visually-hidden">safe call time</span>

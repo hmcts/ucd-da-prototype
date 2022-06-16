@@ -44,13 +44,8 @@
           <form action="checkanswers" method="post" novalidate>
 
             <h1 class="govuk-heading-xl">Your contact details</h1>
-            <p class="govuk-body">We will generally contact you electronically because you have signed up to the dashboard.</p>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="telephone-number">
-                UK telephone number
-              </label>
-              <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel" placeholder="12345679">
-            </div>
+            <p class="govuk-body">We will generally contact you by email because you have signed up to the dashboard.</p>
+
 
             <div class="govuk-form-group">
               <label class="govuk-label" for="email">
@@ -60,9 +55,20 @@
             </div>
 
             <div class="govuk-form-group">
-              <label class="govuk-label" for="width-10">
-                Contact instructions ( safe call time between 9am - 5pm )
+              <label class="govuk-label" for="telephone-number">
+                UK telephone number
               </label>
+              <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel" placeholder="12345679">
+            </div>
+
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="width-10">
+                When to call you (optional)
+              </label>
+              <div id="event-name-hint" class="govuk-hint">
+                Give a time between 9am and 5:30pm when it is safe to call you. For example, 3:30pm
+              </div>
               <input class="govuk-input govuk-input--width-20" id="time" name="time" type="text" spellcheck="false" aria-describedby="time-hint" autocomplete="time">
            
             </div>
