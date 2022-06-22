@@ -19,17 +19,17 @@
 {% block content %}
 
 
+<div class="govuk-grid-row">
 
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
 
-<a href="/respondenttasklist/yourdocuments/uploadv1/uploaddocuments" class="govuk-back-link">Back</a>
+<a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
 
-  <div class="govuk-grid-row">
-
-    <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-l">Upload documents</span>
-        Witness statements and evidence
+        <span class="govuk-caption-l">Witness statements and evidence</span>
+        Your witness statements
       </h1>
 
       <p class="govuk-body">If you are uploading documents from a computer, name the files clearly. For example, letter-from-school.doc.</p>
@@ -57,6 +57,16 @@
 
         <!-- start components here -->
 
+        <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Use this box to write your supporting material. You can also upload a file if you wish and use this box to provide context to the file.
+        </label>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8"></textarea>
+        <button class="govuk-button upload-addnew govuk-button--secondary" data-module="govuk-button">
+          Submit
+        </button>
+
+        </div>
 
 
         <div class="uploadcomponent">
@@ -91,7 +101,7 @@
 
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__value">
-                          witness_statement.pdf
+                          sam_richards__first_witness_statement_ date submitted.pdf
                         </dt>
                         <dd class="govuk-summary-list__value">
                           <strong>Marked as private</strong>
@@ -130,6 +140,7 @@
 
         <br>
 
+    </div>
     </div>
 
     <div class="govuk-grid-column-one-third">

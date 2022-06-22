@@ -19,27 +19,28 @@
 {% block content %}
   <form action="submit/reviewandsubmit" method="post" novalidate>
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
- 		 <a href="#" class="govuk-back-link">Back</a>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-grid-column-full">
+     		 <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+
+      </div>
+
+
       <h1 class="govuk-heading-xl">
         Respond to the application
       </h1>
 
-  </div>
-</div>
-<!--This is only a placeholder, different text and likely alsso a different format will eventually be here !-->
-
-<div class="govuk-warning-text">
-  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-  <strong class="govuk-warning-text__text">
-    <span class="govuk-warning-text__assistive">Warning</span>
-    Your response will be shared with the other people in this case.
-  </strong>
-</div>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Your response will be shared with the other people in this case.
+        </strong>
+      </div>
 
 
- <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+
       <ol class="app-task-list">
         <li>
           <h2 class="app-task-list__section">
@@ -97,7 +98,7 @@
         <li class="app-task-list__item">
           <span class="app-task-list__task-name">
             <a href="aboutyou/tellusyourhearingneeds/languagerequirements" aria-describedby="read-declaration-status">
-              Your needs when you go to court
+              Your support needs
             </a>
           </span>
           <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">To do</strong>
@@ -216,6 +217,7 @@
 </div>
       </ol>
     </div>
+
     <div class="govuk-grid-column-one-third">
 
     		<details class="govuk-details" data-module="govuk-details">
@@ -238,6 +240,7 @@
 
     </div>
   </div>
+
   </form>
 
 

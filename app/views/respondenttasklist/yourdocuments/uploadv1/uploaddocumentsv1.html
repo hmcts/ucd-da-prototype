@@ -19,14 +19,19 @@
 {% block content %}
 
 
-
-
-<form action="/respondenttasklist/startreply" method="post" novalidate>
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
- 		 <a href="/respondenttasklist/startreply" class="govuk-back-link">Back</a>
+   <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-width-container">
+       <a href="/respondenttasklist/startreply"class="govuk-back-link">Back</a>
+
+       <main class="govuk-main-wrapper " id="main-content" role="main">
+         <form action="/respondenttasklist/startreply" method="post" novalidate>
+
+
+
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
-        Sam Richards
+        Upload a document
       </h1>
 
       <p class="govuk-body">Respondent reference #1636575673018538</p>
@@ -34,16 +39,11 @@
       <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-2">View all documents</h2>
       <p class="govuk-body govuk-!-margin-bottom-7">Read through the application and then respond to the questions about the case</p> !-->
 
-  </div>
-</div>
 
 
- <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
 
-      <h2 class="govuk-heading-m govuk-!-margin-bottom-12" >
-          Upload documents
-      </h2>
+
+
 
       <p class="govuk-body govuk-!-margin-bottom-7">Select the type of document you want to upload</p>
 
@@ -56,18 +56,26 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="howdocumentshared" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
-                  Your statements
+                  Your position statements
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="requested" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
+                  Your witness statements
+                </a>
+              </span>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="howdocumentshared" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
-                  Witness statements
+                  Other witness statements
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -75,7 +83,7 @@
                   Digital downloads
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -83,7 +91,7 @@
                   Photographic evidence
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -91,7 +99,7 @@
                   Mobile phone screenshots
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -99,7 +107,7 @@
                   Medical records
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -107,7 +115,7 @@
                   Letters from school
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
           </ul>
         </li>
@@ -123,7 +131,7 @@
                   Previous orders submitted with application
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -131,7 +139,7 @@
                   Make an application in these proceedings
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
 
           </ul>
@@ -148,23 +156,16 @@
                   Medical reports
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="howdocumentshared" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
-                  DNA reports
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
-            </li>
+
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="howdocumentshared" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
                   Paternity test reports
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -172,7 +173,7 @@
                   Drug and alcohol tests (toxicology)
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -180,7 +181,7 @@
                   Police disclosures
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
          </ul>
         </li>
@@ -196,7 +197,7 @@
                   Other documents
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Upload</strong>
+
             </li>
            </ul>
         </li>
@@ -216,8 +217,10 @@
 
     </div>
   </ol>
-
+        </form>
+      </main>
     </div>
+  </div>
 
     <div class="govuk-grid-column-one-third">
 
@@ -241,7 +244,7 @@
 
     </div>
  </div>
-</form>
+
 
 
 
