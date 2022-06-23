@@ -24,7 +24,21 @@
 
         <main class="govuk-main-wrapper " id="main-content" role="main">
 
-          <form action="checkanswers" method="post" novalidate>
+          <form action="addressdetails" method="post" novalidate>
+
+            <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+              <h2 class="govuk-error-summary__title" id="error-summary-title">
+                There is a problem on this page
+              </h2>
+              <div class="govuk-error-summary__body">
+                <ul class="govuk-list govuk-error-summary__list">
+                  <li>
+                    <a href="#passport-issued-day">Your date of birth must be in the past</a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
 
               <h1 class="govuk-heading-xl">Your name and date of birth</h1>
 
@@ -45,19 +59,25 @@
 
             <div class="govuk-form-group">
               <label class="govuk-label" for="previous-name">
-                Previous names, if any (optional)
+                Previous name(s), if any (optional)
               </label>
               <input class="govuk-input" id="previous-name" name="previous-name" type="text" spellcheck="false" autocomplete="name">
             </div>
 
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+
+            <div class="govuk-form-group govuk-form-group--error">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
                 <legend class="govuk-fieldset__legend">
                     Your date of birth
                 </legend>
                 <div id="dob-hint" class="govuk-hint">
-                  For example, 31 3 1980
+                  For example - 31 3 1980
                 </div>
+                <p id="passport-issued-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span> Your date of birth must be in the past
+                </p>
                 <div class="govuk-date-input" id="dob">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -88,6 +108,7 @@
             </div>
 
             
+
             <button class="govuk-button" data-module="govuk-button">
               Save and continue
             </button>

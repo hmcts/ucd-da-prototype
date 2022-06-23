@@ -19,22 +19,20 @@
 {% block content %}
 
 
-
 <div class="govuk-grid-row">
 
   <div class="govuk-grid-column-two-thirds">
     <div class="govuk-width-container">
-<a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
 
+<a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
 
 
       <h1 class="govuk-heading-xl">
         <span class="govuk-caption-l">Witness statements and evidence</span>
-        Your witness statements
+        Your position statements
       </h1>
 
       <p class="govuk-body">If you are uploading documents from a computer, name the files clearly. For example, letter-from-school.doc.</p>
-
 
       <p class="govuk-body govuk-!-margin-bottom-6">Files must end with JPG, BMP, PNG,TIF, PDF, DOC or DOCX.</p>
 
@@ -57,7 +55,6 @@
         </details>
 
 
-
         <!-- start components here -->
 
         <div class="govuk-form-group">
@@ -76,6 +73,7 @@
 
           <div class=" govuk-!-margin-bottom-3">
 
+
             <div class="govuk-form-group govuk-inset-text govuk-!-margin-bottom-9">
 
               <label class="govuk-label govuk-!-font-weight-bold" for="file-upload-1">
@@ -84,7 +82,7 @@
 
               <input class="govuk-file-upload govuk-!-margin-bottom-4" id="file-upload-1" name="file-upload-1" type="file">
 
-                <form action="" method="post" novalidate>
+                <form action="uploadthirddocument" method="post" novalidate>
 
                 <button class="govuk-button upload-addnew govuk-button--secondary" data-module="govuk-button">
                   Upload file
@@ -93,115 +91,86 @@
               </form>
             </div>
 
+            <div class = "uploadedfilessummary">
 
-              <div class = uploadedfilessummary>
+                  <h2 class="app-task-list__section">
+                     Uploaded files
+                  </h2>
 
-                    <h2 class="app-task-list__section">
-                       Uploaded files
-                    </h2>
+                  <dl class="govuk-summary-list">
 
-                      <dl class="govuk-summary-list">
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__value">
+                          sam_richards__first_position_statement_ date submitted.pdf
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          <strong>Marked as private</strong>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link" href="#">
+                            Remove<span class="govuk-visually-hidden"> name</span>
+                          </a>
+                        </dd>
+                      </div>
 
-                          <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__value">
-                              sam_richards__first_witness_statement__date_submitted.pdf
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                              <strong>Marked as private</strong>
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                              <a class="govuk-link" href="#">
-                                Remove<span class="govuk-visually-hidden"> name</span>
-                              </a>
-                            </dd>
-                          </div>
+                    </dl>
 
-                          <div class="govuk-summary-list__row">
-                            <dt class="govuk-summary-list__value">
-                            sam_richards__second_witness_statement__date_submitted.pdf
-                            </dt>
-                            <dd class="govuk-summary-list__value">
-                              <strong>Marked as private</strong>
-                            </dd>
-                            <dd class="govuk-summary-list__actions">
-                              <a class="govuk-link" href="#">
-                                Remove<span class="govuk-visually-hidden"> name</span>
-                              </a>
-                            </dd>
-                          </div>
-
-                        </dl>
-
-                </div>
-
-            </div>
-
+              </div>
 
           </div>
+
+
+        </div>
+
 
         <!-- end components here -->
 
-          <br><br><br><br>
+        <br><br><br><br>
 
 
-          <div class="govuk-button-group">
-
-          <form action="uploadsuccessv3" method="post" novalidate>
-
-            <button class="govuk-button" data-module="govuk-button">
-              Save and continue
-            </button>
+        <div class="govuk-button-group">
 
 
-          </form>
+          <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+          </button>
 
-          </div>
 
-          <br>
+        </div>
+
+        <br>
 
     </div>
     </div>
-
-
 
     <div class="govuk-grid-column-one-third">
 
-    		<details class="govuk-details" data-module="govuk-details">
+      <details class="govuk-details" data-module="govuk-details">
 
- 			      <summary class="govuk-details__summary">
+          <summary class="govuk-details__summary">
 
-       			 <span class="govuk-details__summary-text">
-        		  Contacts for help
-      			  </span>
+           <span class="govuk-details__summary-text">
+            Contacts for help
+            </span>
 
-  			    </summary>
+          </summary>
 
-      			<div class="govuk-details__text">
-       			 Ask a question or get any help in any language
-       			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+          <div class="govuk-details__text">
+           Ask a question or get any help in any language
+           <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
 
-       			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
-       			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
-       			 <a href="#" class="govuk-link">Find out about call charges</a>
-       			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+           <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+           <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+           <a href="#" class="govuk-link">Find out about call charges</a>
+           <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
 
-    			  </div>
+          </div>
 
-			  </details>
+      </details>
 
     </div>
 
-
-
-
   </div>
-
-
-
-
-
-
-
 
 
 

@@ -26,12 +26,10 @@
 
           <h1 class="govuk-heading-xl">Check your details</h1>
 
-          <div id="prepopulated-hint" class="govuk-hint">Read the information to make sure it is correct, and add any missing details
-          </div>
 
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
+              <dt class="govuk-summary-list__key govuk-!-width-one-half">
                 Name
               </dt>
               <dd class="govuk-summary-list__value">
@@ -58,22 +56,7 @@
                 </a>
               </dd>
             </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Place of birth
-              </dt>
-              <dd class="govuk-summary-list__value">
-  <!--this will be prepopulated from the C100 but overwritten by user's input. If no input from C100, it will highlight that it needs to be filled-->
-                <!--{{ data['pob'] }}-->
-                <p id="event-name-error" class="govuk-error-message">
-                  <span class="govuk-visually-hidden">Error:</span>Complete this section
-                </p>
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="personaldetails">Edit<span class="govuk-visually-hidden">place of birth</span>
-                </a>
-              </dd>
-            </div>
+
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Address
@@ -90,25 +73,10 @@
                 </a>
               </dd>
             </div>
+            
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Address history
-              </dt>
-              <dd class="govuk-summary-list__value">
-  <!--this will be prepopulated from the C100 but overwritten by user's input. If no input from C100, it will highlight that it needs to be filled-->
-                <!--{{ data['more-detail'] }}-->
-                <p id="event-name-error" class="govuk-error-message">
-                  <span class="govuk-visually-hidden">Error:</span>Complete this section
-                </p>
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="addresshistory">Edit<span class="govuk-visually-hidden">address</span>
-                </a>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Phone number
+                Telephone number
               </dt>
               <dd class="govuk-summary-list__value">
   <!--this will be prepopulated from the C100 but overwritten by their input. If no input from C100, it will highlight that it needs to be filled-->
@@ -142,9 +110,10 @@
 
           </dl>
 
+          <div id="prepopulated-hint" class="govuk-hint govuk-!-margin-top-1 govuk-!-margin-bottom-6">If you do not want to share your contact details with the other person in the case, update the section <a href="../confidentiality/detailsknown">Keeping your contact details private</a></div>
       <div>
 
-        <form action="/darespondenttasklist/start" method="post" novalidate>
+        <form action="../../start" method="post" novalidate>
 
           <input type="hidden" name="answers-checked" value="true">
 
@@ -152,9 +121,7 @@
             <button class="govuk-button" data-module="govuk-button">
               Save and continue
             </button>
-            <a href="personaldetails" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Edit answers
-            </a>
+
           </div>
 
         </form>

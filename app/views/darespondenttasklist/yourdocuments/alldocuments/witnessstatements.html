@@ -17,92 +17,83 @@
 {% endblock %}
 
 {% block content %}
-<form action="/darespondenttasklist/start" method="post" novalidate>
+
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
- 		 <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
-        View all documents
-      </h1>
+   <div class="govuk-grid-column-two-thirds">
 
-      <p class="govuk-body">Respondent reference #1636575673018538</p>
+    <div class="govuk-width-container">
+       <a href="/darespondenttasklist/yourdocuments/alldocuments/alldocuments" class="govuk-back-link">Back</a>
 
-      <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-2">View all documents</h2>
-      <p class="govuk-body govuk-!-margin-bottom-7">Read through the application and then respond to the questions about the case</p> !-->
-
-  </div>
-</div>
-
-<div class="govuk-inset-text">
-  Some documents will only be accessible if granted access by the court
-</div>
-
- <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+       <main class="govuk-main-wrapper " id="main-content" role="main">
+         <form action="/respondenttasklist/yourdocuments/alldocuments/alldocuments" method="post" novalidate>
 
 
+     <h1 class="govuk-heading-xl">
+       <span class="govuk-caption-l">All documents</span>
+       Other witness statements
+     </h1>
+
+      <p class="govuk-body">Case number #1636575673018538</p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
 
       <ol class="app-task-list">
         <li>
-          <h2 class="app-task-list__section">
-             Witness statements
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/public/pdf/example-witness-statement.pdf" aria-describedby="eligibility-status" target="_blank"">
-                  Witness statement - James harvy
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/public/pdf/example-witness-statement.pdf" aria-describedby="eligibility-status" target="_blank"">
-                  Witness statement - susan collins
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/public/pdf/example-witness-statement.pdf" aria-describedby="eligibility-status" target="_blank"">
-                  Witness statement - David marshall
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/public/pdf/example-witness-statement.pdf" aria-describedby="eligibility-status" target="_blank"">
-                  Witness statement - Simon mortlock
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Viewed</strong>
-            </li>
-          </ul>
+
+          <dl class="govuk-summary-list govuk-summary-list--no-border">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                21 June 2021
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#">Other_witness_statements__first_statement__21062021.pdf</a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                27 May 2021
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#">Other_witness_statements__second_statement__27052021.pdf</a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                18 May 2021
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#">Other_witness_statements__third_statement__18052021.pdf</a>
+              </dd>
+            </div>
+
+          </dl>
         </li>
       </ol>
 
-      <div class="govuk-button-group">
 
 
-            <div class="govuk-button-group">
-              <a href="alldocuments" class="govuk-button govuk-button--secondary" data-module="govuk-button" >
-                  Go back
-              </a>
-
-              <button class="govuk-button" href="/darespondenttasklist/start" data-module="govuk-button">
-                Continue
-              </button>
-
-           </div>
 
 
-      </div>
 
+
+
+
+
+      <button class="govuk-button govuk-button--secondary" href="#" onclick="history.back(-1)"  data-module="govuk-button">
+        Go back
+      </button>
+
+
+
+
+
+            </form>
+          </main>
+
+        </div>
     </div>
 
     <div class="govuk-grid-column-one-third">
@@ -127,7 +118,7 @@
 
     </div>
  </div>
-  </form>
+
 
 
 

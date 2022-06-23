@@ -24,8 +24,24 @@
 
         <main class="govuk-main-wrapper " id="main-content" role="main">
 
-          <form action="checkanswers" method="post" novalidate>
+          <form action="addresslookupcont" method="post" novalidate>
+            <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+              <h2 class="govuk-error-summary__title" id="error-summary-title">
+                There is a problem on this page
+              </h2>
+              <div class="govuk-error-summary__body">
+                <ul class="govuk-list govuk-error-summary__list">
 
+                  <li>
+                    <a href="#postcode-input">Enter a valid postcode</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="govuk-form-group govuk-form-group--error">
+
+            
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
@@ -33,24 +49,28 @@
                 </h1>
               </legend>
               <div class="govuk-!-padding-bottom-4"></div>
-              <p class="govuk-body govuk-!-font-weight-bold">
-                24 Happy Hill
-              <br>Happy End
-              <br>H24 HE</p>
-              <div class="govuk-!-padding-bottom-4"></div>
 
 
+            <div class="govuk-form-group">
+              <label for="steps-address-lookup-form-postcode-field" class="govuk-label">Your current postcode</label>
+              <p id="address-postcode-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Enter a valid postcode
+              </p>
+              <input id="steps-address-lookup-form-postcode-field" class="govuk-input govuk-!-width-one-third" autocomplete="postal-code" type="text" value="" name="steps_address_lookup_form[postcode]">
+            </div>
+            </div>
 
-            </fieldset>
-            <div class="govuk-button-group">
+  <p class="govuk-body govuk-!-margin-bottom-8">
+    <a class="govuk-link ga-pageLink" data-ga-category="address lookup" data-ga-label="applicant manual entry" href="addressblank">I live outside the UK</a>
+  </p>
+
 
 
 
             <button class="govuk-button" data-module="govuk-button">
-              Save and continue
+              Continue
             </button>
-            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="addresslookup">Edit address</a>
-          </div>
+
 
           </form>
 

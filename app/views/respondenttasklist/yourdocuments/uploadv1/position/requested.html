@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Upload documents
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+
+      <a href="#" onclick="history.back(-1)"  class="govuk-back-link">Back</a>
+
+
+
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-l">Witness statements and evidence</span>
+        Your position statements
+      </h1>
+
+
+
+              <div class="govuk-form-group govuk-!-margin-bottom-9">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-4">
+                      Has this document been request by the court?
+                    </h1>
+                  </legend>
+                  <div class="govuk-warning-text govuk-!-margin-bottom-4">
+
+                    <p class="govuk-body">The court approves all documents before they are considered in the case. Uploading a document that the court has not requested does not automatically mean this document will be considered by the court. </p>
+
+                    <p class="govuk-body">If you are unsure whether you have been requested to provide documents by the court, please, read careful any orders you have have been issued by the court.</p>
+
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="yes-redirect" name="where-do-you-live" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="yes-redirect">
+                        Yes, I have been requested or given permission by the court to provide this document
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="no-redirect" name="where-do-you-live" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="no-redirect">
+                        No, the court did not request this document
+                      </label>
+                    </div>
+                  </div>
+            </div>
+
+            </div>
+
+
+
+
+          <!-- end components here -->
+
+
+
+
+          <div class="govuk-button-group">
+
+            <form action="howdocumentshared" method="post" novalidate>
+
+              <input type="hidden" name="answers-checked" value="true">
+
+              <button class="govuk-button" data-module="govuk-button" >Continue</button>
+
+            </form>
+
+          </div>
+
+
+
+    </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <details class="govuk-details" data-module="govuk-details">
+
+          <summary class="govuk-details__summary">
+
+           <span class="govuk-details__summary-text">
+            Contacts for help
+            </span>
+
+          </summary>
+
+          <div class="govuk-details__text">
+           Ask a question or get any help in any language
+           <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+           <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+           <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+           <a href="#" class="govuk-link">Find out about call charges</a>
+           <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+          </div>
+
+      </details>
+
+    </div>
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
