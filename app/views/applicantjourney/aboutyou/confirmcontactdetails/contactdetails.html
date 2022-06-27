@@ -44,8 +44,7 @@
           <form action="checkanswers" method="post" novalidate>
 
             <h1 class="govuk-heading-xl">Your contact details</h1>
-            <p class="govuk-body">The court will generally contact you by email because you have opted to manage your case online.<br>
-              Only give a telephone number if it is safe for you to take calls. You can specify a safe time to call.</p>
+            <p class="govuk-body">The court will generally contact you by email because you have opted to manage your case online.</p>
 
 
             <div class="govuk-form-group">
@@ -59,6 +58,9 @@
               <label class="govuk-label" for="telephone-number">
                 UK telephone number (optional)
               </label>
+              <div id="event-name-hint" class="govuk-hint">
+                Only give a telephone number if it is safe for you to take calls
+              </div>
               <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel" placeholder="12345679">
             </div>
 
