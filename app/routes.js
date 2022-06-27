@@ -560,6 +560,72 @@ const router = express.Router()
                 });
 
 
+        router.post('/applicanttasklist/aboutyou/confidentiality/start-answer', function (req, res) {
+          // Make a variable and give it the value from 'how-many-balls'
+          var confDetails = req.session.data['confidential']
+
+          // Check whether the variable matches a condition
+          if (confDetails == "yes"){
+            // Send user to next page
+            res.redirect('/applicanttasklist/aboutyou/confidentiality/feedback')
+
+          }else {
+              // Send user to ineligible page
+              res.redirect('/applicanttasklist/aboutyou/confidentiality/feedbackno')
+          }
+
+        });
+
+        router.post('/applicanttasklist/aboutyou/confidentiality/startalternative-answer', function (req, res) {
+            // Make a variable and give it the value from 'how-many-balls'
+            var noConf = req.session.data['confidential']
+
+            // Check whether the variable matches a condition
+            if (noConf == "yes"){
+              // Send user to next page
+              res.redirect('/applicanttasklist/aboutyou/confidentiality/feedback')
+
+            }else {
+                // Send user to ineligible page
+                res.redirect('/applicanttasklist/aboutyou/confidentiality/feedbackno')
+            }
+
+          });
+
+        
+          router.post('/applicanttasklist/aboutyou/confidentiality/detailsknown-answer', function (req, res) {
+              // Make a variable and give it the value from 'how-many-balls'
+              var detailsKnown = req.session.data['detailsknown']
+
+              // Check whether the variable matches a condition
+              if (detailsKnown == "yes"){
+                // Send user to next page
+                res.redirect('/applicanttasklist/aboutyou/confidentiality/startalternative')
+
+              }else {
+                  // Send user to ineligible page
+                  res.redirect('/applicanttasklist/aboutyou/confidentiality/start')
+              }
+
+            });
+
+            router.post('/applicanttasklist/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
+                // Make a variable and give it the value from 'how-many-balls'
+                var reasonAdj = req.session.data['reasonable-adjustments']
+
+                // Check whether the variable matches a condition
+                if (reasonAdj == "No"){
+                  // Send user to next page
+                  res.redirect('/applicanttasklist/aboutyou/tellusyourhearingneeds/preventfromparticipating')
+
+                }else {
+                    // Send user to ineligible page
+                    res.redirect('/applicanttasklist/aboutyou/tellusyourhearingneeds/documents')
+                }
+
+              });
+
+
 
 
 

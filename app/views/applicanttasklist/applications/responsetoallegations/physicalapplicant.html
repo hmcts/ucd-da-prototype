@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-width-container">
+
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+            <form action="abuseagainstchildren" method="post" novalidate>
+            <h1 class="govuk-heading-xl">Allegations of physical abuse towards the applicant</h1>
+
+            <p class="govuk-body-l">The applicant described the following physical abuse:</p>
+            <div class="govuk-inset-text">
+            <h3 class="govuk-heading-s">Briefly describe what happened and who was involved, if you feel able to<h3>
+              <p class="govuk-body"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non mauris ac lacus fermentum facilisis sit amet in dolor. Mauris vel posuere libero. Vestibulum condimentum egestas mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent non mollis quam. Phasellus porttitor quis turpis non iaculis. Phasellus rutrum placerat ultrices. Aenean ultricies elit ultrices quam mattis, eget lobortis lorem pulvinar. Etiam a bibendum quam, eu pharetra enim. Pellentesque tempus libero ipsum, sed eleifend sapien bibendum sed. Mauris interdum tellus odio, tincidunt posuere mi pretium sed. Mauris finibus ornare magna. In ut sapien in est efficitur lacinia. Cras ut mi eu mauris finibus dictum non quis ante.<p>
+            <h3 class="govuk-heading-s">When did the behaviour start?<h3>
+              <p class="govuk-body"> Lorem ipsum dolor sit amet<p>
+            <h3 class="govuk-heading-s">Is the behaviour still ongoing?<h3>
+              <p class="govuk-body"> Yes<p>
+            <h3 class="govuk-heading-s">Have you asked for help?<h3>
+              <p class="govuk-body">No<p>
+                </div>
+
+
+                <h3 class="govuk-heading-m">Respond to the information provided by the applicant <h3>
+                  <div id="waste-hint" class="govuk-hint">
+                    Try to give a brief response to each of the points that were raised by the applicant.
+
+                    <br>
+                    Include any evidence that is relevant to the allegations.
+                  </div>
+
+            <textarea class="govuk-textarea" id="physical-response" name="physical-response"" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+            <div class="govuk-!-padding-bottom-4"></div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  I do not wish to respond to this allegation
+                </label>
+              </div>
+            </div>
+            <div class="govuk-!-padding-bottom-4"></div>
+            
+             <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Save and continue
+             </button>
+
+
+          </main>
+      </div>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+ 			      <summary class="govuk-details__summary">
+       			 <span class="govuk-details__summary-text">
+        		  Contacts for help
+      			  </span>
+  			    </summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

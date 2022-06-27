@@ -1,39 +1,59 @@
 {% extends "layout.html" %}
+
 {% block pageTitle %}
   Hearing details
 {% endblock %}
+
 {% block header %}
   <!-- Blank header with no service name for the start page -->
+
 {{ govukHeader({
     homepageUrl: "/",
     serviceName: serviceName,
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
 }) }}
+
 {% endblock %}
+
 {% block content %}
+
 <div class="govuk-grid-row">
+
    <div class="govuk-grid-column-two-thirds">
+
     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+
+
+
+
+
+
       <h1 class="govuk-heading-xl govuk-!-margin-top-6">
           Your court hearings
         </h1>
         <p class="govuk-body">Case number #1636575673018538</p>
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
     <h3 class="govuk-heading-l">Your next hearing</h3>
+
       <h4 class="govuk-heading-m govuk-!-margin-left-9">
         Final hearing
       </h4>
     <h4 class="govuk-heading-s govuk-!-margin-left-9"> You must attend this hearing</h4>
   <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-left-9">
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
           Date
       </dt>
       <dd class="govuk-summary-list__value">
-        11 July 2021
+        Monday 12 July 2021
       </dd>
     </div>
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
        Time
@@ -42,6 +62,7 @@
         10:30am
       </dd>
     </div>
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
        Duration of hearing
@@ -50,6 +71,7 @@
         2 hours
       </dd>
     </div>
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
        Type of hearing
@@ -58,6 +80,7 @@
         Remote (by telephone or video)
       </dd>
     </div>
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
        Hearing link
@@ -66,6 +89,7 @@
         The court will email you instructions to join the hearing
       </dd>
     </div>
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
        Court name
@@ -74,6 +98,8 @@
         Bristol family court
       </dd>
     </div>
+
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
         Support
@@ -84,6 +110,9 @@
         </a>
       </dd>
     </div>
+
+
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
         Hearing notice
@@ -95,6 +124,8 @@
         </a>
       </dd>
     </div>
+
+
 <!--       <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
       Virtual hearing
@@ -105,23 +136,32 @@
         </a>
       </dd>
     </div> -->
+
   </dl>
+
+
   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
   <h3 class="govuk-heading-l">Your previous hearings</h3>
   <div>
     <h4 class="govuk-heading-m govuk-!-margin-left-9">
       First hearing
     </h4>
   </div>
+
   <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-left-9">
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
        Date
       </dt>
       <dd class="govuk-summary-list__value">
-        28 June 2021
+        Monday 28 June 2021
       </dd>
     </div>
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
        Time
@@ -130,6 +170,7 @@
         9:00am
       </dd>
     </div>
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
        Type of hearing
@@ -138,6 +179,7 @@
         In person
       </dd>
     </div>
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
        Court name
@@ -146,6 +188,8 @@
         Bristol family court
       </dd>
     </div>
+
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
        Court address
@@ -155,6 +199,9 @@
           <a href="">Useful documents (Map)</a>
       </dd>
     </div>
+
+
+
 <!--       <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
       Virtual hearing
@@ -163,6 +210,8 @@
         Not available
       </dd>
     </div> -->
+
+
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
        Hearing outcome
@@ -171,22 +220,30 @@
           <a href="">HearingOutcome.pdf</a>
       </dd>
     </div>
+
+
+
+
   </dl>
+
   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
   <div>
     <h4 class="govuk-heading-m govuk-!-margin-left-9">
       Pre-hearing review
     </h4>
   </div>
   <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-left-9">
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Date
         </dt>
         <dd class="govuk-summary-list__value">
-          17 June 2021
+          Thursday 17 June 2021
         </dd>
       </div>
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Time
@@ -195,6 +252,7 @@
           11:30am
         </dd>
       </div>
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Type of hearing
@@ -203,6 +261,7 @@
           In person
         </dd>
       </div>
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Court name
@@ -211,6 +270,8 @@
           Bristol family court
         </dd>
       </div>
+
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
          Court address
@@ -228,27 +289,68 @@
             <a href="">HearingOutcome.pdf</a>
         </dd>
       </div>
+
+
+
     </dl>
+
+
+
+
+
+
+
       <div class="govuk-button-group">
-        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="../startreply">Go back</a>
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="../start">Go back</a>
        </div>
+
+
+
+
+
+
+
+
 </div>
+
+
+
 <div class="govuk-grid-column-one-third">
-        <details class="govuk-details" data-module="govuk-details">
-             <summary class="govuk-details__summary">
-             <span class="govuk-details__summary-text">
-              Contacts for help
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-             Ask a question or get any help in any language
-             <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
-             <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
-             <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
-             <a href="#" class="govuk-link">Find out about call charges</a>
-             <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
-              </div>
-            </details>
+
+
+
+
+
+    	<details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+			  </div>
+			</details>
+
+
+
+
+
   </div>
+
+
+
+
+
   </div>
+
+
+
 {% endblock %}
