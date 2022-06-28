@@ -19,32 +19,16 @@
 {% block content %}
 
 <style>
-  .hmcts-progress-bar-vertical .hmcts-progress-bar__list-item {
-    width: 90px;
-    display: inline-block;
-}
 
+  .hmcts-progress-bar-vertical .hmcts-progress-bar__list-item { width:100px; display: inline-block; }
 
 @media screen and (max-width:1200px) {
 
-.hmcts-progress-bar-vertical .hmcts-progress-bar__list-item { max-width:45px; display:block; margin-top: 10px; }
-.hmcts-progress-bar-vertical .hmcts-progress-bar__list::before {
-  border-top: none;
-  position: absolute;
-  top: 0px;
-  border-left: 6px solid #CECECE;
-  height: 100%;
-  position: absolute;
-  left:20px;
-  top: 0;
+    .hmcts-progress-bar-vertical .hmcts-progress-bar__list-item {  max-width:45px;display:block; margin-top: 10px; }
+    .hmcts-progress-bar-vertical-6items .hmcts-progress-bar__list::before { border-top: none; position: absolute; top: 0px; border-left: 6px solid #CECECE; height: 100%; position: absolute; left:20px; top:0; }
+    .hmcts-progress-bar-vertical-6items .hmcts-progress-bar__label { margin-top:-25px; margin-left:50px; width:350px; text-align:left }
 
-}
-
-.hmcts-progress-bar-vertical .hmcts-progress-bar__label { margin-top:-25px; margin-left:50px; width:350px; text-align:left }
-
-}
-
-
+    }
 
 </style>
 
@@ -54,9 +38,8 @@
 
       <h1 class="govuk-heading-l">Progess bar proof of concept</h1>
 
-
       <h2 class="govuk-heading-m">
-        Example 2:  Desktop progress bar - Responsive mode: vertical
+       Responsive mode: vertical 6 stops
       </h2>
 
         <!-- start components here -->
@@ -101,12 +84,122 @@
 
         <br>
 
-        <a href="vertical-examples">Further examples</a>
-
         <br><br><br>
 
 
+
+        <h2 class="govuk-heading-m">
+            Responsive mode: vertical 5 stops
+           </h2>
+     
+             <!-- start components here -->
+     
+             <div class="hmcts-progress-bar-vertical" role="progressbar">
+               <ol class="hmcts-progress-bar__list">
+               
+               <li class="hmcts-progress-bar__list-item">
+                 <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+                 <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 1: </span>Application issued</span>
+               </li>
+               
+               <li class="hmcts-progress-bar__list-item" aria-current="step">
+                 <span class="hmcts-progress-bar__icon"></span>
+                 <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Current Step 2: </span>Response submitted</span>
+               </li>
+               
+               <li class="hmcts-progress-bar__list-item">
+                 <span class="hmcts-progress-bar__icon"></span>
+                 <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 3: </span>Hearing</span>
+               </li>
+               
+               <li class="hmcts-progress-bar__list-item">
+                 <span class="hmcts-progress-bar__icon"></span>
+                 <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 4: </span>Order</span>
+               </li>
+     
+     
+               <li class="hmcts-progress-bar__list-item">
+                 <span class="hmcts-progress-bar__icon"></span>
+                 <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 5: </span>Final order</span>
+               </li>
+     
+               </ol>
+             </div> 
+     
+             <br>
+     
+             <br><br><br>
+
+
+
+             <h2 class="govuk-heading-m">
+                Responsive mode: vertical 4 stops
+               </h2>
+         
+                 <!-- start components here -->
+         
+                 <div class="hmcts-progress-bar-vertical vertical--4stop" role="progressbar">
+                   <ol class="hmcts-progress-bar__list">
+                   
+                   <li class="hmcts-progress-bar__list-item">
+                     <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+                     <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 1: </span>Application issued</span>
+                   </li>
+                   
+                   <li class="hmcts-progress-bar__list-item" aria-current="step">
+                     <span class="hmcts-progress-bar__icon"></span>
+                     <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Current Step 2: </span>Response submitted</span>
+                   </li>
+                   
+                   <li class="hmcts-progress-bar__list-item">
+                     <span class="hmcts-progress-bar__icon"></span>
+                     <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 3: </span>Hearing</span>
+                   </li>
+                   
+                   <li class="hmcts-progress-bar__list-item">
+                     <span class="hmcts-progress-bar__icon"></span>
+                     <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 4: </span>Order</span>
+                   </li>
+         
+                   </ol>
+                 </div> 
+         
+                 <br>
+         
+                 <br><br><br>
+
        
+
+                 <h2 class="govuk-heading-m">
+                    Responsive mode: vertical 3 stops
+                   </h2>
+             
+                     <!-- start components here -->
+             
+                     <div class="hmcts-progress-bar-vertical" role="progressbar">
+                       <ol class="hmcts-progress-bar__list">
+                       
+                       <li class="hmcts-progress-bar__list-item">
+                         <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+                         <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 1: </span>Application issued</span>
+                       </li>
+                       
+                       <li class="hmcts-progress-bar__list-item" aria-current="step">
+                         <span class="hmcts-progress-bar__icon"></span>
+                         <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Current Step 2: </span>Response submitted</span>
+                       </li>
+                       
+                       <li class="hmcts-progress-bar__list-item">
+                         <span class="hmcts-progress-bar__icon"></span>
+                         <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 3: </span>Hearing</span>
+                       </li>
+             
+                       </ol>
+                     </div> 
+             
+                     <br>
+             
+                     <br><br><br>
 
 
 
@@ -117,7 +210,7 @@
           <h3 class="govuk-heading-m">
             Notes:
           </h3>
-            <p class="govuk-body govuk govuk-!-margin-bottom-0">2. Progress bar (example 2) vertical responsive, is an "extended" version of the HMCTS progress bar component.</p>
+            <p class="govuk-body govuk govuk-!-margin-bottom-0">Progress bar vertical responsive is an "extended" version of the HMCTS progress bar component.</p>
         </div>
 
 
