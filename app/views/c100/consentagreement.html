@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-width-container">
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+          <form action="consentagreement-answer" method="post" novalidate>
+
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Have you and the other people in this application reached an agreement outside of court and are you asking the court to formalise the agreement?
+                </h1>
+              </legend>
+              <div class="govuk-!-padding-bottom-4"></div>
+
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input id="consentagreement-yes" class="govuk-radios__input" type="radio" value="yes" name="consentagreement">
+                      <label for="consentagreement-yes" class="govuk-label govuk-radios__label">Yes</label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input id="consentagreement-no" class="govuk-radios__input" type="radio" value="no" name="consentagreement">
+                      <label for="consentagreement-no" class="govuk-label govuk-radios__label">No</label>
+                    </div>
+                  </div>
+                 </fieldset>
+               </div>
+
+
+            <button class="govuk-button" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            <p class="govuk-body">Evidence shows that is better for the children and often faster if you can reach an agreement outside of court. </p>
+
+            <p class="govuk-body"><a href="" class="govuk-link" rel="external" target="_blank">Find out more about alternative routes of reaching an agreement.</a></p>
+
+
+
+
+          </form>
+
+        </main>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+   			 <summary class="govuk-details__summary">
+     			 <span class="govuk-details__summary-text">
+      		  Contacts for help
+    			  </span>
+    			</summary>
+    			<div class="govuk-details__text">
+     			 Ask a question or get any help in any language
+     			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+     			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+     			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+     			 <a href="#" class="govuk-link">Find out about call charges</a>
+     			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+  			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

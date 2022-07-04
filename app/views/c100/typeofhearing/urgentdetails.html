@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+
+     <div class="govuk-width-container">
+
+       <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+       <main class="govuk-main-wrapper " id="main-content" role="main">
+
+             <form action="withoutnotice" method="post" novalidate>
+
+               <div class="govuk-form-group">
+                 <fieldset class="govuk-fieldset">
+
+                  <h1 class="govuk-heading-xl">Details of urgent hearing</h1>
+
+                  <div class="govuk-form-group">
+                    <label for="urgenthearing-details" class="govuk-label">Give details of why you’re asking for an urgent hearing</label>
+                    <span class="govuk-hint" id="urgenthearing-details-details-hint">A court will only hear your case urgently if you can give good reason for the urgency.</span>
+                    <textarea id="urgenthearing-details-details" class="govuk-textarea" rows="5" aria-describedby="urgenthearing-details-details-hint" name="urgenthearing-details">
+                    </textarea>
+                  </div>
+                  <div class="govuk-form-group">
+                    <label for="surgenthearing-when" class="govuk-label">How soon do you need an urgent hearing?</label>
+                    <input id="surgenthearing-when" class="govuk-input" type="text" name="surgenthearing-when">
+                  </div>
+
+                  <div class="govuk-inset-text">
+                    If you need to go to court now, <a href="https://www.find-court-tribunal.service.gov.uk/services/childcare-and-parenting/childcare-arrangements/search-by-postcode" rel="external" target="_blank" class="govuk-link">contact your nearest family court</a> for assistance.
+                  </div>
+
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <span class="govuk-fieldset__heading">Do you need a hearing within the next 48 hours?</span>
+                      </legend>
+                      <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input id="shortnotice-yes" class="govuk-radios__input" type="radio" value="yes" name="shortnotice" aria-controls="shortnotice-yes-conditional" aria-expanded="false">
+                          <label for="shortnotice-yes" class="govuk-label govuk-radios__label">Yes</label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="shortnotice-yes-conditional">
+                          <div class="govuk-form-group">
+                            <label for="shortnotice-details" class="govuk-label">What have you done to tell each respondent of this application?</label>
+                            <span class="govuk-hint" id="shortnotice-hint">The court will expect you to tell the other people involved that you are making this application, unless you have a reason not to.</span>
+                            <textarea id="shortnotice-textarea" class="govuk-textarea" rows="5" aria-describedby="shortnotice-textarea-hint" name="shortnotice-textarea"></textarea>
+                          </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input id="shortnotice-no" class="govuk-radios__input" type="radio" value="no" name="shortnotice">
+                          <label for="shortnotice-no" class="govuk-label govuk-radios__label">No</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+
+
+                  <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Save and continue
+                  </button>
+
+
+
+
+      </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+  			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+  		  </div>
+  	</details>
+  </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,166 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+     <div class="govuk-width-container">
+       <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+       <main class="govuk-main-wrapper " id="main-content" role="main">
+
+         <form action="childabuse-answer" method="post" novalidate>
+
+           <fieldset class="govuk-fieldset">
+             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+               <span class="govuk-caption-l">Safety concerns</span>
+               <h1 class="govuk-fieldset__heading">
+                 What type of behaviour has child 1 experienced or is at risk of experiencing?
+               </h1>
+             </legend>
+             <div class="govuk-!-padding-bottom-4"></div>
+             <div id="contact-hint" class="govuk-hint">
+                Select all options that are relevant to you.
+            </div>
+
+             <div class="govuk-form-group">
+               <fieldset class="govuk-fieldset"
+               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="physicalabuse" name="childabuse" type="checkbox" value="Physical abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="physicalabuse">
+                      Physical abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                             Incuding behaviour such as punching, choking, kicking, or hitting with an object
+
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="psychologicalabuse" name="childabuse" type="checkbox" value="Psychological abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="psychologicalabuse">
+                      Psychological abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      When someone is subjected to a situation that can lead to anxiety, depression, or post-traumatics stress disorder
+
+                    </div>
+                  </div>
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="emotionalalabuse" name="childabuse" type="checkbox" value="Emotional abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="emotionalalabuse">
+                      Emotional abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      Examples can include making the children feel unloved, worthless, humiliated, or ignored
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="sexualabuse" name="childabuse" type="checkbox" value="Sexual abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="sexualabuse">
+                      Sexual abuse
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      A child is sexually abused when they are forced or persuaded to take part in sexual activities, including online. It may not necessarily involve a high level of violence, and the child may or may not be aware of what's happening. Sexual abuse can also be without contact, for example grooming or exploitation.
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="financialabuse" name="childabuse" type="checkbox" value="Financial abuse">
+                    <label class="govuk-label govuk-checkboxes__label" for="financialabuse">
+                      Financial abuse
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="abduction" name="childabuse" type="checkbox" value="Abduction">
+                    <label class="govuk-label govuk-checkboxes__label" for="abduction">
+                      Abduction
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      If there is a risk of the child being taken away from you, especially if they can be kept abroad.
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="abduction" name="childabuse" type="checkbox" value="Abduction">
+                    <label class="govuk-label govuk-checkboxes__label" for="abduction">
+                      Something else
+                    </label>
+                    <div id="physicalabuse-hint" class="govuk-hint govuk-!-margin-left-3">
+                      If you have concerns that do not fit into any of the above categories, you can tell the court here.
+                    </div>
+                  </div>
+
+               </div>
+               <div class="govuk-!-padding-bottom-4"></div>
+
+
+
+
+
+
+           <button class="govuk-button" data-module="govuk-button">
+             Save and continue
+           </button>
+
+
+
+
+
+         </form>
+
+       </main>
+     </div>
+   </div>
+
+   <div class="govuk-grid-column-one-third">
+
+       <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+           Contacts for help
+           </span>
+         </summary>
+         <div class="govuk-details__text">
+          Ask a question or get any help in any language
+          <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+          <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+          <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+          <a href="#" class="govuk-link">Find out about call charges</a>
+          <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+         </div>
+     </details>
+   </div>
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

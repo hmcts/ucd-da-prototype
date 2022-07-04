@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="../legalrepresentation" method="post" novalidate>
+
+
+
+           <h1 class="govuk-heading-xl">Alternative ways to reach an agreement</h1>
+
+            <p class="govuk-body">
+              Evidence shows it’s usually better for the children if you can reach an agreement another way.
+            </p>
+
+            <p class="govuk-body">
+              By reaching an agreement out of court you may be able to:
+            </p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>make the situation less stressful for the children</li>
+              <li>help the children continue family relationships</li>
+              <li>save time and money</li>
+              <li>reduce conflict with the other person</li>
+             </ul>
+
+            <h2 class="govuk-heading-l">Different options to reach and agreement outside of court</h2>
+            <h3 class="govuk-heading-m">Negotiation tools and services</h3>
+            <p class="govuk-body">
+              If you still communicate with the other person, and there are no concerns about domestic or child abuse, the cheapest and easiest way to make arrangements is to negotiate with each other.</p>
+
+            <p class="govuk-body">There are free tools and services such as <a href="https://www.cafcass.gov.uk/grown-ups/parents-and-carers/divorce-and-separation/parenting-together/parenting-plan/" class="govuk-link" rel="external" target="_blank">parenting plans</a> that can help you reach an agreement.</p>
+
+            <div class="govuk-body"><a href="https://helpwithchildarrangements.service.justice.gov.uk/negotiating-between-parents" class="govuk-link" rel="external" target="_blank">Find out more about negotiation tools and services</a></div>
+
+            <h3 class="govuk-heading-m">Professional mediation</h3>
+
+            <p class="govuk-body">
+              Mediation sessions are run by professionals who help you try to reach an agreement without going to court.</p>
+
+              <p class="govuk-body">Mediation isn’t relationship counselling and you don’t have to be in the same room as the other parent.</p>
+
+                <p class="govuk-body">Mediation is suitable for people who want to reach an agreement but need help from someone who is independent.</p>
+
+                <div class="govuk-body"><a href="https://helpwithchildarrangements.service.justice.gov.uk/professional-mediation" class="govuk-link" rel="external" target="_blank">Find out more about professional mediation</a></div>
+
+                <div class="govuk-inset-text">
+                  <p class="govuk-body govuk-!-font-weight-bold">You could get up to £500 towards family mediation</p>
+
+                  <p class="govuk-body">
+                    This is a new scheme available for a short time only. Find out more about the
+                    <a href="https://www.gov.uk/guidance/family-mediation-voucher-scheme?utm_source=C100&amp;utm_campaign=mediation_vouchers" class="govuk-link" rel="external" target="_blank">family
+                      mediation voucher scheme</a>.
+                  </p>
+                </div>
+
+                <h3 class="govuk-heading-m">Lawyer negotiation</h3>
+
+                <p class="govuk-body">
+                  With lawyer negotiation you don’t deal directly with the person. You hire a lawyer to negotiate arrangements for you.</p>
+
+                  <p class="govuk-body">You can still hire a lawyer to negotiate on your behalf even if the other person chooses not to use one.</p>
+
+                    <p class="govuk-body">Lawyer negotiation is suitable for people who prefer not to meet because their relationship is still difficult, or because there’s a lack of trust.</p>
+
+
+                    <div class="govuk-body"><a href="https://helpwithchildarrangements.service.justice.gov.uk/lawyer-negotiation" class="govuk-link" rel="external" target="_blank">Find out more about lawyer negotiation</a></div>
+
+                    <h3 class="govuk-heading-m">Collaborative law</h3>
+
+                    <p class="govuk-body">
+                    Collaborative lawyers work with you and the other parent to resolve your issues out of court. You each hire a lawyer then all meet to negotiate face-to-face.</p>
+
+                      <p class="govuk-body">The collaborative process involves several steps but is usually quicker and cheaper than going to court.</p>
+
+                        <p class="govuk-body">Collaborative law is suitable for people who can still communicate with each other but may have complex legal issues to resolve.</p>
+
+
+                        <div class="govuk-body"><a href="https://helpwithchildarrangements.service.justice.gov.uk/collaborative-law" class="govuk-link" rel="external" target="_blank">Find out more about collaborative law</a></div>
+
+
+              <div class="govuk-!-padding-bottom-6"></div>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <span class="govuk-fieldset__heading">Going to court</span>
+                  </legend>
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input id="gotocourt" class="govuk-checkboxes__input" type="checkbox" value="true" name="gotocourt">
+                      <label for="gotocourt" class="govuk-label govuk-checkboxes__label">I still want to go to court</label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}

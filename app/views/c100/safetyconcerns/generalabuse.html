@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-width-container">
+        <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+          <form action="generalabuse-answer" method="post" novalidate>
+
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <span class="govuk-caption-l">Safety concerns</span>
+                <h1 class="govuk-fieldset__heading">
+                  Do you have any concerns for your safety or the safety of the children?
+                </h1>
+              </legend>
+              <p class="govuk-body">If you have concerns for the safety of yourself or the children, we will need to ask some further questions.</p>
+
+                <p class="govuk-body">Your answers will help the court consider any risks to you or the children. This information forms part of your court application and will be dealt with sensitively.</p>
+
+                <div class="govuk-warning-text">
+                  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                  <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                    You may find some of the following questions difficult or upsetting to answer. Please complete them as best you can.
+                  </strong>
+                </div>
+
+
+              <div class="govuk-!-padding-bottom-4"></div>
+
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input id="generalabuse-yes" class="govuk-radios__input" type="radio" value="Yes" name="generalabuse" aria-controls="generalabuse-conditional">
+                      <label for="generalabuse-yes" class="govuk-label govuk-radios__label">Yes</label>
+                    </div>
+
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="generalabuse-conditional">
+
+                        <h3 class="govuk-heading-s" for="generalabuse-hint" style="color:#d4351c">Evidence you give will be considered as part of your child arrangements application. If you want to make an application for a domestic abuse injunction, you'll have an opportunity to do it at a later stage.</h3>
+
+                      </div>
+
+                    <div class="govuk-radios__item">
+                      <input id="generalabuse-no" class="govuk-radios__input" type="radio" value="no" name="generalabuse">
+                      <label for="generalabuse-no" class="govuk-label govuk-radios__label">No</label>
+                    </div>
+                  </div>
+                 </fieldset>
+               </div>
+
+
+            <button class="govuk-button" data-module="govuk-button">
+              Save and continue
+            </button>
+
+
+
+
+
+          </form>
+
+        </main>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+    		<details class="govuk-details" data-module="govuk-details">
+   			 <summary class="govuk-details__summary">
+     			 <span class="govuk-details__summary-text">
+      		  Contacts for help
+    			  </span>
+    			</summary>
+    			<div class="govuk-details__text">
+     			 Ask a question or get any help in any language
+     			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+     			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+     			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+     			 <a href="#" class="govuk-link">Find out about call charges</a>
+     			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+
+  			  </div>
+			</details>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

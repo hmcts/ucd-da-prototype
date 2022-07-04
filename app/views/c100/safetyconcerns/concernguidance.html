@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+    <form action="generalabuse" method="post" novalidate>
+<div class="govuk-grid-row app-inverted--card app-inverted-text">
+<div class="govuk-grid-column-full">
+<h1 class="govuk-heading-xl app-inverted-text">Safety concerns</h1>
+<p class="govuk-body-l app-inverted-text">
+  The court needs to know if anyone who spends time with the children poses a risk to their safety or yours.
+</p>
+
+<h2 class="govuk-heading-m app-inverted-text">What to consider as a risk to safety to you or the children<h2>
+
+  <p class="govuk-body app-inverted-text">
+    A variety of behaviours can be considered abuse. If children see or hear someone else being treated badly, it can harm them. If you or the children have experienced or are at risk of experiencing any of these behaviours, it is considered a safety concern by the court:
+  </p>
+
+  <h3 class="govuk-heading-s app-inverted-text">Physical abuse <h3>
+    <p class="govuk-body app-inverted-text " >Examples of physical abuse includes action such as:</p>
+    <ul class="govuk-list govuk-list--bullet app-inverted-text app-inverted-narrow-width govuk-!-margin-left-9">
+      <li>unching</li>
+      <li>choking</li>
+      <li>kicking</li>
+      <li>hitting with an object</li>
+    </ul>
+  <h3 class="govuk-heading-s app-inverted-text">Psychological abuse <h3>
+    <p class="govuk-body app-inverted-text " >Physical abuse is when someone is put in a situation that leads to:</p>
+    <ul class="govuk-list govuk-list--bullet app-inverted-text app-inverted-narrow-width govuk-!-margin-left-9">
+      <li>anxiety</li>
+      <li>depression</li>
+      <li>post traumatic stress disorder</li>
+
+    </ul>
+  <h3 class="govuk-heading-s app-inverted-text">Emotional abuse <h3>
+    <p class="govuk-body app-inverted-text " >Emotional abuse could be spoken (verbal) or not involving words or speech (non-verbal). Examples include:</p>
+    <ul class="govuk-list govuk-list--bullet app-inverted-text app-inverted-narrow-width govuk-!-margin-left-9">
+      <li>name calling</li>
+      <li>constant criticism</li>
+      <li>controlling behaviour</li>
+      <li>not letting them have an opinion</li>
+    </ul>
+
+  <h3 class="govuk-heading-s app-inverted-text">Sexual abuse <h3>
+    <p class="govuk-body app-inverted-text " >Examples of sexual abuse include:</p>
+    <ul class="govuk-list govuk-list--bullet app-inverted-text app-inverted-narrow-width govuk-!-margin-left-9">
+      <li>being forced or pressured to have sex without consent</li>
+      <li>being threatened into an unwanted sexual activity</li>
+      <li>unwanted touching or groping</li>
+    </ul>
+  <h3 class="govuk-heading-s app-inverted-text">Financial abuse <h3>
+    <p class="govuk-body app-inverted-text " >Examples of financial abuse include:</p>
+    <ul class="govuk-list govuk-list--bullet app-inverted-text app-inverted-narrow-width govuk-!-margin-left-9">
+      <li>not allowing a person to work</li>
+      <li>stopping someone saving their own money</li>
+      <li>withholding money or credit cards</li>
+    </ul>
+  <h3 class="govuk-heading-s app-inverted-text">Abduction<h3>
+    <p class="govuk-body app-inverted-text " >Information about abduction and international element</p>
+
+
+
+  <h2 class="govuk-heading-m app-inverted-text">
+    Why do we need this information and what will we do with it?
+  </h2>
+  <p class="govuk-body app-inverted-text">The court needs to know if any of the other people in this application, or anyone connected to them who has contact with the children, poses a risk to the safety of the children.</p>
+  <p class="govuk-body app-inverted-text">If you can provide this information now, it will make it easier for the court and support services to make sure your case is handled correctly.</p>
+
+   <p class="govuk-body app-inverted-text">If you don't want to provide details of the abuse right now, you will be able to do so when you speak to the Children and Family Court Advisory Support Service (Cafcass).</p>
+  <p class="govuk-body app-inverted-text">The <a href="https://www.cafcass.gov.uk/" class="govuk-link govuk-link app-link--inverted" rel="external" target="_blank">Children and Family Court Advisory and Support Service (Cafcass)</a> in England, and <a href="https://cafcass.gov.wales/" class="govuk-link govuk-link app-link--inverted" rel="external" target="_blank">Cafcass Cymru</a> in Wales protects the interests of children involved in family court cases.
+ <p class="govuk-body app-inverted-text">An advisor from Cafcass or Cafcass Cymru will look at your answers during safeguarding checks, and may need to ask you some more questions.</p>
+  <p class="govuk-body app-inverted-text">As part of this process they will get in touch with organisations such as the police and local authorities, for any information about you, the other people in the case and the children.</p>
+  <p class="govuk-body app-inverted-text">They will provide this information to the court before your first hearing. The judge will take their assessment into account when deciding what is best for the children.</p>
+  <p class="govuk-body-l app-inverted-text">The information you provide in this section will also be shared with the applicant, so they can respond to what you have said.</p>
+
+</div>
+<div class="govuk-button-group govuk-!-margin-top-6">
+  <a class="govuk-button app-button--l app-button--inverted" role="button" draggable="false" data-module="govuk-button" href="generalabuse">Continue</a>
+
+</div>
+</div>
+
+</form>
+</main>
+
+
+
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+           <form action="urgent-answer" method="post" novalidate>
+             <div class="govuk-grid-row">
+               <h1 class="govuk-heading-xl">Do you need an urgent hearing?</h1>
+
+               <p class="govuk-body">A hearing will usually take place within 5 or 6 weeks of the court processing your application. You can ask for a hearing to take place sooner and a court will consider if there’s good reason for the urgency, for example:</p>
+               <ul class="govuk-list govuk-list--bullet">
+                 <li>there’s a risk of harm to you or the children</li>
+                 <li>the children are at risk of abduction</li>
+                </ul>
+
+               <div class="govuk-inset-text">
+                 Contact the police if you or the children are in immediate danger.
+               </div>
+
+               <details class="govuk-details" data-module="govuk-details">
+                 <summary class="govuk-details__summary">
+                   <span class="govuk-details__summary-text" data-ga-category="explanations" data-ga-label="urgent hearing">Examples of when a court may consider an urgent hearing</span>
+                 </summary>
+                 <div class="govuk-details__text">
+                   <p class="govuk-body">There is:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                     <li>risk to the life, liberty or physical safety of you, your family or your home</li>
+                     <li>significant risk that proceedings relating to the dispute will be brought in another country</li>
+                    </ul>
+                    <p class="govuk-body">Any delay would cause:</p>
+                      <ul class="govuk-list govuk-list--bullet">
+                       <li>a risk of harm to the children</li>
+                       <li>unreasonable hardship for you</li>
+                       <li>a risk of unlawful removal of a child from the UK, or a risk of unlawful retention of a child who is currently outside England and Wales</li>
+                       <li>a significant risk of a miscarriage of justice</li>
+                       <li>irretrievable problems in dealing with the dispute (including the irretrievable loss of significant evidence)</li>
+                      </ul>
+
+                 </div>
+               </details>
+
+
+                 <div class="govuk-form-group">
+                   <fieldset class="govuk-fieldset">
+                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-visually-hidden">
+                       <span class="govuk-fieldset__heading">Do you need an urgent hearing?</span>
+                     </legend>
+                     
+                     <div class="govuk-radios" data-module="govuk-radios">
+                       <div class="govuk-radios__item">
+                         <input id="urgenthering-yes" class="govuk-radios__input" type="radio" value="yes" name="urgenthering">
+                         <label for="urgenthering-yes" class="govuk-label govuk-radios__label">Yes</label>
+                       </div>
+                       <div class="govuk-radios__item">
+                         <input id="steurgenthering-no" class="govuk-radios__input" type="radio" value="no" name="urgenthering">
+                         <label for="surgenthering-no" class="govuk-label govuk-radios__label">No</label>
+                       </div>
+                     </div>
+                   </fieldset>
+                 </div>
+
+           <div class="govuk-!-padding-bottom-4"></div>
+
+              <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Save and continue
+              </button>
+
+
+
+
+      </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  <details class="govuk-details" data-module="govuk-details">
+			 <summary class="govuk-details__summary">
+ 			 <span class="govuk-details__summary-text">
+  		  Contacts for help
+			  </span>
+			</summary>
+			<div class="govuk-details__text">
+ 			 Ask a question or get any help in any language
+ 			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+ 			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+ 			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+ 			 <a href="#" class="govuk-link">Find out about call charges</a>
+ 			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+		  </div>
+		</details>
+  </div>
+</div>
+
+
+
+{% endblock %}

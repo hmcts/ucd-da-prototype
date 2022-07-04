@@ -394,7 +394,7 @@ const router = express.Router()
                                                     // Check whether the variable matches a condition
                                                     if (reasonAdjust == "No"){
                                                       // Send user to next page
-                                                      res.redirect('/tasklistresponse/aboutyou/tellusyourhearingneeds/preventfromparticipating')
+                                                      res.redirect('/tasklistresponse/aboutyou/tellusyourhearingneeds/checkanswersreqs')
 
                                                     }else {
                                                         // Send user to ineligible page
@@ -526,6 +526,26 @@ const router = express.Router()
               }
 
             });
+
+
+
+            router.post('/respondenttasklist/applications/responsetoallegations/paperform/start-answer', function (req, res) {
+              // Make a variable and give it the value from 'how-many-balls'
+              var paperAlleg = req.session.data['answer']
+
+              // Check whether the variable matches a condition
+              if (paperAlleg == "yes"){
+                // Send user to next page
+                res.redirect('/respondenttasklist/applications/responsetoallegations/paperform/applicantabuse')
+
+              }else {
+                  // Send user to ineligible page
+                  res.redirect('/respondenttasklist/applications/responsetoallegations/paperform/checkanswers-no')
+              }
+
+            });
+
+
 
             router.post('/respondenttasklist/aboutyou/confidentiality/detailsknown-answer', function (req, res) {
                 // Make a variable and give it the value from 'how-many-balls'
