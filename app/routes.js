@@ -570,7 +570,7 @@ const router = express.Router()
                   // Check whether the variable matches a condition
                   if (reasonAdj == "No"){
                     // Send user to next page
-                    res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/preventfromparticipating')
+                    res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/checkanswersreqs')
 
                   }else {
                       // Send user to ineligible page
