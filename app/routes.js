@@ -646,6 +646,329 @@ const router = express.Router()
               });
 
 
+              router.post('/c100/legalrepresentation-answer', function (req, res) {
+                // Make a variable and give it the value from 'how-many-balls'
+                var legRep = req.session.data['solicitor']
+
+                // Check whether the variable matches a condition
+                if (legRep == "Yes"){
+                  // Send user to next page
+                  res.redirect('/c100/legalrepresentationapplication')
+
+                }else {
+                    // Send user to ineligible page
+                    res.redirect('permissions')
+                }
+
+              });
+
+              router.post('/c100/legalrepresentationapplication-answer', function (req, res) {
+                  // Make a variable and give it the value from 'how-many-balls'
+                  var repCon = req.session.data['solicitorapplication']
+
+                  // Check whether the variable matches a condition
+                  if (repCon == "Yes"){
+                    // Send user to next page
+                    res.redirect('contactrepresentative')
+
+                  }else {
+                      // Send user to ineligible page
+                      res.redirect('permissions')
+                  }
+
+                });
+
+                router.post('/c100/permissions-answer', function (req, res) {
+                    // Make a variable and give it the value from 'how-many-balls'
+                    var permNeed = req.session.data['permission']
+
+                    // Check whether the variable matches a condition
+                    if (permNeed == "Yes"){
+                      // Send user to next page
+                      res.redirect('permissionsrequested')
+
+                    }else {
+                        // Send user to ineligible page
+                        res.redirect('miam/miamintro')
+                    }
+
+                  });
+
+                  router.post('/c100/permissionsrequested-answer', function (req, res) {
+                      // Make a variable and give it the value from 'how-many-balls'
+                      var permReq = req.session.data['permissionsrequested']
+
+                      // Check whether the variable matches a condition
+                      if (permReq == "Yes"){
+                        // Send user to next page
+                        res.redirect('miam/miamintro')
+
+                      }else {
+                          // Send user to ineligible page
+                          res.redirect('permissionsguidance')
+                      }
+
+                    });
+
+                    router.post('/c100/safetyconcerns/generalabuse-answer', function (req, res) {
+                        // Make a variable and give it the value from 'how-many-balls'
+                        var genAbuse = req.session.data['generalabuse']
+
+                        // Check whether the variable matches a condition
+                        if (genAbuse == "Yes"){
+                          // Send user to next page
+                          res.redirect('concernabout')
+
+                        }else {
+                            // Send user to ineligible page
+                            res.redirect('../internationalelement/start')
+                        }
+
+                      });
+
+                      router.post('/c100/safetyconcerns/concernabout-answer', function (req, res) {
+                          // Make a variable and give it the value from 'how-many-balls'
+                          var whoVic = req.session.data['concernabout']
+
+                          // Check whether the variable matches a condition
+                          if (whoVic == "thechildren"){
+                            // Send user to next page
+                            res.redirect('whichchild')
+
+                          }else {
+                              // Send user to ineligible page
+                              res.redirect('typeofabuse')
+                          }
+
+                        });
+
+                        router.post('/c100/safetyconcerns/childabuse-answer', function (req, res) {
+                            // Make a variable and give it the value from 'how-many-balls'
+                            var abduct = req.session.data['childabuse']
+
+                            // Check whether the variable matches a condition
+                            if (abduct == "Abduction"){
+                              // Send user to next page
+                              res.redirect('abduction/childlocation')
+
+                            }else {
+                                // Send user to ineligible page
+                                res.redirect('physicaldescriptionchild')
+                            }
+
+                          });
+
+                  router.post('/c100/safetyconcerns/abduction/abduction-answer', function (req, res) {
+                      // Make a variable and give it the value from 'how-many-balls'
+                      var childAbd = req.session.data['abduction']
+
+                      // Check whether the variable matches a condition
+                      if (childAbd == "yes"){
+                        // Send user to next page
+                        res.redirect('/c100/safetyconcerns/abduction/policeinvolvement')
+                      } else {
+                        // Send user to ineligible page
+                        res.redirect('/c100/safetyconcerns/abduction/checkanswers')
+                      }
+
+                    });
+
+                    router.post('/c100/safetyconcerns/abduction/threats-answer', function (req, res) {
+                        // Make a variable and give it the value from 'how-many-balls'
+                        var abdThreat = req.session.data['threat']
+
+                        // Check whether the variable matches a condition
+                        if (abdThreat == "yes"){
+                          // Send user to next page
+                          res.redirect('/c100/safetyconcerns/abduction/previousabductions')
+                        } else {
+                          // Send user to ineligible page
+                          res.redirect('../otherconcerns/drugs')
+                        }
+
+                      });
+
+                    router.post('/c100/safetyconcerns/abduction/passportoffice-answer', function (req, res) {
+                        // Make a variable and give it the value from 'how-many-balls'
+                        var passport = req.session.data['passport']
+
+                        // Check whether the variable matches a condition
+                        if (passport == "yes"){
+                          // Send user to next page
+                          res.redirect('/c100/safetyconcerns/abduction/passportamount')
+                        } else {
+                          // Send user to ineligible page
+                          res.redirect('/c100/safetyconcerns/abduction/threats')
+                        }
+
+                      });
+
+                      router.post('/c100/typeoforder/courtorder-answer', function (req, res) {
+                          // Make a variable and give it the value from 'how-many-balls'
+                          var passport = req.session.data['courtorder']
+
+                          // Check whether the variable matches a condition
+                          if (passport == "child_arrangements_home"){
+                            // Send user to next page
+                            res.redirect('caorder')
+                          } else {
+                            // Send user to ineligible page
+                            res.redirect('')
+                          }
+
+                        });
+
+                        router.post('/c100/confidentiality/start-answer', function (req, res) {
+                            // Make a variable and give it the value from 'how-many-balls'
+                            var conDetails = req.session.data['confidential']
+
+                            // Check whether the variable matches a condition
+                            if (conDetails == "yes"){
+                              // Send user to next page
+                              res.redirect('feedback')
+
+                            }else {
+                                // Send user to ineligible page
+                                res.redirect('feedbackno')
+                            }
+
+                          });
+
+                          router.post('/c100/confidentiality/startalternative-answer', function (req, res) {
+                              // Make a variable and give it the value from 'how-many-balls'
+                              var noConDe = req.session.data['confidential']
+
+                              // Check whether the variable matches a condition
+                              if (noConDe == "yes"){
+                                // Send user to next page
+                                res.redirect('feedback')
+
+                              }else {
+                                  // Send user to ineligible page
+                                  res.redirect('feedbackno')
+                              }
+
+                            });
+
+                          router.post('/c100/confidentiality/detailsknown-answer', function (req, res) {
+                              // Make a variable and give it the value from 'how-many-balls'
+                              var detKnown = req.session.data['detailsknown']
+
+                              // Check whether the variable matches a condition
+                              if (detKnown == "yes"){
+                                // Send user to next page
+                                res.redirect('startalternative')
+
+                              }else {
+                                  // Send user to ineligible page
+                                  res.redirect('start')
+                              }
+
+                              });
+
+                              router.post('/c100/typeofhearing/urgent-answer', function (req, res) {
+                                  // Make a variable and give it the value from 'how-many-balls'
+                                  var urgHear = req.session.data['urgenthering']
+
+                                  // Check whether the variable matches a condition
+                                  if (urgHear == "yes"){
+                                    // Send user to next page
+                                    res.redirect('urgentdetails')
+
+                                  }else {
+                                      // Send user to ineligible page
+                                      res.redirect('withoutnotice')
+                                  }
+
+                                  });
+
+                                  router.post('/c100/typeofhearing/withoutnotice-answer', function (req, res) {
+                                      // Make a variable and give it the value from 'how-many-balls'
+                                      var withNotice = req.session.data['withoutnotice']
+
+                                      // Check whether the variable matches a condition
+                                      if (withNotice == "yes"){
+                                        // Send user to next page
+                                        res.redirect('withoutnoticedetails')
+
+                                      }else {
+                                          // Send user to ineligible page
+                                          res.redirect('../people/peopleplaceholder')
+                                      }
+
+                                      });
+
+                                      router.post('/c100/consentagreement-answer', function (req, res) {
+                                          // Make a variable and give it the value from 'how-many-balls'
+                                          var consAgr = req.session.data['consentagreement']
+
+                                          // Check whether the variable matches a condition
+                                          if (consAgr == "yes"){
+                                            // Send user to next page
+                                            res.redirect('typeoforder/courtorder')
+
+                                          }else {
+                                              // Send user to ineligible page
+                                              res.redirect('alternativeresolution/goingtocourt')
+                                          }
+
+                                          });
+
+                        router.post('/c100/proceedings/start-answer', function (req, res) {
+                            // Make a variable and give it the value from 'how-many-balls'
+                            var protProceedings = req.session.data['protection']
+                            var proceedings = req.session.data['childrenorders']
+
+                            // Check whether the variable matches a condition
+                            if (proceedings == "yes" || protProceedings == "yes"){
+                              // Send user to next page
+                              res.redirect('/c100/proceedings/courtproceedings')
+                            } else {
+                              // Send user to ineligible page
+                              res.redirect('../safetyconcerns/concernguidance')
+                            }
+
+                          });
+
+                          router.post('/c100/safetyconcerns/childabuse-answer', function (req, res) {
+                              // Make a variable and give it the value from 'how-many-balls'
+                              var chilAbuse = req.session.data['childabuse']
+
+                              // Check whether the variable matches a condition
+                              if (chilAbuse == "physicalabuse" ){
+                                // Send user to next page
+                                res.redirect('/c100/safetyconcerns/physicaldescriptionchild')
+                              }
+
+                              else {
+                                // Send user to ineligible page
+                                res.redirect('/c100/safetyconcerns/otherconcerns/drugs')
+                              }
+
+                            });
+
+
+
+                                router.post('/c100/tellusyourhearingneeds/start-answer', function (req, res) {
+                                    // Make a variable and give it the value from 'how-many-balls'
+                                    var reasonAdjust = req.session.data['reasonable-adjustments']
+
+                                    // Check whether the variable matches a condition
+                                    if (reasonAdjust == "No"){
+                                      // Send user to next page
+                                      res.redirect('../submit/reviewandsubmit')
+
+                                    }else {
+                                        // Send user to ineligible page
+                                        res.redirect('/c100/tellusyourhearingneeds/documents')
+                                    }
+
+                                  });
+
+
+
+
+
 
 
 
