@@ -395,5 +395,20 @@
 </div>
 
 
+<script src="https://code.jquery.com/jquery-3.6.0.js"  crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('input[name="domesticabusereasons"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miampoliceinvolvement']").prop( "checked", false );
+              
+          }
+      });
+  });
+</script>
+
+
 
 {% endblock %}
