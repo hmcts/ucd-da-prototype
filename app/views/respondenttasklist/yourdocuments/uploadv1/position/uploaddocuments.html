@@ -52,9 +52,13 @@
           </ul>
       </label>
       <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8"></textarea>
+      <form action="uploadmoredocument" method="post" novalidate>
+
       <button class="govuk-button upload-addnew govuk-button--secondary" data-module="govuk-button">
         Submit
       </button>
+
+    </form>
 
       </div>
 
@@ -140,18 +144,18 @@
 
               </div>
               <br>
-          <p class="govuk-body">This confirm that the information you are submitting is true and accurate, to the best of your knowledge.</p>
+              <p class="govuk-body">This confirms that the information you are submitting is true and accurate, to the best of your knowledge.</p>
 
             </fieldset>
           </div>
 
-
           <div class="govuk-button-group">
 
-
-            <button class="govuk-button" data-module="govuk-button">
-              Save and continue
-            </button>
+            <form action="uploadsuccessv3"
+              <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+              </button>
+            </form>
 
           </div>
 
