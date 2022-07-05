@@ -966,6 +966,126 @@ const router = express.Router()
                                   });
 
 
+                                  router.post('/c100/miam/miamotherproceedings-answer', function (req, res) {
+                                    // Make a variable and give it the value from 'how-many-balls'
+                                    var miamProc = req.session.data['miamproceedings']
+
+                                    // Check whether the variable matches a condition
+                                    if (miamProc == "yes"){
+                                      // Send user to next page
+                                      res.redirect('miamnoneed')
+
+                                    }else {
+                                        // Send user to ineligible page
+                                        res.redirect('miaminfo')
+                                    }
+
+                                  });
+
+                                  router.post('/c100/miam/miamattendance-answer', function (req, res) {
+                                      // Make a variable and give it the value from 'how-many-balls'
+                                      var miamAtt = req.session.data['miamattendance']
+
+                                      // Check whether the variable matches a condition
+                                      if (miamAtt == "yes"){
+                                        // Send user to next page
+                                        res.redirect('miamdocument')
+
+                                      }else {
+                                          // Send user to ineligible page
+                                          res.redirect('mediatorconfirmation')
+                                      }
+
+                                    });
+
+                                    router.post('/c100/miam/miamdocument-answer', function (req, res) {
+                                        // Make a variable and give it the value from 'how-many-balls'
+                                        var miamDoc = req.session.data['miamdocument']
+
+                                        // Check whether the variable matches a condition
+                                        if (miamDoc == "yes"){
+                                          // Send user to next page
+                                          res.redirect('miamdate')
+
+                                        }else {
+                                            // Send user to ineligible page
+                                            res.redirect('miamgetdoc')
+                                        }
+
+                                      });
+
+
+                                      router.post('/c100/miam/mediatorconfirmation-answer', function (req, res) {
+                                          // Make a variable and give it the value from 'how-many-balls'
+                                          var medConf = req.session.data['mediatorconfirmation']
+
+                                          // Check whether the variable matches a condition
+                                          if (medConf == "yes"){
+                                            // Send user to next page
+                                            res.redirect('mediatordocument')
+
+                                          }else {
+                                              // Send user to ineligible page
+                                              res.redirect('validreason')
+                                          }
+
+                                        });
+
+                                        router.post('/c100/miam/mediatordocument-answer', function (req, res) {
+                                            // Make a variable and give it the value from 'how-many-balls'
+                                            var medDoc = req.session.data['mediatordocument']
+
+                                            // Check whether the variable matches a condition
+                                            if (medDoc == "yes"){
+                                              // Send user to next page
+                                              res.redirect('miamdate')
+
+                                            }else {
+                                                // Send user to ineligible page
+                                                res.redirect('miamgetdoc')
+                                            }
+
+                                          });
+
+                                          router.post('/c100/miam/validreason-answer', function (req, res) {
+                                              // Make a variable and give it the value from 'how-many-balls'
+                                              var valReas = req.session.data['validreason']
+
+                                              // Check whether the variable matches a condition
+                                              if (valReas == "yes"){
+                                                // Send user to next page
+                                                res.redirect('generalreasons')
+
+                                              }else {
+                                                  // Send user to ineligible page
+                                                  res.redirect('miammustattend')
+                                              }
+
+                                            });
+
+                                            router.post('/c100/miam/generalreasons-answer', function (req, res) {
+                                                // Make a variable and give it the value from 'how-many-balls'
+                                                var valReas = req.session.data['exemptionreasons']
+
+                                                // Check whether the variable matches a condition
+                                                if (valReas == "no"){
+                                                  // Send user to next page
+                                                  res.redirect('miammustattend')
+
+                                                }else {
+                                                    // Send user to ineligible page
+                                                    res.redirect('miamdomesticabuse')
+                                                }
+
+                                              });
+
+
+
+
+
+                                  
+
+
 
 
 
