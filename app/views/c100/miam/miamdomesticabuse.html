@@ -111,7 +111,7 @@
 
                                    <div class="govuk-checkboxes__item">
                                      <input id="courtinvolvement-1" class="govuk-checkboxes__input" type="checkbox" value="court_bound_over" name="miamcourtinvolvement">
-                                     <label for="scourtinvolvement-1" class="govuk-label govuk-checkboxes__label">
+                                     <label for="courtinvolvement-1" class="govuk-label govuk-checkboxes__label">
                                        A court order binding a prospective party over in connection with a domestic violence offence
                                      </label>
                                    </div>
@@ -406,6 +406,44 @@
               
           }
       });
+
+      $('input[id="courtinvolvement"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamcourtinvolvement']").prop( "checked", false );
+              
+          }
+      });
+
+
+      $('input[id="letterconfirmation"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamletterconfirmation']").prop( "checked", false );
+              
+          }
+      });
+
+      $('input[id="authorityletter"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamauthorityletter']").prop( "checked", false );
+              
+          }
+      });
+
+      $('input[id="organisationletter"]').click(function(){
+          if($(this).prop("checked") == true){
+          }
+          else if($(this).prop("checked") == false){
+              $("input[name='miamorganisationletter']").prop( "checked", false );
+              
+          }
+      });
+
   });
 </script>
 
