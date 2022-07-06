@@ -31,7 +31,7 @@
                  <h1 class="govuk-heading-xl">I need help communicating and understanding</h1>
 
                <div class="govuk-inset-text">
-                 Think about all communication with the tribunal, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.
+                 Think about all communications with the court, as well as what you might need at a hearing. Consider remote and in-person hearings, in case your preferred hearing type is not possible.
                </div>
 
                <div class="govuk-form-group">
@@ -71,15 +71,22 @@
                        </label>
                      </div>
                      <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-5" name="reasonable-adjustments" type="checkbox" value="I need help travelling to, or moving around tribunal building">
+                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-5" name="reasonable-adjustments" type="checkbox" value="I need help travelling to, or moving around court building" aria-controls="reasonable-adjustments-5-conditional">
                        <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
-                         British Sign Language interpreter
+                         Sign Language interpreter
 
 
                        </label>
+                       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="reasonable-adjustments-5-conditional">
+                         <div class="govuk-form-group">
+                           <label for="steps-attending-court-language-form-language-interpreter-details-field" class="govuk-label">Describe what you need</label>
+                           <textarea id="steps-attending-court-language-form-language-interpreter-details-field" class="govuk-textarea" rows="1" name="steps_attending_court_language_form[language_interpreter_details]">
+                           </textarea>
+                         </div>
+                         </div>
                      </div>
                      <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-5" name="reasonable-adjustments" type="checkbox" value="I need help travelling to, or moving around tribunal building">
+                       <input class="govuk-checkboxes__input" id="reasonable-adjustments-5" name="reasonable-adjustments" type="checkbox" value="I need help travelling to, or moving around court building">
                        <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
                          Speech to text reporter (palantypist)
 
@@ -98,14 +105,14 @@
                        <div class="govuk-checkboxes__item">
                          <input class="govuk-checkboxes__input" id="reasonable-adjustments-2" name="reasonable-adjustments" type="checkbox" value="I need help communicating and understanding">
                          <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
-                           Visit to court or tribunal before the tribunal hearing
+                           Visit to court before the hearing
 
                          </label>
                        </div>
                        <div class="govuk-checkboxes__item">
                          <input class="govuk-checkboxes__input" id="reasonable-adjustments-3" name="reasonable-adjustments" type="checkbox" value="I need to bring support with me to a hearing">
                          <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
-                           Explanation of the tribual hearing room layout and who will be in the room
+                           Explanation of the court and who's in the room at the hearing
 
                          </label>
                        </div>
@@ -114,7 +121,7 @@
                          <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments">
                            Intermediary
                            <div id="reasonable-adjustments-4-hint" class="govuk-hint">
-                             a person to act as a link and assist you in the hearing - a judge may allow this to help you understand and communicate better
+                             a person to help you if you have communication needs by providing professional support to participate in a hearing
 
                            </div>
                          </label>
@@ -137,7 +144,7 @@
                      <div class="govuk-checkboxes__item">
                        <input class="govuk-checkboxes__input" id="reasonable-adjustments-none" name="reasonable-adjustments" type="checkbox" value="No, I do not need any extra support at this time" data-behaviour="exclusive">
                        <label class="govuk-label govuk-checkboxes__label" for="reasonable-adjustments-none">
-                         No, I do not need any extra support at this time
+                         No, I do not need any support at this time
                        </label>
                      </div>
                    </div>
