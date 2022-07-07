@@ -27,7 +27,7 @@
        <form action="otherconcerns/drugs" method="post" novalidate>
 
          <span class="govuk-caption-l">Safety concerns</span>
-         <h1 class="govuk-heading-l">Briefly describe the physical abuse against child 1 if you feel able to</h1>
+         <h1 class="govuk-heading-xl">Briefly describe the physical abuse against the children if you feel able to</h1>
 
          <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
@@ -45,14 +45,39 @@
           </div>
         </details>
 
+
         <div class="govuk-form-group">
-          <h2 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="more-detail">
+          <h2 class="govuk-heading-m">
+              Which children are you concerned about? (optional)
+          </h2>
+          <fieldset class="govuk-fieldset"
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+             <div class="govuk-checkboxes__item">
+               <input class="govuk-checkboxes__input" id="child-1" name="children" type="checkbox" value="The children" data-behaviour="exclusive">
+               <label class="govuk-label govuk-checkboxes__label" for="child-1">
+                 All of the children in the application
+               </label>
+             </div>
+             <div class="govuk-checkboxes__item">
+               <input class="govuk-checkboxes__input" id="child-2" name="children" type="checkbox" value="The applicant">
+               <label class="govuk-label govuk-checkboxes__label" for="child-2">
+                 Child 1
+               </label>
+             </div>
+             <div class="govuk-checkboxes__item">
+               <input class="govuk-checkboxes__input" id="child-3" name="children" type="checkbox" value="The applicant">
+               <label class="govuk-label govuk-checkboxes__label" for="child-3">
+                 Child 2
+               </label>
+             </div>
+          </div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">
                Give a short description of the nature of the behaviours you want the court to consider. (optional)
-            </label>
           </h2>
         <div id="more-detail-hint" class="govuk-hint">
-             This information will be treated sensitively, and you will have a chance to give further details to the court later in the proceedings.
+             You will have a chance to give further details to the court later in the proceedings.
         </div>
            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="4"></textarea>
 
@@ -89,7 +114,7 @@
            </div>
            <div>
             <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
-                Have you ever asked for help? (optional)
+                Have you ever asked for help from a professional person or agency? (optional)
                 </label>
             </h2>
             <div id="more-detail-hint" class="govuk-hint">
@@ -105,7 +130,7 @@
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-resphelp">
                   <div class="govuk-form-group">
-                    <label class="govuk-label govuk-label--s" for="proposal-howmany">Please indicate who you sought help from and what did they do. (optional)</label>
+                    <p class="govuk-body">Please indicate who you sought help from and what did they do. (optional)</p>
                     <textarea class="govuk-textarea" id="non-molestation-date" name="non-molestation-date" rows="5" aria-describedby="resphelp"></textarea>
                   </div>
 

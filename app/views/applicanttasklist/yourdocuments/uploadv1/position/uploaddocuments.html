@@ -52,9 +52,13 @@
           </ul>
       </label>
       <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8"></textarea>
+      <form action="uploadmoredocument" method="post" novalidate>
+
       <button class="govuk-button upload-addnew govuk-button--secondary" data-module="govuk-button">
         Submit
       </button>
+
+    </form>
 
       </div>
 
@@ -122,14 +126,36 @@
           <!-- end components here -->
 
           <br>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h3 class="govuk-heading-s">
+                  Statement of truth
+                </h3>
+              </legend>
 
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                    I believe that the facts stated in these documents are true
+                  </label>
+                </div>
+
+              </div>
+              <br>
+              <p class="govuk-body">This confirms that the information you are submitting is true and accurate, to the best of your knowledge.</p>
+
+            </fieldset>
+          </div>
 
           <div class="govuk-button-group">
 
-
-            <button class="govuk-button" data-module="govuk-button">
-              Save and continue
-            </button>
+            <form action="uploadsuccessv3"
+              <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+              </button>
+            </form>
 
           </div>
 
