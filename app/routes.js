@@ -6,403 +6,402 @@ const router = express.Router()
 
 
 
-      router.post('/tasklistresponse/safetyconcerns/abduction/abduction-answer', function (req, res) {
+router.post('/tasklistresponse/safetyconcerns/abduction/abduction-answer', function (req, res) {
+  // Make a variable and give it the value from 'how-many-balls'
+  var childAbd = req.session.data['abduction']
+
+  // Check whether the variable matches a condition
+  if (childAbd == "yes"){
+    // Send user to next page
+    res.redirect('/tasklistresponse/safetyconcerns/abduction/policeinvolvement')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/tasklistresponse/safetyconcerns/abduction/checkanswers')
+  }
+
+});
+
+router.post('/tasklistresponse/safetyconcerns/abduction/threats-answer', function (req, res) {
+    // Make a variable and give it the value from 'how-many-balls'
+    var abdThreat = req.session.data['threat']
+
+    // Check whether the variable matches a condition
+    if (abdThreat == "yes"){
+      // Send user to next page
+      res.redirect('/tasklistresponse/safetyconcerns/abduction/previousabductions')
+    } else {
+      // Send user to ineligible page
+      res.redirect('/tasklistresponse/safetyconcerns/abduction/childlocation')
+    }
+
+  });
+
+router.post('/tasklistresponse/safetyconcerns/abduction/passportoffice-answer', function (req, res) {
+    // Make a variable and give it the value from 'how-many-balls'
+    var passport = req.session.data['passport']
+
+    // Check whether the variable matches a condition
+    if (passport == "yes"){
+      // Send user to next page
+      res.redirect('/tasklistresponse/safetyconcerns/abduction/passportamount')
+    } else {
+      // Send user to ineligible page
+      res.redirect('/tasklistresponse/safetyconcerns/abduction/threats')
+    }
+
+  });
+
+  router.post('/tasklistresponse/applicationdetails/proceedings/start-answer', function (req, res) {
+      // Make a variable and give it the value from 'how-many-balls'
+      var protProceedings = req.session.data['protection']
+      var proceedings = req.session.data['childrenorders']
+
+      // Check whether the variable matches a condition
+      if (proceedings == "yes" || protProceedings == "yes"){
+        // Send user to next page
+        res.redirect('/tasklistresponse/applicationdetails/proceedings/courtproceedings')
+      } else {
+        // Send user to ineligible page
+        res.redirect('/tasklistresponse/applicationdetails/proceedings/checkanswers-proceedings')
+      }
+
+    });
+
+
+    router.post('/tasklistresponse/applicationdetails/miam/start-answer', function (req, res) {
+        // Make a variable and give it the value from 'how-many-balls'
+        var miam = req.session.data['MIAM']
+
+        // Check whether the variable matches a condition
+        if (miam == "yes"){
+          // Send user to next page
+          res.redirect('/tasklistresponse/applicationdetails/miam/checkanswers-MIAMyes')
+
+        }else {
+            // Send user to ineligible page
+            res.redirect('/tasklistresponse/applicationdetails/miam/willingnesstoattend')
+        }
+
+      });
+
+      router.post('/tasklistresponse/applicationdetails/miam/willingnesstoattend-answer', function (req, res) {
           // Make a variable and give it the value from 'how-many-balls'
-          var childAbd = req.session.data['abduction']
+          var miamWill = req.session.data['MIAM-willing']
 
           // Check whether the variable matches a condition
-          if (childAbd == "yes"){
+          if (miamWill == "yes"){
             // Send user to next page
-            res.redirect('/tasklistresponse/safetyconcerns/abduction/policeinvolvement')
-          } else {
-            // Send user to ineligible page
-            res.redirect('/tasklistresponse/safetyconcerns/abduction/checkanswers')
+            res.redirect('/tasklistresponse/applicationdetails/miam/checkanswers-MIAM')
+
+          }else {
+              // Send user to ineligible page
+              res.redirect('/tasklistresponse/applicationdetails/miam/checkanswers-MIAMnono')
           }
 
         });
 
-        router.post('/tasklistresponse/safetyconcerns/abduction/threats-answer', function (req, res) {
+      router.post('/tasklistresponse/safetyconcerns/yoursafety/sexualabuse-answer', function (req, res) {
+          // Make a variable and give it the value from 'how-many-balls'
+          var sexAbuse = req.session.data['sexualabuse']
+
+          // Check whether the variable matches a condition
+          if (sexAbuse == "yes"){
+            // Send user to next page
+            res.redirect('/tasklistresponse/safetyconcerns/yoursafety/sexualdescription')
+
+          }else {
+              // Send user to ineligible page
+              res.redirect('/tasklistresponse/safetyconcerns/yoursafety/physicalabuse')
+          }
+
+        });
+
+        router.post('/tasklistresponse/safetyconcerns/yoursafety/physicalabuse-answer', function (req, res) {
             // Make a variable and give it the value from 'how-many-balls'
-            var abdThreat = req.session.data['threat']
+            var physAbuse = req.session.data['physicalabuseq']
 
             // Check whether the variable matches a condition
-            if (abdThreat == "yes"){
+            if (physAbuse == "yes"){
               // Send user to next page
-              res.redirect('/tasklistresponse/safetyconcerns/abduction/previousabductions')
-            } else {
-              // Send user to ineligible page
-              res.redirect('/tasklistresponse/safetyconcerns/abduction/childlocation')
+              res.redirect('/tasklistresponse/safetyconcerns/yoursafety/physicaldescription')
+
+            }else {
+                // Send user to ineligible page
+                res.redirect('/tasklistresponse/safetyconcerns/yoursafety/financialabuse')
             }
 
           });
 
-        router.post('/tasklistresponse/safetyconcerns/abduction/passportoffice-answer', function (req, res) {
-            // Make a variable and give it the value from 'how-many-balls'
-            var passport = req.session.data['passport']
-
-            // Check whether the variable matches a condition
-            if (passport == "yes"){
-              // Send user to next page
-              res.redirect('/tasklistresponse/safetyconcerns/abduction/passportamount')
-            } else {
-              // Send user to ineligible page
-              res.redirect('/tasklistresponse/safetyconcerns/abduction/threats')
-            }
-
-          });
-
-          router.post('/tasklistresponse/applicationdetails/proceedings/start-answer', function (req, res) {
+          router.post('/tasklistresponse/safetyconcerns/yoursafety/financialabuse-answer', function (req, res) {
               // Make a variable and give it the value from 'how-many-balls'
-              var protProceedings = req.session.data['protection']
-              var proceedings = req.session.data['childrenorders']
+              var finAbuse = req.session.data['finanicalabuseq']
 
               // Check whether the variable matches a condition
-              if (proceedings == "yes" || protProceedings == "yes"){
+              if (finAbuse == "yes"){
                 // Send user to next page
-                res.redirect('/tasklistresponse/applicationdetails/proceedings/courtproceedings')
-              } else {
-                // Send user to ineligible page
-                res.redirect('/tasklistresponse/applicationdetails/proceedings/checkanswers-proceedings')
+                res.redirect('/tasklistresponse/safetyconcerns/yoursafety/financialdescription')
+
+              }else {
+                  // Send user to ineligible page
+                  res.redirect('/tasklistresponse/safetyconcerns/yoursafety/psychologicalabuse')
               }
 
             });
 
-
-            router.post('/tasklistresponse/applicationdetails/miam/start-answer', function (req, res) {
+            router.post('/tasklistresponse/safetyconcerns/yoursafety/psychologicalabuse-answer', function (req, res) {
                 // Make a variable and give it the value from 'how-many-balls'
-                var miam = req.session.data['MIAM']
+                var psychAbuse = req.session.data['psychologicalabuseq']
 
                 // Check whether the variable matches a condition
-                if (miam == "yes"){
+                if (psychAbuse == "yes"){
                   // Send user to next page
-                  res.redirect('/tasklistresponse/applicationdetails/miam/checkanswers-MIAMyes')
+                  res.redirect('/tasklistresponse/safetyconcerns/yoursafety/psychologicaldescription')
 
                 }else {
                     // Send user to ineligible page
-                    res.redirect('/tasklistresponse/applicationdetails/miam/willingnesstoattend')
+                    res.redirect('/tasklistresponse/safetyconcerns/yoursafety/emotionalabuse')
                 }
 
               });
 
-              router.post('/tasklistresponse/applicationdetails/miam/willingnesstoattend-answer', function (req, res) {
+              router.post('/tasklistresponse/safetyconcerns/yoursafety/emotionalabuse-answer', function (req, res) {
                   // Make a variable and give it the value from 'how-many-balls'
-                  var miamWill = req.session.data['MIAM-willing']
+                  var emoAbuse = req.session.data['emotionalabuseq']
 
                   // Check whether the variable matches a condition
-                  if (miamWill == "yes"){
+                  if (emoAbuse == "yes"){
                     // Send user to next page
-                    res.redirect('/tasklistresponse/applicationdetails/miam/checkanswers-MIAM')
+                    res.redirect('/tasklistresponse/safetyconcerns/yoursafety/emotionaldescription')
 
                   }else {
                       // Send user to ineligible page
-                      res.redirect('/tasklistresponse/applicationdetails/miam/checkanswers-MIAMnono')
+                      res.redirect('/tasklistresponse/safetyconcerns/yoursafety/checkanswers')
                   }
 
                 });
 
-              router.post('/tasklistresponse/safetyconcerns/yoursafety/sexualabuse-answer', function (req, res) {
-                  // Make a variable and give it the value from 'how-many-balls'
-                  var sexAbuse = req.session.data['sexualabuse']
-
-                  // Check whether the variable matches a condition
-                  if (sexAbuse == "yes"){
-                    // Send user to next page
-                    res.redirect('/tasklistresponse/safetyconcerns/yoursafety/sexualdescription')
-
-                  }else {
-                      // Send user to ineligible page
-                      res.redirect('/tasklistresponse/safetyconcerns/yoursafety/physicalabuse')
-                  }
-
-                });
-
-                router.post('/tasklistresponse/safetyconcerns/yoursafety/physicalabuse-answer', function (req, res) {
+                router.post('/tasklistresponse/safetyconcerns/yoursafety/generalquestions-answer', function (req, res) {
                     // Make a variable and give it the value from 'how-many-balls'
-                    var physAbuse = req.session.data['physicalabuseq']
+                    var genAbuse = req.session.data['generalabuse']
 
                     // Check whether the variable matches a condition
-                    if (physAbuse == "yes"){
+                    if (genAbuse == "yes"){
                       // Send user to next page
-                      res.redirect('/tasklistresponse/safetyconcerns/yoursafety/physicaldescription')
+                      res.redirect('/tasklistresponse/safetyconcerns/yoursafety/sexualabuse')
 
                     }else {
                         // Send user to ineligible page
-                        res.redirect('/tasklistresponse/safetyconcerns/yoursafety/financialabuse')
+                        res.redirect('/tasklistresponse/safetyconcerns/yoursafety/generalno')
                     }
 
                   });
 
-                  router.post('/tasklistresponse/safetyconcerns/yoursafety/financialabuse-answer', function (req, res) {
+                  router.post('/tasklistresponse/safetyconcerns/childrensafety/childrenabuse-answer', function (req, res) {
                       // Make a variable and give it the value from 'how-many-balls'
-                      var finAbuse = req.session.data['finanicalabuseq']
+                      var genAbuse = req.session.data['generalabuse']
 
                       // Check whether the variable matches a condition
-                      if (finAbuse == "yes"){
+                      if (genAbuse == "yes"){
                         // Send user to next page
-                        res.redirect('/tasklistresponse/safetyconcerns/yoursafety/financialdescription')
+                        res.redirect('/tasklistresponse/safetyconcerns/childrensafety/start')
 
                       }else {
                           // Send user to ineligible page
-                          res.redirect('/tasklistresponse/safetyconcerns/yoursafety/psychologicalabuse')
+                          res.redirect('/tasklistresponse/safetyconcerns/childrensafety/generalno')
                       }
 
                     });
 
-                    router.post('/tasklistresponse/safetyconcerns/yoursafety/psychologicalabuse-answer', function (req, res) {
+                    router.post('/tasklistresponse/safetyconcerns/childrensafety/sexualabuse-answer', function (req, res) {
                         // Make a variable and give it the value from 'how-many-balls'
-                        var psychAbuse = req.session.data['psychologicalabuseq']
+                        var sexChildAbuse = req.session.data['sexualabuse']
 
                         // Check whether the variable matches a condition
-                        if (psychAbuse == "yes"){
+                        if (sexChildAbuse == "yes"){
                           // Send user to next page
-                          res.redirect('/tasklistresponse/safetyconcerns/yoursafety/psychologicaldescription')
+                          res.redirect('/tasklistresponse/safetyconcerns/childrensafety/sexualdescription')
 
                         }else {
                             // Send user to ineligible page
-                            res.redirect('/tasklistresponse/safetyconcerns/yoursafety/emotionalabuse')
+                            res.redirect('/tasklistresponse/safetyconcerns/childrensafety/physicalabuse')
                         }
 
                       });
 
-                      router.post('/tasklistresponse/safetyconcerns/yoursafety/emotionalabuse-answer', function (req, res) {
+                      router.post('/tasklistresponse/safetyconcerns/childrensafety/physicalabuse-answer', function (req, res) {
                           // Make a variable and give it the value from 'how-many-balls'
-                          var emoAbuse = req.session.data['emotionalabuseq']
+                          var physChildAbuse = req.session.data['physicalabuseq']
 
                           // Check whether the variable matches a condition
-                          if (emoAbuse == "yes"){
+                          if (physChildAbuse == "yes"){
                             // Send user to next page
-                            res.redirect('/tasklistresponse/safetyconcerns/yoursafety/emotionaldescription')
+                            res.redirect('/tasklistresponse/safetyconcerns/childrensafety/physicaldescription')
 
                           }else {
                               // Send user to ineligible page
-                              res.redirect('/tasklistresponse/safetyconcerns/yoursafety/checkanswers')
+                              res.redirect('/tasklistresponse/safetyconcerns/childrensafety/financialabuse')
                           }
 
                         });
 
-                        router.post('/tasklistresponse/safetyconcerns/yoursafety/generalquestions-answer', function (req, res) {
+                        router.post('/tasklistresponse/safetyconcerns/childrensafety/financialabuse-answer', function (req, res) {
                             // Make a variable and give it the value from 'how-many-balls'
-                            var genAbuse = req.session.data['generalabuse']
+                            var finChildAbuse = req.session.data['finanicalabuseq']
 
                             // Check whether the variable matches a condition
-                            if (genAbuse == "yes"){
+                            if (finChildAbuse == "yes"){
                               // Send user to next page
-                              res.redirect('/tasklistresponse/safetyconcerns/yoursafety/sexualabuse')
+                              res.redirect('/tasklistresponse/safetyconcerns/childrensafety/financialdescription')
 
                             }else {
                                 // Send user to ineligible page
-                                res.redirect('/tasklistresponse/safetyconcerns/yoursafety/generalno')
+                                res.redirect('/tasklistresponse/safetyconcerns/childrensafety/psychologicalabuse')
                             }
 
                           });
 
-                          router.post('/tasklistresponse/safetyconcerns/childrensafety/childrenabuse-answer', function (req, res) {
+                          router.post('/tasklistresponse/safetyconcerns/childrensafety/psychologicalabuse-answer', function (req, res) {
                               // Make a variable and give it the value from 'how-many-balls'
-                              var genAbuse = req.session.data['generalabuse']
+                              var psychChildAbuse = req.session.data['psychologicalabuseq']
 
                               // Check whether the variable matches a condition
-                              if (genAbuse == "yes"){
+                              if (psychChildAbuse == "yes"){
                                 // Send user to next page
-                                res.redirect('/tasklistresponse/safetyconcerns/childrensafety/start')
+                                res.redirect('/tasklistresponse/safetyconcerns/childrensafety/psychologicaldescription')
 
                               }else {
                                   // Send user to ineligible page
-                                  res.redirect('/tasklistresponse/safetyconcerns/childrensafety/generalno')
+                                  res.redirect('/tasklistresponse/safetyconcerns/childrensafety/emotionalabuse')
                               }
 
                             });
 
-                            router.post('/tasklistresponse/safetyconcerns/childrensafety/sexualabuse-answer', function (req, res) {
+                            router.post('/tasklistresponse/safetyconcerns/childrensafety/emotionalabuse-answer', function (req, res) {
                                 // Make a variable and give it the value from 'how-many-balls'
-                                var sexChildAbuse = req.session.data['sexualabuse']
+                                var emoChildAbuse = req.session.data['emotionalabuseq']
 
                                 // Check whether the variable matches a condition
-                                if (sexChildAbuse == "yes"){
+                                if (emoChildAbuse == "yes"){
                                   // Send user to next page
-                                  res.redirect('/tasklistresponse/safetyconcerns/childrensafety/sexualdescription')
+                                  res.redirect('/tasklistresponse/safetyconcerns/childrensafety/emotionaldescription')
 
                                 }else {
                                     // Send user to ineligible page
-                                    res.redirect('/tasklistresponse/safetyconcerns/childrensafety/physicalabuse')
+                                    res.redirect('/tasklistresponse/safetyconcerns/childrensafety/checkanswers')
                                 }
 
                               });
 
-                              router.post('/tasklistresponse/safetyconcerns/childrensafety/physicalabuse-answer', function (req, res) {
+                              router.post('/tasklistresponse/safetyconcerns/existingorders/orders-answer', function (req, res) {
                                   // Make a variable and give it the value from 'how-many-balls'
-                                  var physChildAbuse = req.session.data['physicalabuseq']
+                                  var existOrders = req.session.data['existingorders']
 
                                   // Check whether the variable matches a condition
-                                  if (physChildAbuse == "yes"){
+                                  if (existOrders == "yes"){
                                     // Send user to next page
-                                    res.redirect('/tasklistresponse/safetyconcerns/childrensafety/physicaldescription')
+                                    res.redirect('/tasklistresponse/safetyconcerns/existingorders/ordersmade')
 
                                   }else {
                                       // Send user to ineligible page
-                                      res.redirect('/tasklistresponse/safetyconcerns/childrensafety/financialabuse')
+                                      res.redirect('/tasklistresponse/safetyconcerns/existingorders/checkanswers')
                                   }
 
                                 });
 
-                                router.post('/tasklistresponse/safetyconcerns/childrensafety/financialabuse-answer', function (req, res) {
+                                router.post('/tasklistresponse/legalrepresentation/start-answer', function (req, res) {
                                     // Make a variable and give it the value from 'how-many-balls'
-                                    var finChildAbuse = req.session.data['finanicalabuseq']
+                                    var legRep = req.session.data['solicitor']
 
                                     // Check whether the variable matches a condition
-                                    if (finChildAbuse == "yes"){
+                                    if (legRep == "yes"){
                                       // Send user to next page
-                                      res.redirect('/tasklistresponse/safetyconcerns/childrensafety/financialdescription')
+                                      res.redirect('/tasklistresponse/legalrepresentation/solicitordirect')
 
                                     }else {
                                         // Send user to ineligible page
-                                        res.redirect('/tasklistresponse/safetyconcerns/childrensafety/psychologicalabuse')
+                                        res.redirect('/tasklistresponse/legalrepresentation/solicitornotdirect')
                                     }
 
                                   });
 
-                                  router.post('/tasklistresponse/safetyconcerns/childrensafety/psychologicalabuse-answer', function (req, res) {
+                                  router.post('/tasklistresponse/legalrepresentation/solicitorresponse-answer', function (req, res) {
                                       // Make a variable and give it the value from 'how-many-balls'
-                                      var psychChildAbuse = req.session.data['psychologicalabuseq']
+                                      var legRep = req.session.data['selffill']
 
                                       // Check whether the variable matches a condition
-                                      if (psychChildAbuse == "yes"){
+                                      if (legRep == "yes"){
                                         // Send user to next page
-                                        res.redirect('/tasklistresponse/safetyconcerns/childrensafety/psychologicaldescription')
+                                        res.redirect('/tasklistresponse/legalrepresentation/solicitornotdirect')
 
                                       }else {
                                           // Send user to ineligible page
-                                          res.redirect('/tasklistresponse/safetyconcerns/childrensafety/emotionalabuse')
+                                          res.redirect('/tasklistresponse/legalrepresentation/solicitordirect')
                                       }
 
                                     });
 
-                                    router.post('/tasklistresponse/safetyconcerns/childrensafety/emotionalabuse-answer', function (req, res) {
+                                    router.post('/tasklistresponse/aboutyou/confidentiality/start-answer', function (req, res) {
                                         // Make a variable and give it the value from 'how-many-balls'
-                                        var emoChildAbuse = req.session.data['emotionalabuseq']
+                                        var conDetails = req.session.data['confidential']
 
                                         // Check whether the variable matches a condition
-                                        if (emoChildAbuse == "yes"){
+                                        if (conDetails == "yes"){
                                           // Send user to next page
-                                          res.redirect('/tasklistresponse/safetyconcerns/childrensafety/emotionaldescription')
+                                          res.redirect('/tasklistresponse/aboutyou/confidentiality/feedback')
 
                                         }else {
                                             // Send user to ineligible page
-                                            res.redirect('/tasklistresponse/safetyconcerns/childrensafety/checkanswers')
+                                            res.redirect('/tasklistresponse/aboutyou/confidentiality/feedbackno')
                                         }
 
                                       });
 
-                                      router.post('/tasklistresponse/safetyconcerns/existingorders/orders-answer', function (req, res) {
+                                      router.post('/tasklistresponse/aboutyou/confidentiality/startalternative-answer', function (req, res) {
                                           // Make a variable and give it the value from 'how-many-balls'
-                                          var existOrders = req.session.data['existingorders']
+                                          var noConDe = req.session.data['confidential']
 
                                           // Check whether the variable matches a condition
-                                          if (existOrders == "yes"){
+                                          if (noConDe == "yes"){
                                             // Send user to next page
-                                            res.redirect('/tasklistresponse/safetyconcerns/existingorders/ordersmade')
+                                            res.redirect('/tasklistresponse/aboutyou/confidentiality/feedback')
 
                                           }else {
                                               // Send user to ineligible page
-                                              res.redirect('/tasklistresponse/safetyconcerns/existingorders/checkanswers')
+                                              res.redirect('/tasklistresponse/aboutyou/confidentiality/feedbackno')
                                           }
 
                                         });
 
-                                        router.post('/tasklistresponse/legalrepresentation/start-answer', function (req, res) {
+                                      router.post('/tasklistresponse/aboutyou/confidentiality/detailsknown-answer', function (req, res) {
+                                          // Make a variable and give it the value from 'how-many-balls'
+                                          var detKnown = req.session.data['detailsknown']
+
+                                          // Check whether the variable matches a condition
+                                          if (detKnown == "yes"){
+                                            // Send user to next page
+                                            res.redirect('/tasklistresponse/aboutyou/confidentiality/startalternative')
+
+                                          }else {
+                                              // Send user to ineligible page
+                                              res.redirect('/tasklistresponse/aboutyou/confidentiality/start')
+                                          }
+
+                                        });
+                                        router.post('/tasklistresponse/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
                                             // Make a variable and give it the value from 'how-many-balls'
-                                            var legRep = req.session.data['solicitor']
+                                            var reasonAdjust = req.session.data['reasonable-adjustments']
 
                                             // Check whether the variable matches a condition
-                                            if (legRep == "yes"){
+                                            if (reasonAdjust == "No"){
                                               // Send user to next page
-                                              res.redirect('/tasklistresponse/legalrepresentation/solicitordirect')
+                                              res.redirect('/tasklistresponse/aboutyou/tellusyourhearingneeds/checkanswersreqs')
 
                                             }else {
                                                 // Send user to ineligible page
-                                                res.redirect('/tasklistresponse/legalrepresentation/solicitornotdirect')
+                                                res.redirect('/tasklistresponse/aboutyou/tellusyourhearingneeds/documents')
                                             }
 
                                           });
-
-                                          router.post('/tasklistresponse/legalrepresentation/solicitorresponse-answer', function (req, res) {
-                                              // Make a variable and give it the value from 'how-many-balls'
-                                              var legRep = req.session.data['selffill']
-
-                                              // Check whether the variable matches a condition
-                                              if (legRep == "yes"){
-                                                // Send user to next page
-                                                res.redirect('/tasklistresponse/legalrepresentation/solicitornotdirect')
-
-                                              }else {
-                                                  // Send user to ineligible page
-                                                  res.redirect('/tasklistresponse/legalrepresentation/solicitordirect')
-                                              }
-
-                                            });
-
-                                            router.post('/tasklistresponse/aboutyou/confidentiality/start-answer', function (req, res) {
-                                                // Make a variable and give it the value from 'how-many-balls'
-                                                var conDetails = req.session.data['confidential']
-
-                                                // Check whether the variable matches a condition
-                                                if (conDetails == "yes"){
-                                                  // Send user to next page
-                                                  res.redirect('/tasklistresponse/aboutyou/confidentiality/feedback')
-
-                                                }else {
-                                                    // Send user to ineligible page
-                                                    res.redirect('/tasklistresponse/aboutyou/confidentiality/feedbackno')
-                                                }
-
-                                              });
-
-                                              router.post('/tasklistresponse/aboutyou/confidentiality/startalternative-answer', function (req, res) {
-                                                  // Make a variable and give it the value from 'how-many-balls'
-                                                  var noConDe = req.session.data['confidential']
-
-                                                  // Check whether the variable matches a condition
-                                                  if (noConDe == "yes"){
-                                                    // Send user to next page
-                                                    res.redirect('/tasklistresponse/aboutyou/confidentiality/feedback')
-
-                                                  }else {
-                                                      // Send user to ineligible page
-                                                      res.redirect('/tasklistresponse/aboutyou/confidentiality/feedbackno')
-                                                  }
-
-                                                });
-
-                                              router.post('/tasklistresponse/aboutyou/confidentiality/detailsknown-answer', function (req, res) {
-                                                  // Make a variable and give it the value from 'how-many-balls'
-                                                  var detKnown = req.session.data['detailsknown']
-
-                                                  // Check whether the variable matches a condition
-                                                  if (detKnown == "yes"){
-                                                    // Send user to next page
-                                                    res.redirect('/tasklistresponse/aboutyou/confidentiality/startalternative')
-
-                                                  }else {
-                                                      // Send user to ineligible page
-                                                      res.redirect('/tasklistresponse/aboutyou/confidentiality/start')
-                                                  }
-
-                                                });
-                                                router.post('/tasklistresponse/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
-                                                    // Make a variable and give it the value from 'how-many-balls'
-                                                    var reasonAdjust = req.session.data['reasonable-adjustments']
-
-                                                    // Check whether the variable matches a condition
-                                                    if (reasonAdjust == "No"){
-                                                      // Send user to next page
-                                                      res.redirect('/tasklistresponse/aboutyou/tellusyourhearingneeds/checkanswersreqs')
-
-                                                    }else {
-                                                        // Send user to ineligible page
-                                                        res.redirect('/tasklistresponse/aboutyou/tellusyourhearingneeds/documents')
-                                                    }
-
-                                                  });
-
 
 
 
@@ -479,105 +478,102 @@ const router = express.Router()
   //Ameet's forms below
 
 
-        router.post('/respondenttasklist/aboutyou/confidentiality/start-answer', function (req, res) {
-            // Make a variable and give it the value from 'how-many-balls'
-            var confDetails = req.session.data['confidential']
+  router.post('/respondenttasklist/aboutyou/confidentiality/start-answer', function (req, res) {
+    // Make a variable and give it the value from 'how-many-balls'
+    var confDetails = req.session.data['confidential']
 
-            // Check whether the variable matches a condition
-            if (confDetails == "yes"){
-              // Send user to next page
-              res.redirect('/respondenttasklist/aboutyou/confidentiality/feedback')
+    // Check whether the variable matches a condition
+    if (confDetails == "yes"){
+      // Send user to next page
+      res.redirect('/respondenttasklist/aboutyou/confidentiality/feedback')
 
-            }else {
-                // Send user to ineligible page
-                res.redirect('/respondenttasklist/aboutyou/confidentiality/feedbackno')
-            }
+    }else {
+        // Send user to ineligible page
+        res.redirect('/respondenttasklist/aboutyou/confidentiality/feedbackno')
+    }
 
-          });
+  });
 
-          router.post('/respondenttasklist/aboutyou/confidentiality/startalternative-answer', function (req, res) {
-              // Make a variable and give it the value from 'how-many-balls'
-              var noConf = req.session.data['confidential']
+  router.post('/respondenttasklist/aboutyou/confidentiality/startalternative-answer', function (req, res) {
+      // Make a variable and give it the value from 'how-many-balls'
+      var noConf = req.session.data['confidential']
 
-              // Check whether the variable matches a condition
-              if (noConf == "yes"){
-                // Send user to next page
-                res.redirect('/respondenttasklist/aboutyou/confidentiality/feedback')
+      // Check whether the variable matches a condition
+      if (noConf == "yes"){
+        // Send user to next page
+        res.redirect('/respondenttasklist/aboutyou/confidentiality/feedback')
 
-              }else {
-                  // Send user to ineligible page
-                  res.redirect('/respondenttasklist/aboutyou/confidentiality/feedbackno')
-              }
+      }else {
+          // Send user to ineligible page
+          res.redirect('/respondenttasklist/aboutyou/confidentiality/feedbackno')
+      }
 
-            });
+    });
 
-          router.post('/respondenttasklist/applications/responsetoallegations/start-answer', function (req, res) {
-              // Make a variable and give it the value from 'how-many-balls'
-              var ansAlleg = req.session.data['answer']
+  router.post('/respondenttasklist/applications/responsetoallegations/start-answer', function (req, res) {
+      // Make a variable and give it the value from 'how-many-balls'
+      var ansAlleg = req.session.data['answer']
 
-              // Check whether the variable matches a condition
-              if (ansAlleg == "yes"){
-                // Send user to next page
-                res.redirect('/respondenttasklist/applications/responsetoallegations/applicantabuse')
+      // Check whether the variable matches a condition
+      if (ansAlleg == "yes"){
+        // Send user to next page
+        res.redirect('/respondenttasklist/applications/responsetoallegations/applicantabuse')
 
-              }else {
-                  // Send user to ineligible page
-                  res.redirect('/respondenttasklist/applications/responsetoallegations/checkanswers-no')
-              }
+      }else {
+          // Send user to ineligible page
+          res.redirect('/respondenttasklist/applications/responsetoallegations/checkanswers-no')
+      }
 
-            });
+    });
 
+    router.post('/respondenttasklist/applications/responsetoallegations/paperform/start-answer', function (req, res) {
+        // Make a variable and give it the value from 'how-many-balls'
+        var paperAlleg = req.session.data['answer']
 
+        // Check whether the variable matches a condition
+        if (paperAlleg == "yes"){
+          // Send user to next page
+          res.redirect('/respondenttasklist/applications/responsetoallegations/paperform/applicantabuse')
 
-            router.post('/respondenttasklist/applications/responsetoallegations/paperform/start-answer', function (req, res) {
-              // Make a variable and give it the value from 'how-many-balls'
-              var paperAlleg = req.session.data['answer']
+        }else {
+            // Send user to ineligible page
+            res.redirect('/respondenttasklist/applications/responsetoallegations/paperform/checkanswers-no')
+        }
 
-              // Check whether the variable matches a condition
-              if (paperAlleg == "yes"){
-                // Send user to next page
-                res.redirect('/respondenttasklist/applications/responsetoallegations/paperform/applicantabuse')
+      });
 
-              }else {
-                  // Send user to ineligible page
-                  res.redirect('/respondenttasklist/applications/responsetoallegations/paperform/checkanswers-no')
-              }
+    router.post('/respondenttasklist/aboutyou/confidentiality/detailsknown-answer', function (req, res) {
+        // Make a variable and give it the value from 'how-many-balls'
+        var detailsKnown = req.session.data['detailsknown']
 
-            });
+        // Check whether the variable matches a condition
+        if (detailsKnown == "yes"){
+          // Send user to next page
+          res.redirect('/respondenttasklist/aboutyou/confidentiality/startalternative')
 
+        }else {
+            // Send user to ineligible page
+            res.redirect('/respondenttasklist/aboutyou/confidentiality/start')
+        }
 
+      });
 
-            router.post('/respondenttasklist/aboutyou/confidentiality/detailsknown-answer', function (req, res) {
-                // Make a variable and give it the value from 'how-many-balls'
-                var detailsKnown = req.session.data['detailsknown']
+      router.post('/respondenttasklist/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
+          // Make a variable and give it the value from 'how-many-balls'
+          var reasonAdj = req.session.data['reasonable-adjustments']
 
-                // Check whether the variable matches a condition
-                if (detailsKnown == "yes"){
-                  // Send user to next page
-                  res.redirect('/respondenttasklist/aboutyou/confidentiality/startalternative')
+          // Check whether the variable matches a condition
+          if (reasonAdj == "No"){
+            // Send user to next page
+            res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/checkanswersreqs')
 
-                }else {
-                    // Send user to ineligible page
-                    res.redirect('/respondenttasklist/aboutyou/confidentiality/start')
-                }
+          }else {
+              // Send user to ineligible page
+              res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/documents')
+          }
 
-              });
+        });
 
-              router.post('/respondenttasklist/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
-                  // Make a variable and give it the value from 'how-many-balls'
-                  var reasonAdj = req.session.data['reasonable-adjustments']
-
-                  // Check whether the variable matches a condition
-                  if (reasonAdj == "No"){
-                    // Send user to next page
-                    res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/checkanswersreqs')
-
-                  }else {
-                      // Send user to ineligible page
-                      res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/documents')
-                  }
-
-                });
 
 
         router.post('/applicanttasklist/aboutyou/confidentiality/start-answer', function (req, res) {
