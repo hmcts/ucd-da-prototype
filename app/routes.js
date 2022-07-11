@@ -404,7 +404,7 @@ router.post('/tasklistresponse/safetyconcerns/abduction/passportoffice-answer', 
 
 
 
-                                                    //darespondenttasklist's forms below
+//darespondenttasklist's forms below
 
   router.post('/darespondenttasklist/aboutyou/confidentiality/start-answer', function (req, res) {
     // Make a variable and give it the value from 'how-many-balls'
@@ -468,6 +468,21 @@ router.post('/tasklistresponse/safetyconcerns/abduction/passportoffice-answer', 
               res.redirect('/darespondenttasklist/aboutyou/tellusyourhearingneeds/documents')
           }
 
+        });
+
+//respondenttasklist's forms below
+
+        router.post('/respondenttasklist/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
+          // Make a variable and give it the value from 'how-many-balls'
+          var reasonAdj = req.session.data['reasonable-adjustments']
+          // Check whether the variable matches a condition
+          if (reasonAdj == "No"){
+            // Send user to next page
+            res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/checkanswersreqs')
+          }else {
+              // Send user to ineligible page
+              res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/documents')
+          }
         });
 
 
