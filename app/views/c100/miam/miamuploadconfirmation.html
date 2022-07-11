@@ -24,7 +24,36 @@
 
      <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
          <form action="../typeoforder/courtorder" method="post" novalidate>
-              <h1 class="govuk-heading-xl">Confirmation of upload will be here, need to figure out how it'll look</h1>
+              <h1 class="govuk-heading-xl">Upload your MIAM certificate</h1>
+
+              <div class="govuk-notification-banner govuk-notification-banner--success govuk-!-margin-bottom-29" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                <div class="govuk-notification-banner__header">
+                  <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Success
+                  </h2>
+                </div>
+                <div class="govuk-notification-banner__content">
+                  <h2 class="govuk-notification-banner__heading">
+                    Your MIAM certificate has been uploaded
+                  </h2>
+                </div>
+              </div>
+              <h2 class="app-task-list__section govuk-!-margin-bottom-4">Your documents for Mediation Infortmation and Assessment Meeting (MIAM)</h2>
+
+
+                <dl class="govuk-summary-list">
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__value">
+                        sam_richards__MIAM_certificate__date_submitted.pdf
+                      </dt>
+
+
+                    </div>
+
+
+
+                  </dl>
 
 
 
@@ -34,8 +63,15 @@
 
 
 
-            <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Save and continue
-            </button>
+         <div class="govuk-button-group govuk-!-margin-top-6">
+           <button class="govuk-button" data-module="govuk-button">
+             Continue
+           </button>
+           <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+             Save and come back later
+           </a>
+
+         </div>
 
 
 

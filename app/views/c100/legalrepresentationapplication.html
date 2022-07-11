@@ -40,7 +40,7 @@
                  <label for="solicitorapplication-yes" class="govuk-label govuk-radios__label">Yes
                  </label>
                </div>
-               
+
                <div class="govuk-radios__item">
                  <input id="solicitorapplication-no" class="govuk-radios__input" type="radio" value="No" name="solicitorapplication">
                  <label for="solicitorapplication-no" class="govuk-label govuk-radios__label">No</label>
@@ -50,8 +50,15 @@
           </div>
 
           <form action="legalerror" method="post" novalidate>
-            <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Save and continue
-            </button>
+            <div class="govuk-button-group govuk-!-margin-top-6">
+              <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+              </button>
+              <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+                Save and come back later
+              </a>
+
+            </div>
           </form>
 
 

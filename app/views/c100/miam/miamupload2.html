@@ -23,7 +23,7 @@
      <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
 
      <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
-
+         <form action="miamuploadconfirmation" method="post" novalidate>
               <h1 class="govuk-heading-xl">Upload your MIAM certificate</h1>
 
 
@@ -61,7 +61,7 @@
 
              <div class="uploadcomponent">
 
-               <div class=" govuk-!-margin-bottom-3">
+               <div class=" govuk-!-margin-bottom-3"></div>
 
                  <div class="govuk-form-group govuk-inset-text">
                    <label class="govuk-label govuk-!-font-weight-bold" for="file-upload-1">
@@ -76,20 +76,44 @@
 
                      </div>
 
-                     <form action="miamupload2" method="post" novalidate>
+
 
                      <button class="govuk-button upload-addnew govuk-button--secondary" data-module="govuk-button">
                        Upload file
                      </button>
 
-                   </form>
+
 
                  </div>
 
                  </div>
 
+                 <div class=" govuk-!-padding-bottom-6"></div>
 
-               </div>
+
+               <div class = "uploadedfilessummary">
+
+                     <h2 class="app-task-list__section">
+                       Your documents
+                     </h2>
+
+                     <dl class="govuk-summary-list">
+
+                         <div class="govuk-summary-list__row">
+                           <dt class="govuk-summary-list__value">
+                             sam_richards__miam_certificate__date_submitted.pdf
+                           </dt>
+
+                           <dd class="govuk-summary-list__actions">
+                             <a class="govuk-link" href="#">
+                               Remove<span class="govuk-visually-hidden"> name</span>
+                             </a>
+                           </dd>
+                         </div>
+
+                       </dl>
+
+                 </div>
 
  <div class="govuk-!-padding-bottom-4"></div>
 
@@ -102,6 +126,7 @@
    </a>
 
  </div>
+
 
 
 

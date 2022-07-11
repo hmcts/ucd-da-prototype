@@ -29,7 +29,7 @@
          <span class="govuk-caption-l">Safety concerns</span>
          <h1 class="govuk-heading-xl">Briefly describe the physical abuse against the children if you feel able to</h1>
 
-         <details class="govuk-details" data-module="govuk-details">
+         <!-- <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text" data-ga-category="explanations" data-ga-label="abuse details">
               Why do we need this information and what will we do with it?
@@ -43,11 +43,21 @@
             <p class="govuk-body">They will submit information to the court before your first hearing. Their assessment helps the judge make a decision that is in the best interests of the children.</p>
             <p class="govuk-body">The information you provide in this section will also be shared with the respondents so that they have the opportunity to respond to your allegations.</p>
           </div>
-        </details>
+        </details> -->
 
+        <p class="govuk-body ">The information you provide will be used as evidence in the child arrangement application. It is not an application for a domestic abuse injunction. As part of an injunction, you can <a href="https://www.gov.uk/injunction-domestic-violence" class="govuk-link govuk-link a" rel="external" target="_blank">apply for a non-molestation order or an occupation order</a>.
+        </p>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+           The information that you give in this section will also be shared with the applicant, so they are able to respond to what you have said.
+          </strong>
+        </div>
 
         <div class="govuk-form-group">
-          <h2 class="govuk-heading-m">
+          <h2 class="govuk-heading-s">
               Which children are you concerned about? (optional)
           </h2>
           <fieldset class="govuk-fieldset"
@@ -73,15 +83,15 @@
           </div>
 
         <div class="govuk-form-group">
-          <h2 class="govuk-heading-m">
-               Give a short description of the nature of the behaviours you want the court to consider. (optional)
+          <h2 class="govuk-heading-s">
+               Give a short description of the nature of the behaviours that you want the court to consider. (optional)
           </h2>
         <div id="more-detail-hint" class="govuk-hint">
              You will have a chance to give further details to the court later in the proceedings.
         </div>
            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="4"></textarea>
 
-           <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+           <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
                When did this behaviour start and how long did it continue? (optional)
              </label>
            </h2>
@@ -92,16 +102,23 @@
 
            <div class="govuk-form-group">
              <fieldset class="govuk-fieldset">
-               <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+               <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
                    Is the behaviour still ongoing? (optional)
                </h2>
                <div class="govuk-radios" data-module="govuk-radios">
                  <div class="govuk-radios__item">
-                   <input class="govuk-radios__input" id="respabuseongoing-yes" name="respabuseongoing" type="radio" value="yes">
+                   <input class="govuk-radios__input" id="respabuseongoing-yes" name="respabuseongoing" type="radio" value="yes" aria-controls="respabuseongoing-conditional">
                    <label class="govuk-label govuk-radios__label" for="respabuseongoing-yes">
                      Yes
                    </label>
                  </div>
+
+                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="respabuseongoing-conditional">
+
+                     <p class="govuk-body" for="respabuseongoing-hint">Contact 999 if there is an emergency. If it's not an emergency consider contacting <a href="https://www.nspcc.org.uk"  class="govuk-link" rel="external" target="_blank">NSPCC</a> or <a href="https://www.gov.uk/report-child-abuse"  class="govuk-link" rel="external" target="_blank">the social care team at you local council </a>.</p>
+
+                   </div>
+
                  <div class="govuk-radios__item">
                    <input class="govuk-radios__input" id="respabuseongoing-no" name="respabuseongoing" type="radio" value="no">
                    <label class="govuk-label govuk-radios__label" for="respabuseongoing-no">
@@ -113,7 +130,7 @@
              </fieldset>
            </div>
            <div>
-            <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+            <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
                 Have you ever asked for help from a professional person or agency? (optional)
                 </label>
             </h2>
@@ -150,48 +167,47 @@
 
 
 
-          <button class="govuk-button" data-module="govuk-button">
-            Save and continue
-          </button>
+       <div class="govuk-button-group govuk-!-margin-top-6">
+         <button class="govuk-button" data-module="govuk-button">
+           Save and continue
+         </button>
+         <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+           Save and come back later
+         </a>
+
+       </div>
       </main>
     </div>
   </div>
 
   <div class="govuk-grid-column-one-third">
-      <div class="blue-bar"></div>
-      <div class="app-sidebar-grey govuk-!-padding-3" style="color:grey">
+    <div class="govuk-form-group">
 
-        <h2 class="govuk-heading-m">Report an incident</h2>
 
-        <p class="govuk-body">
-          Always call 999 if there’s an emergency or if you think a child’s in danger.
-        </p>
 
-        <p class="govuk-body govuk-!-margin-bottom-1">If it is not an emergency, you can:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li><a href="https://www.gov.uk/report-child-abuse" class="govuk-link" rel="external" target="_blank">report child abuse</a></li>
-          <li><a href="https://www.gov.uk/report-domestic-abuse" class="govuk-link" rel="external" target="_blank">report domestic abuse</a></li>
-        </ul>
-      </div>
+           <h2 class="govuk-heading-m">Report an incident</h2>
 
-      <h2 class="govuk-heading-m">Get support</h2>
+           <p class="govuk-body">
+             Always call 999 if there’s an emergency or if you think a child’s in danger.
+           </p>
 
-      <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Child safety</h3>
-      <ul class="govuk-list">
-        <li><a href="https://www.nspcc.org.uk" class="govuk-link" rel="external" target="_blank">NSPCC</a></li>
-        <li><a href="https://www.childline.org.uk" class="govuk-link" rel="external" target="_blank">Childline</a></li>
-      </ul>
 
-      <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Domestic abuse</h3>
-      <ul class="govuk-list">
-        <li><a href="http://www.nationaldomesticviolencehelpline.org.uk" class="govuk-link" rel="external" target="_blank">National Domestic Violence Helpline</a></li>
-        <li><a href="https://www.womensaid.org.uk" class="govuk-link" rel="external" target="_blank">Women’s Aid</a></li>
-        <li><a href="http://www.mensadviceline.org.uk" class="govuk-link" rel="external" target="_blank">Men’s Advice Line</a></li>
-      </ul>
+
+         <h2 class="govuk-heading-m">Get support</h2>
+
+
+         <ul class="govuk-list">
+           <li><a href="https://www.nspcc.org.uk" class="govuk-link" rel="external" target="_blank">NSPCC: National Society for the Prevention of Cruelty to Children</a></li>
+           <li><a href="https://www.childline.org.uk" class="govuk-link" rel="external" target="_blank">Childline</a></li>
+          <li><a href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help" class="govuk-link" rel="external" target="_blank">GOV.UK Support directory</a></li>
+          <li><a href="https://supportnav.org.uk/" class="govuk-link" rel="external" target="_blank">SupportNav</a></li>
+         </ul>
+
     </div>
 
 
-  <div class="govuk-grid-column-one-third">
+
+
     <details class="govuk-details" data-module="govuk-details">
  			 <summary class="govuk-details__summary">
    			 <span class="govuk-details__summary-text">

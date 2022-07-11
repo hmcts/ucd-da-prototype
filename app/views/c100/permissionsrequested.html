@@ -28,7 +28,7 @@
 
 
 
-         <h1 class="govuk-heading-xl">Do you have a reason the court should grant you a permission make this application?</h1>
+         <h1 class="govuk-heading-xl">Do you have a reason the court should grant you a permission to make this application?</h1>
 
 
          <div class="govuk-!-padding-bottom-4"></div>
@@ -64,8 +64,15 @@
           </div>
 
           <form action="legalerror" method="post" novalidate>
-            <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">Save and continue
-            </button>
+            <div class="govuk-button-group govuk-!-margin-top-6">
+              <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+              </button>
+              <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+                Save and come back later
+              </a>
+
+            </div>
           </form>
 
 
