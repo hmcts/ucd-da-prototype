@@ -19,88 +19,88 @@
 {% block content %}
 
 
-
-
-<form action="/applicantjourney/start" method="post" novalidate>
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
- 		 <a href="/applicantjourney/start" class="govuk-back-link">Back</a>
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
-        Sam Richards
+   <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-width-container">
+       <a href="/darespondenttasklist/start"class="govuk-back-link">Back</a>
+
+       <main class="govuk-main-wrapper " id="main-content" role="main">
+         <form action="/respondenttasklist/startreply" method="post" novalidate>
+
+
+
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+        Upload documents
       </h1>
 
-      <p class="govuk-body">Respondent reference #1636575673018538</p>
+      <p class="govuk-body">Case number #1636575673018538</p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-5">
 
-      <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-2">View all documents</h2>
-      <p class="govuk-body govuk-!-margin-bottom-7">Read through the application and then respond to the questions about the case</p> !-->
-
-  </div>
-</div>
-
-
- <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h2 class="govuk-heading-m govuk-!-margin-bottom-12" >
-          Upload documents
-      </h2>
-
-      <p class="govuk-body govuk-!-margin-bottom-7">Select the type of document you want to upload</p>
-
+      <p class="govuk-body">If the court has asked you to submit further evidence, you can upload documents here.</p>
+      <h2 class="govuk-heading-l">Select the type of document</h2>
       <ol class="app-task-list">
         <li>
-          <h2 class="app-task-list__section">
+          <h3 class="app-task-list__section">
              Witness statements and evidence
-          </h2>
+          </h3>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="uploaddocuments" aria-describedby="eligibility-status">
-                  Your statements
+                <a href="position/requested" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
+                  Your position statements
                 </a>
               </span>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="howdocumentshared" aria-describedby="eligibility-status">
-                  Witness statements
+                <a href="requested" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
+                  Your witness statements
                 </a>
               </span>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
-                  Digital downloads
+                <a href="" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
+                  Other people's witness statements
                 </a>
               </span>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
-                  Photographic evidence
+                <a href="" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
+                  Emails, screenshots, images and other media files
                 </a>
               </span>
+
             </li>
+
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
-                  Mobile phone screenshots
-                </a>
-              </span>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
+                <a href="" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
                   Medical records
                 </a>
               </span>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
+                <a href="" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
                   Letters from school
                 </a>
               </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
+                  Tenancy and mortgage agreements
+                </a>
+              </span>
+
             </li>
           </ul>
         </li>
@@ -112,18 +112,13 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="applicationdetails/proceedings/start" aria-describedby="current-or-previous-proceedings">
+                <a href="" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
                   Previous orders submitted with application
                 </a>
               </span>
+
             </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="applicationdetails/proceedings/start" aria-describedby="current-or-previous-proceedings">
-                  Make an application in these proceedings
-                </a>
-              </span>
-            </li>
+
 
           </ul>
         </li>
@@ -135,38 +130,36 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="safetyconcerns/yoursafety/safetyinfo" aria-describedby="your-safety">
+                <a href="medical/requested" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
                   Medical reports
                 </a>
               </span>
+
             </li>
+
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="safetyconcerns/childrensafety/childrenabuse" aria-describedby="children-safety">
-                  DNA reports
-                </a>
-              </span>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="safetyconcerns/abduction/abduction" aria-describedby="abduction">
+                <a href="" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
                   Paternity test reports
                 </a>
               </span>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="safetyconcerns/otherconcerns/drugs" aria-describedby="risk-of-harm-or-violence">
+                <a href="" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
                   Drug and alcohol tests (toxicology)
                 </a>
               </span>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="safetyconcerns/existingorders/orders" aria-describedby="risk-of-harm-or-violence">
-                  Police disclosures
+                <a href="" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
+                  Police reports
                 </a>
               </span>
+
             </li>
          </ul>
         </li>
@@ -178,33 +171,27 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="safetyconcerns/yoursafety/safetyinfo" aria-describedby="your-safety">
+                <a href="" class="govuk-link govuk-link--no-visited-state" aria-describedby="eligibility-status">
                   Other documents
                 </a>
               </span>
+
             </li>
            </ul>
         </li>
 
-    <div class="govuk-button-group">
+
+      </ol>
 
 
-          <div class="govuk-button-group">
-            <button class="govuk-button govuk-button--secondary" href="/respondenttasklist/startreply" data-module="govuk-button">
-              Previous
-            </button>
+  <button class="govuk-button govuk-button--secondary"  data-module="govuk-button">
+    Go back
+  </button>
 
-            <button class="govuk-button" href="/respondenttasklist/startreply" data-module="govuk-button">
-              Save and continue
-            </button>
-
-         </div>
-
-
+        </form>
+      </main>
     </div>
-  </ol>
-
-    </div>
+  </div>
 
     <div class="govuk-grid-column-one-third">
 
@@ -228,7 +215,7 @@
 
     </div>
  </div>
-</form>
+
 
 
 
