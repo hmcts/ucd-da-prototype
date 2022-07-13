@@ -1,0 +1,208 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Progress bars
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .hmcts-progress-bar-vertical .hmcts-progress-bar__list-item, .hmcts-progress-bar-active .hmcts-progress-bar__list-item {
+    width: 90px;
+    display: inline-block;
+}
+
+
+@media screen and (max-width:1200px) {
+
+.hmcts-progress-bar-vertical .hmcts-progress-bar__list-item { max-width:45px; display:block; margin-top: 10px; }
+.hmcts-progress-bar-vertical .hmcts-progress-bar__list::before {
+  border-top: none;
+  position: absolute;
+  top: 0px;
+  border-left: 6px solid #CECECE;
+  height: 100%;
+  position: absolute;
+  left:20px;
+  top: 0;
+
+}
+
+.hmcts-progress-bar-vertical .hmcts-progress-bar__label { margin-top:-25px; margin-left:50px; width:350px; text-align:left }
+
+
+.hmcts-progress-bar-active .hmcts-progress-bar__list-item { max-width:45px; display:block; margin-top: 10px; }
+.hmcts-progress-bar-active .hmcts-progress-bar__list::before {
+  border-top: none;
+  position: absolute;
+  top: 0px;
+  border-left: 6px solid #CECECE;
+  height: 100%;
+  position: absolute;
+  left:20px;
+  top: 0;
+}
+
+.hmcts-progress-bar-active .hmcts-progress-bar__label { margin-top:-25px; margin-left:50px; width:350px; text-align:left }
+.hmcts-progress-bar-active .hmcts-progress-bar__list-item { display:none }
+.hmcts-progress-bar-active .hmcts-progress-bar__list-item[aria-current=step] { display:block }
+
+}
+
+
+
+</style>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">Status tags</p>
+
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col"> Class name </th>
+            <th class="govuk-table__header" scope="col"> Tag </th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag">
+                COMPLETED
+              </strong>
+            </td>
+          </tr>
+
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--grey </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                NOT AVAILABLE YET
+              </strong>
+            </td>
+          </tr>
+
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--grey </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                TO DO 
+              </strong>
+            </td>
+          </tr>
+
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--red </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--red">
+                NOT STARTED YET
+              </strong>
+            </td>
+          </tr>
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--blue </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">
+                OPTIONAL
+              </strong>
+            </td>
+          </tr>
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--blue </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">
+                READY TO VIEW
+              </strong>
+            </td>
+          </tr>
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--green </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--green">
+               completed
+              </strong>
+            </td>
+          </tr>
+
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--turquoise </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--turquoise">
+               Submitted
+              </strong>
+            </td>
+          </tr>
+
+
+
+
+        </tbody>
+      </table>
+
+
+
+
+    </div>
+
+
+    <div class="govuk-grid-column-one-third">
+      <h3 class="govuk-heading-m">
+        Notes:
+      </h3>
+        <p class="govuk-body">A list of tags as they are currently represented for HMCTS</p>
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}
