@@ -19,50 +19,7 @@ State tags
 {% block content %}
 
 <style>
-  .hmcts-progress-bar-vertical .hmcts-progress-bar__list-item, .hmcts-progress-bar-active .hmcts-progress-bar__list-item {
-    width: 90px;
-    display: inline-block;
-}
-
-
-@media screen and (max-width:1200px) {
-
-.hmcts-progress-bar-vertical .hmcts-progress-bar__list-item { max-width:45px; display:block; margin-top: 10px; }
-.hmcts-progress-bar-vertical .hmcts-progress-bar__list::before {
-  border-top: none;
-  position: absolute;
-  top: 0px;
-  border-left: 6px solid #CECECE;
-  height: 100%;
-  position: absolute;
-  left:20px;
-  top: 0;
-
-}
-
-.hmcts-progress-bar-vertical .hmcts-progress-bar__label { margin-top:-25px; margin-left:50px; width:350px; text-align:left }
-
-
-.hmcts-progress-bar-active .hmcts-progress-bar__list-item { max-width:45px; display:block; margin-top: 10px; }
-.hmcts-progress-bar-active .hmcts-progress-bar__list::before {
-  border-top: none;
-  position: absolute;
-  top: 0px;
-  border-left: 6px solid #CECECE;
-  height: 100%;
-  position: absolute;
-  left:20px;
-  top: 0;
-}
-
-.hmcts-progress-bar-active .hmcts-progress-bar__label { margin-top:-25px; margin-left:50px; width:350px; text-align:left }
-.hmcts-progress-bar-active .hmcts-progress-bar__list-item { display:none }
-.hmcts-progress-bar-active .hmcts-progress-bar__list-item[aria-current=step] { display:block }
-
-}
-
-
-
+.govuk-tag { text-transform:none }
 </style>
 
   <div class="govuk-grid-row">
@@ -155,10 +112,24 @@ State tags
             </td>
             <td class="govuk-table__cell">
               <strong class="govuk-tag govuk-tag--red">
-                NOT STARTED YET
+                Not started yet
               </strong>
             </td>
           </tr>
+
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <code> govuk-tag--red </code>
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--red">
+                Decision received
+              </strong>
+            </td>
+          </tr>
+
 
 
           <tr class="govuk-table__row">
@@ -167,7 +138,7 @@ State tags
             </td>
             <td class="govuk-table__cell">
               <strong class="govuk-tag govuk-tag--blue">
-                OPTIONAL
+                Optional
               </strong>
             </td>
           </tr>
@@ -181,7 +152,7 @@ State tags
             </td>
             <td class="govuk-table__cell">
               <strong class="govuk-tag govuk-tag--blue">
-                READY TO VIEW
+                Ready to view
               </strong>
             </td>
           </tr>
@@ -245,7 +216,7 @@ State tags
             </td>
             <td class="govuk-table__cell">
               <strong class="govuk-tag govuk-tag--green">
-               completed
+               Completed
               </strong>
             </td>
           </tr>
