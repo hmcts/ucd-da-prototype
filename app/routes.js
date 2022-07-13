@@ -473,18 +473,78 @@ router.post('/tasklistresponse/safetyconcerns/abduction/passportoffice-answer', 
 
 //respondenttasklist's forms below
 
-        router.post('/respondenttasklist/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
-          // Make a variable and give it the value from 'how-many-balls'
-          var reasonAdj = req.session.data['reasonable-adjustments']
-          // Check whether the variable matches a condition
-          if (reasonAdj == "No"){
-            // Send user to next page
-            res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/checkanswersreqs')
-          }else {
-              // Send user to ineligible page
-              res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/documents')
-          }
-        });
+router.post('/respondenttasklist/aboutyou/confidentiality/start-answer', function (req, res) {
+  // Make a variable and give it the value from 'how-many-balls'
+  var confDetails = req.session.data['confidential']
+  // Check whether the variable matches a condition
+  if (confDetails == "yes"){
+    // Send user to next page
+    res.redirect('/respondenttasklist/aboutyou/confidentiality/feedback')
+  }else {
+      // Send user to ineligible page
+      res.redirect('/respondenttasklist/aboutyou/confidentiality/feedbackno')
+  }
+});
+router.post('/respondenttasklist/aboutyou/confidentiality/startalternative-answer', function (req, res) {
+    // Make a variable and give it the value from 'how-many-balls'
+    var noConf = req.session.data['confidential']
+    // Check whether the variable matches a condition
+    if (noConf == "yes"){
+      // Send user to next page
+      res.redirect('/respondenttasklist/aboutyou/confidentiality/feedback')
+    }else {
+        // Send user to ineligible page
+        res.redirect('/respondenttasklist/aboutyou/confidentiality/feedbackno')
+    }
+  });
+router.post('/respondenttasklist/applications/responsetoallegations/start-answer', function (req, res) {
+    // Make a variable and give it the value from 'how-many-balls'
+    var ansAlleg = req.session.data['answer']
+    // Check whether the variable matches a condition
+    if (ansAlleg == "yes"){
+      // Send user to next page
+      res.redirect('/respondenttasklist/applications/responsetoallegations/applicantabuse')
+    }else {
+        // Send user to ineligible page
+        res.redirect('/respondenttasklist/applications/responsetoallegations/checkanswers-no')
+    }
+  });
+  router.post('/respondenttasklist/applications/responsetoallegations/paperform/start-answer', function (req, res) {
+      // Make a variable and give it the value from 'how-many-balls'
+      var paperAlleg = req.session.data['answer']
+      // Check whether the variable matches a condition
+      if (paperAlleg == "yes"){
+        // Send user to next page
+        res.redirect('/respondenttasklist/applications/responsetoallegations/paperform/applicantabuse')
+      }else {
+          // Send user to ineligible page
+          res.redirect('/respondenttasklist/applications/responsetoallegations/paperform/checkanswers-no')
+      }
+    });
+  router.post('/respondenttasklist/aboutyou/confidentiality/detailsknown-answer', function (req, res) {
+      // Make a variable and give it the value from 'how-many-balls'
+      var detailsKnown = req.session.data['detailsknown']
+      // Check whether the variable matches a condition
+      if (detailsKnown == "yes"){
+        // Send user to next page
+        res.redirect('/respondenttasklist/aboutyou/confidentiality/startalternative')
+      }else {
+          // Send user to ineligible page
+          res.redirect('/respondenttasklist/aboutyou/confidentiality/start')
+      }
+    });
+    router.post('/respondenttasklist/aboutyou/tellusyourhearingneeds/start-answer', function (req, res) {
+        // Make a variable and give it the value from 'how-many-balls'
+        var reasonAdj = req.session.data['reasonable-adjustments']
+        // Check whether the variable matches a condition
+        if (reasonAdj == "No"){
+          // Send user to next page
+          res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/checkanswersreqs')
+        }else {
+            // Send user to ineligible page
+            res.redirect('/respondenttasklist/aboutyou/tellusyourhearingneeds/documents')
+        }
+      });
 
 
 
