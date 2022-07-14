@@ -7,9 +7,9 @@
 {% block header %}
   <!-- Blank header with no service name for the start page -->
 
-{{ govukHeader({
+  {{ govukHeader({
     homepageUrl: "/",
-    serviceName: serviceName,
+    serviceName: "Non Molestation and Occupation",
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
 }) }}
@@ -20,17 +20,52 @@
 
 
 
-
-<a href="/respondenttasklist/yourdocuments/uploadv3/uploadmoredocument" class="govuk-back-link">Back</a>
-
 <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+<a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem on this page
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+
+          <li>
+            <a href="#postcode-input">Confirm that the facts stated in these documents are true</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-l">Upload documents</span>
-        Witness statements and evidence
+        <span class="govuk-caption-l">Witness statements and evidence</span>
+        Your witness statements
       </h1>
+      <h2 class="govuk-heading-m">
+
+        Provide the documents
+      </h2>
+
+      <div class="govuk-form-group">
+      <label class="govuk-label" for="more-detail">
+        You can use this box to:
+
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>write a statement if you do not want to upload a document</li>
+            <li>give the court more information about the documents you are uploading</li>
+
+          </ul>
+      </label>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8"></textarea>
+      <button class="govuk-button upload-addnew govuk-button--secondary" data-module="govuk-button">
+        Submit
+      </button>
+
+      </div>
 
       <p class="govuk-body">If you are uploading documents from a computer, name the files clearly. For example, letter-from-school.doc.</p>
 
@@ -60,7 +95,6 @@
         <!-- start components here -->
 
 
-
         <div class="uploadcomponent">
 
           <div class=" govuk-!-margin-bottom-3">
@@ -86,18 +120,16 @@
               <div class = uploadedfilessummary>
 
                     <h2 class="app-task-list__section">
-                       Uploaded files
+                       Your documents
                     </h2>
 
                       <dl class="govuk-summary-list">
 
                           <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__value">
-                              witness_statement.pdf
+                              sam_richards__first_witness_statement__date_submitted.pdf
                             </dt>
-                            <dd class="govuk-summary-list__value">
-                              <strong>Marked as private</strong>
-                            </dd>
+
                             <dd class="govuk-summary-list__actions">
                               <a class="govuk-link" href="#">
                                 Remove<span class="govuk-visually-hidden"> name</span>
@@ -107,11 +139,9 @@
 
                           <div class="govuk-summary-list__row">
                             <dt class="govuk-summary-list__value">
-                              witness_statement2.pdf
+                            sam_richards__second_witness_statement__date_submitted.pdf
                             </dt>
-                            <dd class="govuk-summary-list__value">
-                              <strong>Marked as private</strong>
-                            </dd>
+
                             <dd class="govuk-summary-list__actions">
                               <a class="govuk-link" href="#">
                                 Remove<span class="govuk-visually-hidden"> name</span>
@@ -130,7 +160,42 @@
 
         <!-- end components here -->
 
-          <br><br><br><br>
+          <br>
+          <div class="govuk-form-group govuk-form-group--error">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h3 class="govuk-heading-m">
+                  Statement of truth
+                </h3>
+              </legend>
+              <div class="govuk-warning-text">
+                 <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                 <strong class="govuk-warning-text__text">
+                   <span class="govuk-warning-text__assistive">Warning</span>
+                   Proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement verified by a statement of truth without an honest belief in its truth.
+
+                 </strong>
+               </div>
+              <p id="address-postcode-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Confirm that the facts stated in these documents are true
+              </p>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                    I believe that the facts stated in these documents are true
+                  </label>
+                </div>
+
+              </div>
+              <br>
+              <p class="govuk-body">This confirms that the information you are submitting is true and accurate, to the best of your knowledge.</p>
+
+            </fieldset>
+          </div>
+          </div>
+
 
 
           <div class="govuk-button-group">
@@ -148,6 +213,7 @@
 
           <br>
 
+    </div>
     </div>
 
 

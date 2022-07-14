@@ -17,293 +17,39 @@
 {% endblock %}
 
 {% block content %}
-<form action="/respondenttasklist/startreply" method="post" novalidate>
+
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
- 		 <a href="/respondenttasklist/startreply" class="govuk-back-link">Back</a>
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+   <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-width-container">
+       <a href="/respondenttasklist/startreply"  class="govuk-back-link">Back</a>
+
+       <main class="govuk-main-wrapper " id="main-content" role="main">
+         <form action="/respondenttasklist/startreply" method="post" novalidate>
+
+
+
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
         All documents
       </h1>
 
       <p class="govuk-body">Case number #1636575673018538</p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
 
 
       <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-2">View all documents</h2>
       <p class="govuk-body govuk-!-margin-bottom-7">Read through the application and then respond to the questions about the case</p> !-->
 
-  </div>
-</div>
 
 
 
- <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+
+
+
 
 
       <ol class="app-task-list">
-        <li>
-          <h2 class="app-task-list__section">
-             Respondent documents
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
-                  Responce to the applicant's request
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
-                  Responce to the allegations of harm and violence
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
-                  Permission to start proceedings (C2)
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
-                  Previous orders submitted with application
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
-                  Position statement
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
-                  Skeleton arguments
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Updated</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
-                  Submissions
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/alldocuments/witnessstatements" aria-describedby="eligibility-status">
-                  Letters from school
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
-                  Expert reports (medical)
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  Your statements
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="witnessstatements" aria-describedby="eligibility-status">
-                  Witness statements
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag govuk-tag--red app-task-list__tag" id="eligibility-status">Updated</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  Digital downloads
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  Photographic evidence
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  Mobile phone screenshots
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  Medical records
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  Medical reports
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  DNA reports
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  Paternity test reports
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  Drug and alcohol tests (toxicology)
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  Police disclosures
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  Emails to ask to change a hearing date
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="eligibility-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  Witness availability
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag govuk-tag--red app-task-list__tag" id="eligibility-status">Updated</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
-                  Letters of complaint
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag govuk-tag--red app-task-list__tag" id="eligibility-status">Updated</strong>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="app-task-list__section">
-             Applicants documents
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                 <a href="applicationdetails/miam/start" aria-describedby="application-details-miam">
-                  Applicant's request for child arrangements
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="applicationdetails/proceedings/start" aria-describedby="current-or-previous-proceedings">
-                  Applicants allegations of harm or violence
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="applicationdetails/proceedings/start" aria-describedby="current-or-previous-proceedings">
-                  Position statement
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="aboutyou/tellusyourhearingneeds/start" aria-describedby="read-declaration-status">
-                  Skeleton arguments
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="aboutyou/tellusyourhearingneeds/start" aria-describedby="read-declaration-status">
-                  Submissions
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="aboutyou/tellusyourhearingneeds/start" aria-describedby="read-declaration-status">
-                  Expert reports (medical)
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="aboutyou/tellusyourhearingneeds/start" aria-describedby="read-declaration-status">
-                  Evidence filled
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="aboutyou/tellusyourhearingneeds/start" aria-describedby="read-declaration-status">
-                  MIAM certificate
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag govuk-tag govuk-tag--grey" id="eligibility-status">Viewed</strong>
-            </li>
-          </ul>
-        </li>
 
         <li>
           <h2 class="app-task-list__section">
@@ -313,10 +59,361 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="orders" aria-describedby="your-safety">
-                  Orders
+                  View all orders from the court
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="submit-pay-status">New</strong>
+
+            </li>
+         </ul>
+        </li>
+
+
+
+        <li>
+          <h2 class="app-task-list__section">
+             Respondent's documents
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
+                  <\namerespondentxxxxx>'s response to the request for child arrangements
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
+                <\namerespondentxxxxx>'s allegations of harm and violence
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
+                <\namerespondentxxxxx>'s response to the other side's allegations of harm and violence
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  <\namerespondentxxxxx>'s position statements
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="yourwitnessstatements" aria-describedby="eligibility-status">
+                  <\namerespondentxxxxx>'s  witness statements
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="witnessstatements" aria-describedby="eligibility-status">
+                  Other people's witness statements
+                </a>
+              </span>
+
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
+                  Applications made in these proceedings
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
+                  Previous orders submitted with application
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/respondenttasklist/yourdocuments/alldocuments/witnessstatements" aria-describedby="eligibility-status">
+                  Letters from school
+                </a>
+              </span>
+
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Emails, screenshots, images and other media files
+                </a>
+              </span>
+
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Medical records
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Medical reports
+                </a>
+              </span>
+
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Paternity test reports
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Drug and alcohol tests (toxicology)
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Police reports
+                </a>
+              </span>
+
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Witness availability
+                </a>
+              </span>
+
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Tenancy and mortgage
+                </a>
+              </span>
+
+            </li>
+
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+             Applicant's documents
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                 <a href="applicationdetails/miam/start" aria-describedby="application-details-miam">
+                  <\nameapplicantxxxxx>'s request for child arrangements
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="applicationdetails/proceedings/start" aria-describedby="current-or-previous-proceedings">
+                  <\nameapplicantxxxxx>'s allegations of harm or violence
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="applicationdetails/proceedings/start" aria-describedby="current-or-previous-proceedings">
+                  <\nameapplicantxxxxx>'s response to the other side's allegations of harm and violence
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="applicationdetails/proceedings/start" aria-describedby="current-or-previous-proceedings">
+                <\nameapplicantxxxxx> position statements
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="applicationdetails/proceedings/start" aria-describedby="current-or-previous-proceedings">
+                  <\nameapplicantxxxxx> witness statements
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="applicationdetails/proceedings/start" aria-describedby="current-or-previous-proceedings">
+                  Other people's witness statements
+                </a>
+              </span>
+
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="aboutyou/tellusyourhearingneeds/start" aria-describedby="read-declaration-status">
+                  MIAM certificate
+                </a>
+              </span>
+
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
+                  Applications made in these proceedings
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/respondenttasklist/yourdocuments/witnessstatements" aria-describedby="eligibility-status">
+                  Previous orders submitted with application
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/respondenttasklist/yourdocuments/alldocuments/witnessstatements" aria-describedby="eligibility-status">
+                  Letters from school
+                </a>
+              </span>
+
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Emails, screenshots, images and other media files
+                </a>
+              </span>
+
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Medical records
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Medical reports
+                </a>
+              </span>
+
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Paternity test reports
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Drug and alcohol tests (toxicology)
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Police reports
+                </a>
+              </span>
+
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Witness availability
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  Tenancy and mortgage
+                </a>
+              </span>
+
+            </li>
+
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+             CAFCASS and local authority documents
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/yoursafety/safetyinfo" aria-describedby="your-safety">
+                  Safeguarding letter
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/childrensafety/childrenabuse" aria-describedby="children-safety">
+                  Section 7 report
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/abduction/abduction" aria-describedby="abduction">
+                  Section 37 report
+                </a>
+              </span>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/otherconcerns/drugs" aria-describedby="risk-of-harm-or-violence">
+                  16a risk assessment
+                </a>
+              </span>
+
             </li>
          </ul>
         </li>
@@ -328,90 +425,74 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="safetyconcerns/yoursafety/safetyinfo" aria-describedby="your-safety">
-                  Safeguarding letter
+                <a href="safetyconcerns/contact/unsupervised" aria-describedby="risk-of-harm-or-violence">
+                  Important information about your address and contact details
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="submit-pay-status">New</strong>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="safetyconcerns/childrensafety/childrenabuse" aria-describedby="children-safety">
-                  Section 7 report
+                <a href="legalrepresentation/start" aria-describedby="eligibility-status">
+                  DNA reports
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Viewed</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="safetyconcerns/abduction/abduction" aria-describedby="abduction">
-                  Section 37 report
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="safetyconcerns/otherconcerns/drugs" aria-describedby="risk-of-harm-or-violence">
-                  16a risk assessment
-                </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">View</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="safetyconcerns/existingorders/orders" aria-describedby="risk-of-harm-or-violence">
-                  Police disclosures
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="submit-pay-status">New</strong>
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="safetyconcerns/contact/unsupervised" aria-describedby="risk-of-harm-or-violence">
-                  Annex Z
+                  Privacy notice
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Viewed</strong>
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/contact/unsupervised" aria-describedby="risk-of-harm-or-violence">
+                  Special measures
+                </a>
+              </span>
+
             </li>
          </ul>
         </li>
 
         <li>
           <h2 class="app-task-list__section">
-             Final decision from the court
+             Attending the hearing
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="safetyconcerns/yoursafety/safetyinfo" aria-describedby="your-safety">
-                  View your final order
+                <a href="safetyconcerns/contact/unsupervised" aria-describedby="risk-of-harm-or-violence">
+                  Notice of hearing
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="submit-pay-status">New</strong>
-            </li>
 
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="safetyconcerns/contact/unsupervised" aria-describedby="risk-of-harm-or-violence">
+                  Support you need during your case
+                </a>
+              </span>
+
+            </li>
          </ul>
         </li>
+      </ol>
 
-    <div class="govuk-button-group">
 
-
-          <div class="govuk-button-group">
             <button class="govuk-button govuk-button--secondary" href="/respondenttasklist/startreply" data-module="govuk-button">
-              Previous
+              Go back
             </button>
 
-            <button class="govuk-button" href="/respondenttasklist/startreply" data-module="govuk-button">
-              Save and continue
-            </button>
-
-         </div>
 
 
+</form>
+</main>
     </div>
-  </ol>
-
     </div>
 
     <div class="govuk-grid-column-one-third">
@@ -436,7 +517,7 @@
 
     </div>
  </div>
-</form>
+
 
 
 

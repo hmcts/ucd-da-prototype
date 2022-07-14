@@ -17,39 +17,64 @@
 {% endblock %}
 
 {% block content %}
-<form action="/respondenttasklist/yourdocuments/alldocuments/alldocuments" method="post" novalidate>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
- 		 <a href="/respondenttasklist/yourdocuments/alldocuments/alldocuments" class="govuk-back-link">Back</a>
-     <h1 class="govuk-heading-l">
-       <span class="govuk-caption-l">Alldocuments</span>
-       Orders from the court
-     </h1>
 
-      <p class="govuk-body">Case number #1636575673018538</p>
+  <div class="govuk-grid-row">
+     <div class="govuk-grid-column-two-thirds">
 
-      <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-2">View all documents</h2>
-      <p class="govuk-body govuk-!-margin-bottom-7">Read through the application and then respond to the questions about the case</p> !-->
+      <div class="govuk-width-container">
+     		 <a href="/respondenttasklist/yourdocuments/alldocuments/alldocuments" class="govuk-back-link">Back</a>
 
-  </div>
-</div>
+         <main class="govuk-main-wrapper " id="main-content" role="main">
 
- <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+
+         <h1 class="govuk-heading-xl">
+           <span class="govuk-caption-l">All documents</span>
+           Orders from the court
+         </h1>
+
+          <p class="govuk-body">Case number #1636575673018538</p>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-2">View all documents</h2>
+          <p class="govuk-body govuk-!-margin-bottom-7">Read through the application and then respond to the questions about the case</p> !-->
+
+
+
+
+
 
 
       <ol class="app-task-list">
+
         <li>
-          <h2 class="app-task-list__section">
-             Orders from the court
-          </h2>
-          <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-left-6">
+
+          <dl class="govuk-summary-list govuk-summary-list--no-border">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                24 June 2021
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#">Final_Order__Child2__24062021.pdf</a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                23 June 2021
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#">Final_Order__Child1__23062021.pdf</a>
+              </dd>
+            </div>
+
+
+
+
+
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 21 June 2021
               </dt>
               <dd class="govuk-summary-list__value">
-                <strong>Useful documents</strong><br>
                 <a href="#">Non-molestationOrder.pdf</a>
               </dd>
             </div>
@@ -59,7 +84,6 @@
                 27 May 2021
               </dt>
               <dd class="govuk-summary-list__value">
-                <strong>Useful documents</strong><br>
                 <a href="#">OccupationOrder.pdf</a>
               </dd>
             </div>
@@ -69,7 +93,6 @@
                 18 May 2021
               </dt>
               <dd class="govuk-summary-list__value">
-                <strong>Useful documents</strong><br>
                 <a href="#">NoticeOfProceedings.pdf</a>
               </dd>
             </div>
@@ -82,12 +105,10 @@
 
 
             <div class="govuk-button-group">
-              <button class="govuk-button govuk-button--secondary" href="/respondenttasklist/startreply" data-module="govuk-button">
-                Previous
-              </button>
 
-              <button class="govuk-button" href="/respondenttasklist/startreply" data-module="govuk-button">
-                Save and continue
+
+              <button class="govuk-button govuk-button--secondary" href="#" onclick="history.back(-1)"  data-module="govuk-button">
+                Go back
               </button>
 
            </div>
@@ -95,6 +116,8 @@
 
       </div>
 
+</main>
+    </div>
     </div>
 
     <div class="govuk-grid-column-one-third">
@@ -119,7 +142,8 @@
 
     </div>
  </div>
-  </form>
+
+
 
 
 
