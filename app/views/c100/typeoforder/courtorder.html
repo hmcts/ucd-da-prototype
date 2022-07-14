@@ -34,42 +34,43 @@
                <span class="govuk-hint" id="courtorder-hint">Select all that apply</span>
                <div class="govuk-!-padding-bottom-2"></div>
 
-
                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                 <div class="govuk-checkboxes__item">
-                   <input id="childlives" class="govuk-checkboxes__input" type="checkbox" value="child_arrangements_home" name="courtorder">
-                   <label for="childlives" class="govuk-label govuk-checkboxes__label">Decide who they live with and when</label>
-                 </div>
+               <div class="govuk-checkboxes__item">
+                 <input id="caorder" class="govuk-checkboxes__input" type="checkbox" value="caorder" name="courtorder" aria-controls="caorder-conditional">
+                 <label for="caorder" class="govuk-label govuk-checkboxes__label">Decide on an arrangement with the children</label>
+                 <span class="govuk-hint govuk-checkboxes__hint" id="caorder-hint">For example:
+                      <ul class="govuk-list govuk-list--bullet govuk-hint">
+                       <li>who they live with and when</li>
+                       <li>decide how much time they spend with each person</li>
 
-                 <div class="govuk-checkboxes__item">
-                   <input id="contactime" class="govuk-checkboxes__input" type="checkbox" value="child_arrangements_time" name="courtorder">
-                   <label for="contactime" class="govuk-label govuk-checkboxes__label">Decide how much time they spend with each person</label>
-                 </div>
-                 <div class="govuk-checkboxes__item">
-                   <input id="othercaorder" class="govuk-checkboxes__input" type="checkbox" value="othercaorder" name="othercaorder" aria-controls="othercaorder-conditional">
-                   <label for="othercaorder" class="govuk-label govuk-checkboxes__label">Any other child arrangements issue (how to rethink this?)</label>
+                     </ul></span>
+               </div>
 
+               <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="caorder-conditional">
+                 <div class="govuk-form-group">
+                   <label for="prohibitedsteps-details-field" class="govuk-label">Specify what you want the court to decide on
+                   </label>
+                   <textarea id="prohibitedsteps-details-field" class="govuk-textarea" rows="5" name="prohibitedsteps-textarea">
+                   </textarea>
                  </div>
-                 <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="other-conditional">
-                   <div class="govuk-form-group">
-                     <label for="othercaorder-field" class="govuk-label">Specify what you want the court to decide on
-                     </label>
-                     <textarea id="othercaorder-field" class="govuk-textarea" rows="5" name="othercaorder-textarea">
-                     </textarea>
-                   </div>
-                 </div>
+               </div>
+
+
+
+
+
 
                   <div class="govuk-checkboxes__item">
                     <input id="prohibitedsteps" class="govuk-checkboxes__input" aria-describedby="stopaction-hint" type="checkbox" value="group_prohibited_steps" name="courtorder" aria-controls="prohibitedsteps-conditional" aria-expanded="false">
                     <label for="prohibitedsteps" class="govuk-label govuk-checkboxes__label">Stop the other person doing something</label>
-                    <span class="govuk-hint govuk-checkboxes__hint" id="prohibitedsteps-hint">For example, moving abroad or abducting the children</span>
+
 
                     <span class="govuk-hint govuk-checkboxes__hint" id="issueresolution-hint">For example:
                          <ul class="govuk-list govuk-list--bullet govuk-hint">
-                          <li>Changing the chidlren's names or surname</li>
-                          <li>Relocating the children abroad</li>
-                          <li>Allowing medical treatment to be carried out on them</li>
-                          <li>Taking them on holiday</li>
+                          <li>changing the chidlren's names or surname</li>
+                          <li>relocating the children abroad</li>
+                          <li>allowing medical treatment to be carried out on them</li>
+                          <li>taking them on holiday</li>
                         </ul></span>
                   </div>
 
@@ -89,11 +90,11 @@
                     <label for="issueresolution" class="govuk-label govuk-checkboxes__label">Resolve a specific issue</label>
                     <span class="govuk-hint govuk-checkboxes__hint" id="issueresolution-hint">For example:
                          <ul class="govuk-list govuk-list--bullet govuk-hint">
-                          <li>A specific holiday or arrangement</li>
-                          <li>What school they’ll go to</li>
-                          <li>A religious issue</li>
-                          <li>Changing their names or surname</li>
-                          <li>Relocating the children</li>
+                          <li>a specific holiday or arrangement</li>
+                          <li>what school they’ll go to</li>
+                          <li>a religious issue</li>
+                          <li>changing their names or surname</li>
+                          <li>relocating the children</li>
 
                       </ul></span>
                   </div>

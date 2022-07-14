@@ -28,7 +28,7 @@
 
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-               <form action="miampreviousattendance" method="post" novalidate>
+               <form action="miamurgency-answer" method="post" novalidate>
 
                  <span class="govuk-caption-l">MIAM exemptions</span>
                  <h1 class="govuk-heading-xl">Can you confirm any of the following urgency reasons?</h1>
@@ -36,6 +36,10 @@
                <div class="govuk-inset-text">
                  In order to be exempt from a MIAM, you need to tell us what type of evidence you have.
                </div>
+
+               <p class="govuk-body"><a href="https://www.justice.gov.uk/courts/procedure-rules/family/practice_directions/pd_part_03a" class="govuk-link govuk-link a" rel="external" target="_blank">Read the practice directions</a> for the full list of valid reasons of MIAM exemptions.
+               </p>
+               
 
                <div class="govuk-form-group">
                  <fieldset class="govuk-fieldset" aria-describedby="steps-miam-exemptions-domestic-form-domestic-hint">
@@ -46,16 +50,21 @@
                        <div class="govuk-checkboxes__item police-involvement">
                          <input id="risktolife" class="govuk-checkboxes__input" type="checkbox" value="group_police" name="urgency">
                            <label for="risktolife" class="govuk-label govuk-checkboxes__label">
-                             There is risk to the life, liberty or physical safety of you, your family or your home
-
+                             There is risk of your life, freedom or physical safety being placed in danger
                           </label>
                        </div>
 
+                       <div class="govuk-checkboxes__item police-involvement">
+                         <input id="risktolife" class="govuk-checkboxes__input" type="checkbox" value="group_police" name="urgency">
+                           <label for="risktolife" class="govuk-label govuk-checkboxes__label">
+                             There is risk of your family or your home being placed in danger
+                          </label>
+                       </div>
 
                        <div class="govuk-checkboxes__item">
                          <input id="unreasonablehardship" class="govuk-checkboxes__input" type="checkbox" value="group_court" name="urgency">
                          <label for="unreasonablehardship" class="govuk-label govuk-checkboxes__label">
-                           Any delay caused by attending a MIAM would cause unreasonable hardship for you
+                           There is risk of unreasonable financial loss
 
                          </label>
                        </div>
@@ -64,15 +73,14 @@
                        <div class="govuk-checkboxes__item">
                          <input id="risktochildren" class="govuk-checkboxes__input" type="checkbox" value="group_specialist" name="urgency">
                          <label for="risktochildren" class="govuk-label govuk-checkboxes__label">
-                          Any delay caused by attending a MIAM would cause a risk of harm to the children
-
+                          There is risk of harm to the children
                          </label>
                        </div>
 
                        <div class="govuk-checkboxes__item">
                          <input id="abduction" class="govuk-checkboxes__input" type="checkbox" value="group_local_authority" name="urgency" >
                          <label for="abduction" class="govuk-label govuk-checkboxes__label">
-                          Any delay caused by attending a MIAM would cause a risk of unlawful removal of a child from the UK, or a risk of unlawful retention of a child who is currently outside England and Wales
+                          There is risk of the children being unlawfully removed from the UK or being unlawfully kept overseas, when the child is currently outside England and Wales
                          </label>
                        </div>
 
@@ -81,17 +89,15 @@
                        <div class="govuk-checkboxes__item">
                          <input id="miscarriageofjustice" class="govuk-checkboxes__input" type="checkbox" value="group_da_service" name="urgency">
                          <label for="miscarriageofjustice" class="govuk-label govuk-checkboxes__label">
-                           Any delay caused by attending a MIAM would cause a significant risk of a miscarriage of justice
-
+                           There is risk of an unfair trial (miscarriage of justice)
                          </label>
                        </div>
-
 
 
                        <div class="govuk-checkboxes__item">
                          <input id="irretrievableproblems" class="govuk-checkboxes__input" type="checkbox" value="right_to_remain" name="urgency">
                          <label for="irretrievableproblems" class="govuk-label govuk-checkboxes__label">
-                           Any delay caused by attending a MIAM would cause irretrievable problems in dealing with the dispute (including the irretrievable loss of significant evidence)
+                           There is risk of problems with the evidence in the case, including loss of evidence
 
                          </label>
                        </div>
@@ -99,7 +105,7 @@
                        <div class="govuk-checkboxes__item">
                          <input id="internationalelement" class="govuk-checkboxes__input" type="checkbox" value="financial_abuse" name="urgency">
                          <label for="internationalelement" class="govuk-label govuk-checkboxes__label">
-                           There is a significant risk that in the period necessary to schedule and attend a MIAM, proceedings relating to the dispute will be brought in another state in which a valid claim to jurisdiction may exist, such that a court in that other State would be seized of the dispute before a court in England and Wales
+                           There is risk of court proceedings related to the dispute taking place overseas
                          </label>
                        </div>
 
