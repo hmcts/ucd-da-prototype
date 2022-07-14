@@ -778,10 +778,10 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
 
                   router.post('/c100/typeoforder/courtorder-answer', function (req, res) {
                       // Make a variable and give it the value from 'how-many-balls'
-                      var passport = req.session.data['courtorder']
+                      var typeOrder = req.session.data['courtorder']
 
                       // Check whether the variable matches a condition
-                      if (passport == "child_arrangements_home"){
+                      if (typeOrder == "caorder"){
                         // Send user to next page
                         res.redirect('caorder')
                       } else {
@@ -1040,9 +1040,9 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
                                               var valReas = req.session.data['exemptionreasons']
 
                                               // Check whether the variable matches a condition
-                                              if (valReas == "no"){
+                                              if (valReas == "None"){
                                                 // Send user to next page
-                                                res.redirect('miammustattend')
+                                                res.redirect('miamgetmediator')
 
                                               }else {
                                                   // Send user to ineligible page
@@ -1053,9 +1053,21 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
 
 
 
+                                            router.post('/c100/miam/miamurgency-answer', function (req, res) {
+                                                // Make a variable and give it the value from 'how-many-balls'
+                                                var valReas = req.session.data['urgency']
 
+                                                // Check whether the variable matches a condition
+                                                if (valReas == "No"){
+                                                  // Send user to next page
+                                                  res.redirect('miampreviousattendance')
 
-                                  
+                                                }else {
+                                                    // Send user to ineligible page
+                                                    res.redirect('../typeofhearing/urgent')
+                                                }
+
+                                              });
 
 
 
