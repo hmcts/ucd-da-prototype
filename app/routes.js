@@ -553,7 +553,6 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
   //Ameet's forms below
 
 
-
   router.post('/applicanttasklist/aboutyou/confidentiality/start-answer', function (req, res) {
     // Make a variable and give it the value from 'how-many-balls'
     var confDetails = req.session.data['confidential']
@@ -866,7 +865,7 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
 
                                   }else {
                                       // Send user to ineligible page
-                                      res.redirect('../people/peopleplaceholder')
+                                      res.redirect('../confidentiality/detailsknown')
                                   }
 
                                   });
@@ -1069,10 +1068,7 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
 
                                               });
 
-
-
-
-
+                                              
 
 
 
