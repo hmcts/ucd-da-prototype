@@ -1039,9 +1039,9 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
                                               var valReas = req.session.data['exemptionreasons']
 
                                               // Check whether the variable matches a condition
-                                              if (valReas == "None"){
+                                              if (valReas == "Urgency"){
                                                 // Send user to next page
-                                                res.redirect('miamgetmediator')
+                                                res.redirect('miamurgency')
 
                                               }else {
                                                   // Send user to ineligible page
