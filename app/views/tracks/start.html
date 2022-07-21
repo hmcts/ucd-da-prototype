@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Progress bars
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <h2 class="govuk-heading-l">Train tracks - CA</h2>
+
+          <!-- start components here -->
+
+          <div class="hmcts-progress-bar-vertical" role="progressbar">
+            <ol class="hmcts-progress-bar__list">
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 1: </span>Application issued</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Current Step 2: </span>Safeguard checks</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 3: </span>Orders and hearings</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 4: </span>Final order</span>
+            </li>
+
+
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 5: </span>Case closed</span>
+            </li>
+            </ol>
+          </div> 
+
+          <br>
+
+          <br><br><br>
+
+
+
+
+          <h2 class="govuk-heading-l">Train tracks - DA</h2>
+
+          <!-- start components here -->
+
+          <div class="hmcts-progress-bar-vertical" role="progressbar">
+            <ol class="hmcts-progress-bar__list">
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon hmcts-progress-bar__icon--complete"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 1: </span>Application submitted</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 2: </span>Hearings</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 3: </span>Orders & hearings outcome</span>
+            </li>
+            
+            <li class="hmcts-progress-bar__list-item">
+              <span class="hmcts-progress-bar__icon"></span>
+              <span class="hmcts-progress-bar__label"><span class="govuk-visually-hidden">Step 4: </span>Case closed</span>
+            </li>
+
+            </ol>
+          </div> 
+
+          <br>
+
+          <br><br><br>         
+
+
+
+       
+
+
+        </div>
+
+
+        <div class="govuk-grid-column-one-third">
+
+          <h3 class="govuk-heading-m">Notes:</h3>
+          <p class="govuk-body">Train tracks for CA and DA</p>
+
+        </div>
+
+
+</div>
+
+
+
+{% endblock %}
