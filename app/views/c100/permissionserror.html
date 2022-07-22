@@ -26,6 +26,18 @@
          <form action="miam/miamotherproceedings" method="post" novalidate>
 
 
+           <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+             <h2 class="govuk-error-summary__title" id="error-summary-title">
+               There is a problem on this page
+             </h2>
+             <div class="govuk-error-summary__body">
+               <ul class="govuk-list govuk-error-summary__list">
+                 <li>
+                   <a href="#solicitor">Describe the reason the court should grant you permission to make this application</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
 
 
          <h1 class="govuk-heading-xl">Is there any reason why you would need written permission from the court to make this application?</h1>
@@ -60,16 +72,17 @@
            <fieldset class="govuk-fieldset">
              <div class="govuk-radios" data-module="govuk-radios">
                <div class="govuk-radios__item">
-                 <input id="permission-yes" class="govuk-radios__input" type="radio" value="Yes" name="permission" aria-controls="permissionsrequested-conditional">
+                 <input id="permission-yes" class="govuk-radios__input" type="radio" value="Yes" name="permission" aria-controls="permissionsrequested-conditional" checked="checked">
                  <label for="permission-yes" class="govuk-label govuk-radios__label">Yes</label>
                </div>
-               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="permissionsrequested-conditional">
-                 <div class="govuk-form-group">
-                     <label class="govuk-label" for="more-detail">
-                       Explain why the court should grant permission.
-                     </label>
-                     <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
-                   </div>
+               <div class="govuk-form-group govuk-form-group--error">
+                 <p id="where-do-you-live-error" class="govuk-error-message">
+                   <span class="govuk-visually-hidden">Error:</span>Describe the reason the court should grant you permission to make this application
+                 </p>
+                   <label class="govuk-label" for="more-detail">
+                     Describe the reason
+                   </label>
+                   <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
                  </div>
 
                <div class="govuk-radios__item">

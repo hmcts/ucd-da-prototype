@@ -777,10 +777,10 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
 
                   router.post('/c100/typeoforder/courtorder-answer', function (req, res) {
                       // Make a variable and give it the value from 'how-many-balls'
-                      var typeOrder = req.session.data['courtorder']
+                      var typeOrder = req.session.data['typeoforder']
 
                       // Check whether the variable matches a condition
-                      if (typeOrder == "caorder"){
+                      if (typeOrder == "child_arrangements_home"){
                         // Send user to next page
                         res.redirect('caorder')
                       } else {
@@ -1067,7 +1067,6 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
                                                 }
 
                                               });
-
                                               
 
 
