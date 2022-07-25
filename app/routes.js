@@ -1054,10 +1054,10 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
 
                                             router.post('/c100/miam/miamurgency-answer', function (req, res) {
                                                 // Make a variable and give it the value from 'how-many-balls'
-                                                var valReas = req.session.data['urgency']
+                                                var urgReason = req.session.data['urgency']
 
                                                 // Check whether the variable matches a condition
-                                                if (valReas == "No"){
+                                                if (urgReason == "No"){
                                                   // Send user to next page
                                                   res.redirect('miampreviousattendance')
 
@@ -1067,6 +1067,38 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
                                                 }
 
                                               });
+
+                                              router.post('/c100/proceedings/emergencyprotectionorder-answer', function (req, res) {
+                                                  // Make a variable and give it the value from 'how-many-balls'
+                                                  var ordCopy = req.session.data['ordercopy']
+
+                                                  // Check whether the variable matches a condition
+                                                  if (ordCopy == "yes"){
+                                                    // Send user to next page
+                                                    res.redirect('emergencyupload')
+
+                                                  }else {
+                                                      // Send user to ineligible page
+                                                      res.redirect('../safetyconcerns/concernguidance')
+                                                  }
+
+                                                });
+
+                                                router.post('/c100/proceedings/courtproceedings-answer', function (req, res) {
+                                                    // Make a variable and give it the value from 'how-many-balls'
+                                                    var curOrders = req.session.data['proceedings']
+
+                                                    // Check whether the variable matches a condition
+                                                    if (curOrders == "Emergency Protection Order"){
+                                                      // Send user to next page
+                                                      res.redirect('emergencyprotectionorder')
+
+                                                    }else {
+                                                        // Send user to ineligible page
+                                                        res.redirect('../safetyconcerns/concernguidance')
+                                                    }
+
+                                                  });
                                               
 
 
