@@ -391,7 +391,7 @@ router.post('/tasklistresponse/safetyconcerns/abduction/passportoffice-answer', 
                                             var reasonAdjust = req.session.data['reasonable-adjustments']
 
                                             // Check whether the variable matches a condition
-                                            if (reasonAdjust == "No"){
+                                            if (reasonAdjust == "No, I do not need any support at this time"){
                                               // Send user to next page
                                               res.redirect('/tasklistresponse/aboutyou/tellusyourhearingneeds/checkanswersreqs')
 
@@ -553,6 +553,7 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
   //Ameet's forms below
 
 
+
   router.post('/applicanttasklist/aboutyou/confidentiality/start-answer', function (req, res) {
     // Make a variable and give it the value from 'how-many-balls'
     var confDetails = req.session.data['confidential']
@@ -645,7 +646,7 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
 
               }else {
                   // Send user to ineligible page
-                  res.redirect('permissions')
+                  res.redirect('legalrepresentationdetails')
               }
 
             });
@@ -657,7 +658,7 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
                 // Check whether the variable matches a condition
                 if (permNeed == "Yes"){
                   // Send user to next page
-                  res.redirect('permissionsrequested')
+                  res.redirect('permissionswhy')
 
                 }else {
                     // Send user to ineligible page
@@ -1099,6 +1100,22 @@ router.post('/respondenttasklist/applications/responsetoallegations/start-answer
                                                     }
 
                                                   });
+
+                                                  router.post('/c100/proceedings/otherorder-answer', function (req, res) {
+                                                      // Make a variable and give it the value from 'how-many-balls'
+                                                      var othOrder = req.session.data['ordercopy']
+
+                                                      // Check whether the variable matches a condition
+                                                      if (othOrder == "yes"){
+                                                        // Send user to next page
+                                                        res.redirect('otherordersupload')
+
+                                                      }else {
+                                                          // Send user to ineligible page
+                                                          res.redirect('../safetyconcerns/concernguidance')
+                                                      }
+
+                                                    });
                                               
 
 

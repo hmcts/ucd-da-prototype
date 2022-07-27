@@ -35,7 +35,7 @@
                    <div class="govuk-error-summary__body">
                      <ul class="govuk-list govuk-error-summary__list">
                        <li>
-                         <a href="#solicitor">Select whether you can take part in a video or a phone hearing</a>
+                         <a href="#solicitor">Explain why you are unable to take part in neither video or phone hearings</a>
                        </li>
                      </ul>
                    </div>
@@ -55,11 +55,9 @@
 
                  <p class="govuk-body">Some hearings use a combination of these methods. The approach taken will be decided by a judge.</p>
 
-                 <p id="where-do-you-live-error" class="govuk-error-message">
-                   <span class="govuk-visually-hidden">Error:</span>Select whether you can take part in a video or a phone hearing
-                 </p>
-                 <div class="govuk-form-group govuk-form-group--error">
-                   <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live-error">
+
+                 <div class="govuk-form-group">
+                   <fieldset class="govuk-fieldset" aria-describedby="where-do-you-live">
                    <div id="remotehearing-hint" class="govuk-hint">
                      Select all that apply
                    </div>
@@ -82,7 +80,7 @@
 
                      <div class="govuk-checkboxes__divider">or</div>
                      <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="nophoneorvideo" name="remotehearing" type="checkbox" value="No, I cannot take part in either video or phone hearings" data-behaviour="exclusive" aria-controls="nophoneorvideo-conditional">
+                       <input class="govuk-checkboxes__input" id="nophoneorvideo" name="remotehearing" type="checkbox" value="No, I cannot take part in either video or phone hearings" data-behaviour="exclusive" aria-controls="nophoneorvideo-conditional" checked="checked">
                        <label class="govuk-label govuk-checkboxes__label" for="nophoneorvideo">
                          No, I cannot take part in either video or phone hearings
 
@@ -92,7 +90,11 @@
                        </label>
                      </div>
                      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="nophoneorvideo-conditional">
-                       <div class="govuk-form-group">
+                       <div class="govuk-form-group govuk-form-group--error">
+
+                          <p id="where-do-you-live-error" class="govuk-error-message">
+                            <span class="govuk-visually-hidden">Error:</span>Explain why you are unable to take part in neither video or phone hearings
+                          </p>
                          <label for="nophoneorvideo-details" class="govuk-label">Explain why you are unable to take part in video or phone hearings</label>
                          <textarea id="nophoneorvideo-details" class="govuk-textarea" rows="3" name="nophoneorvideo-details">
                          </textarea>
@@ -108,12 +110,9 @@
                  <button class="govuk-button" data-module="govuk-button">
                    Continue
                  </button>
-                 <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
-                   Save and come back later
-                 </a>
+                 
 
                </div>
-
 
 
 

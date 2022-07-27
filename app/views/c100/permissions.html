@@ -23,7 +23,7 @@
      <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
 
      <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
-         <form action="miam/miamotherproceedings" method="post" novalidate>
+         <form action="permissions-answer" method="post" novalidate>
 
 
 
@@ -32,14 +32,14 @@
 
          <div id="permissionreasons"
            <p class="govuk-body">
-                 In some cases, the court will need to give written permission before the application can be made.</p>
+                 In some cases, the court will need to give permission before the application can be made.</p>
 
           <p class="govuk-body">
             You will not need permission if you are the:</p>
               <ul class="govuk-list govuk-list--bullet">
                <li>mother</li>
                <li>father</li>
-               <li>step-parent</li>
+
                <li>guardian</li>
              </ul>
 
@@ -60,17 +60,10 @@
            <fieldset class="govuk-fieldset">
              <div class="govuk-radios" data-module="govuk-radios">
                <div class="govuk-radios__item">
-                 <input id="permission-yes" class="govuk-radios__input" type="radio" value="Yes" name="permission" aria-controls="permissionsrequested-conditional">
+                 <input id="permission-yes" class="govuk-radios__input" type="radio" value="Yes" name="permission">
                  <label for="permission-yes" class="govuk-label govuk-radios__label">Yes</label>
                </div>
-               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="permissionsrequested-conditional">
-                 <div class="govuk-form-group">
-                     <label class="govuk-label" for="more-detail">
-                       Explain why the court should grant permission.
-                     </label>
-                     <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
-                   </div>
-                 </div>
+
 
                <div class="govuk-radios__item">
                  <input id="permission-no" class="govuk-radios__input" type="radio" value="No" name="permission">

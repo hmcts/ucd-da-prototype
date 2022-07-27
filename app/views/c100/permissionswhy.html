@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Child arrangement respondent
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+
+{{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-width-container">
+     <a href="#" onclick="history.back(-1)" class="govuk-back-link">Back</a>
+
+     <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+         <form action="permissionsrequest" method="post" novalidate>
+
+
+
+
+         <h1 class="govuk-heading-xl">Why do you need a permission from the court to make this application?</h1>
+
+
+         <div class="govuk-form-group">
+           <fieldset class="govuk-fieldset">
+             <div id="remotehearing-hint" class="govuk-hint">
+               Select all that apply
+             </div>
+             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+               <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="parentalresponsibility" name="permissionwhy" type="checkbox" value="I do not have parental responsibility for the children">
+                 <label class="govuk-label govuk-checkboxes__label" for="parentalresponsibility">
+                   I do not have parental responsibility for the children
+
+                 </label>
+               </div>
+               <div class="govuk-checkboxes__item">
+                 <input class="govuk-checkboxes__input" id="courtban" name="permissionwhy" type="checkbox" value="I am banned from making an application by a court order" aria-controls="courtban-conditional">
+                 <label class="govuk-label govuk-checkboxes__label" for="courtban">
+                   I am banned from making an application by a court order
+
+                 </label>
+               </div>
+               <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="courtban-conditional">
+                 <div class="govuk-form-group">
+                   <label for="nophoneorvideo-details" class="govuk-label">Provide details of the court order in place</label>
+                   <textarea id="nophoneorvideo-details" class="govuk-textarea" rows="3" name="nophoneorvideo-details">
+                   </textarea>
+                 </div>
+                 </div>
+
+             </div>
+
+           </fieldset>
+         </div>
+
+
+
+
+         
+
+          <div class="govuk-button-group govuk-!-margin-top-6">
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+            <a class="govuk-button govuk-button--secondary" href="../../applicanttasklist/inprogress"  data-module="govuk-button">
+              Save and come back later
+            </a>
+
+          </div>
+
+
+
+
+       </main>
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <details class="govuk-details" data-module="govuk-details">
+ 			 <summary class="govuk-details__summary">
+   			 <span class="govuk-details__summary-text">
+    		  Contacts for help
+  			  </span>
+  			</summary>
+  			<div class="govuk-details__text">
+   			 Ask a question or get any help in any language
+   			 <p class="govuk-body govuk-!-font-weight-bold">Telephone</p>
+
+   			 <p class="govuk-body govuk-!-font-weight-regular">0300 303 0742</p>
+   			 <p class="govuk-body govuk-!-font-weight-regular">Monday to Friday, 8am to 8pm</p>
+   			 <a href="#" class="govuk-link">Find out about call charges</a>
+   			 <p class="govuk-body govuk-!-font-weight-regular">(opens in a new window)</p>
+			  </div>
+			</details>
+    </div>
+</div>
+
+
+
+{% endblock %}
